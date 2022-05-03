@@ -3,6 +3,7 @@ import { Box,Image,Badge,Heading,Text, Stack,Button, Spacer, Flex} from '@chakra
 import {ArrowBackIcon,CheckIcon} from '@chakra-ui/icons'
 import questionImg from './img/question/sample.png'
 import answerImg from './img/answer/sampleAnswer.JPG'
+import { Setting } from './components/Setting';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <Heading mt={"3"} ml="3" color="teal">どこでも試験対策</Heading>
+      <Setting />
       <Flex ml={"4"} alignItems="baseline">
         <Badge  colorScheme='purple' height="100%" borderRadius={"full"}>テストモード</Badge>
         <Text fontSize='md' color={"gray.500"} ml="2">正解9  不正解1  正解率90.0%</Text>
@@ -106,6 +108,8 @@ function App() {
 
       </Box>
     </Box>
+    
+
     <Stack bg={"teal"} p="2" bottom={"0"} position={"fixed"} w="100%" mt={"auto"} direction="row">
       <Button colorScheme='teal' variant='solid'>
         <ArrowBackIcon />

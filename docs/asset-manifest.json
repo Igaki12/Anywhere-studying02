@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Anywhere-studying02/static/css/main.1d766016.css",
-    "main.js": "/Anywhere-studying02/static/js/main.6ab3cc7e.js",
+    "main.css": "/Anywhere-studying02/static/css/main.b6ca8e26.css",
+    "main.js": "/Anywhere-studying02/static/js/main.3a73e577.js",
     "static/media/sampleAnswer.JPG": "/Anywhere-studying02/static/media/sampleAnswer.32d9dfc8ac6cc0bae263.JPG",
     "static/media/sample.png": "/Anywhere-studying02/static/media/sample.a6320935e2373dc71003.png",
     "index.html": "/Anywhere-studying02/index.html",
-    "main.1d766016.css.map": "/Anywhere-studying02/static/css/main.1d766016.css.map",
-    "main.6ab3cc7e.js.map": "/Anywhere-studying02/static/js/main.6ab3cc7e.js.map"
+    "main.b6ca8e26.css.map": "/Anywhere-studying02/static/css/main.b6ca8e26.css.map",
+    "main.3a73e577.js.map": "/Anywhere-studying02/static/js/main.3a73e577.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d766016.css",
-    "static/js/main.6ab3cc7e.js"
+    "static/css/main.b6ca8e26.css",
+    "static/js/main.3a73e577.js"
   ]
 }
