@@ -23,7 +23,7 @@ export const Setting = ({}) => {
     その他説明不足・バグ等あれば本人まで。
   </ListItem>
 </List>
-<Stack direction='row' spacing={4} align='center' w={"100vw"} m="2" ml={6} >
+<Stack direction='row' spacing={4} align='center' m="2" ml={6} >
   <Button colorScheme='teal' variant='outline'>
     練習モード
   </Button>
