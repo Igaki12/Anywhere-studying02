@@ -1,4 +1,4 @@
-import { Stack, Button, Spacer,Circle } from '@chakra-ui/react'
+import { Stack, Button, Spacer, Circle } from '@chakra-ui/react'
 import { ArrowBackIcon, CheckIcon, ChevronDownIcon } from '@chakra-ui/icons'
 export const ControlPanel = ({}) => {
   return (
@@ -11,10 +11,14 @@ export const ControlPanel = ({}) => {
       right={'5'}
       alignItems={'end'}
     >
-      <Button colorScheme="teal" variant="outline" borderRadius={'full'}>
-        <Circle size="40px" bg="green.100" color="white">
-          <ChevronDownIcon />
-        </Circle>
+      <Button
+        colorScheme="teal"
+        variant="outline"
+        borderRadius={'full'}
+        h="50px"
+        w={'50px'}
+      >
+        <ChevronDownIcon size="2xl" />
       </Button>
     </Stack>
 
