@@ -7,7 +7,6 @@ export const QuestionsLog = ({ questionsList }) => {
     <>
       <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
         <Image src={questionImg} alt={questionsList.imageAlt} />
-        <Image src="../img/question/sample.png" alt={questionsList.imageAlt} />
 
         <Box p="6">
           <Box display="flex" alignItems="baseline">
