@@ -4,6 +4,7 @@ import {ArrowBackIcon,CheckIcon} from '@chakra-ui/icons'
 import questionImg from './img/question/sample.png'
 import answerImg from './img/answer/sampleAnswer.JPG'
 import { Setting } from './components/Setting';
+import {ResultBar} from './components/ResultBar';
 
 
 function App() {
@@ -25,10 +26,7 @@ function App() {
     <>
       <Heading mt={"3"} ml="3" color="teal">どこでも試験対策</Heading>
       <Setting />
-      <Flex ml={"4"} alignItems="baseline">
-        <Badge  colorScheme='purple' height="100%" borderRadius={"full"}>テストモード</Badge>
-        <Text fontSize='md' color={"gray.500"} ml="2">正解9  不正解1  正解率90.0%</Text>
-      </Flex>
+      <ResultBar />
       <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
       <Image src={questionImg} alt={property.imageAlt} />
 

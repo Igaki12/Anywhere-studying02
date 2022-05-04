@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Anywhere-studying02/static/css/main.b6ca8e26.css",
-    "main.js": "/Anywhere-studying02/static/js/main.7e74f729.js",
+    "main.css": "/Anywhere-studying02/static/css/main.f53dfe3a.css",
+    "main.js": "/Anywhere-studying02/static/js/main.a4530370.js",
     "static/media/sampleAnswer.JPG": "/Anywhere-studying02/static/media/sampleAnswer.32d9dfc8ac6cc0bae263.JPG",
     "static/media/sample.png": "/Anywhere-studying02/static/media/sample.a6320935e2373dc71003.png",
     "index.html": "/Anywhere-studying02/index.html",
-    "main.b6ca8e26.css.map": "/Anywhere-studying02/static/css/main.b6ca8e26.css.map",
-    "main.7e74f729.js.map": "/Anywhere-studying02/static/js/main.7e74f729.js.map"
+    "main.f53dfe3a.css.map": "/Anywhere-studying02/static/css/main.f53dfe3a.css.map",
+    "main.a4530370.js.map": "/Anywhere-studying02/static/js/main.a4530370.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6ca8e26.css",
-    "static/js/main.7e74f729.js"
+    "static/css/main.f53dfe3a.css",
+    "static/js/main.a4530370.js"
   ]
 }
