@@ -4,22 +4,28 @@ import { Setting } from './components/Setting'
 import { ResultBar } from './components/ResultBar'
 import { QuestionsLog } from './components/QuestionsLog'
 import { ControlPanel } from './components/ControlPanel'
+import questionImg from './img/question/sample.png'
+import answerImg from './img/answer/sampleAnswer.JPG'
+import { useQuestionList } from './useQuestionList'
 
 function App() {
-  const property = {
-    imageUrl: '',
-    imageAlt: '（エラーにより写真が表示できません。）',
-    beds: 3,
-    baths: 2,
-    question:
-      'これは小腸粘膜上皮を構成する細胞の電子顕微鏡写真である。細胞面を答え、この写真を説明しなさい。',
-    answer: '小腸粘膜上皮では...',
-    reviewCount: 34,
-    rating: 4,
-    year: 2020,
-    details: '大問1(3)',
-    answerNum: 'ウ',
-  }
+  const {showQuestionList} = useQuestionList();
+  const questionList = showQuestionList();
+  // const questionList = {
+  //   questionImgUrl: questionImg,
+  //   answerImgUrl: answerImg,
+  //   imageAlt: '（エラーにより写真が表示できません。）',
+  //   beds: 3,
+  //   baths: 2,
+  //   question:
+  //     'これは小腸粘膜上皮を構成する細胞の電子顕微鏡写真である。細胞面を答え、この写真を説明しなさい。',
+  //   answer: '小腸粘膜上皮では...',
+  //   reviewCount: 34,
+  //   rating: 4,
+  //   year: 2020,
+  //   details: '大問1(3)',
+  //   answerNum: 'ウ',
+  // }
 
   return (
     <>
@@ -28,7 +34,7 @@ function App() {
       </Heading>
       <Setting />
       <ResultBar />
-      <QuestionsLog questionsList={property} />
+      <QuestionsLog questionList={questionList} />
 
       <Stack direction={'row'} m="2">
         <Button colorScheme="blue" size="md">
