@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import imageSample1 from './img/question/sample.png'
 import imageSample2 from './img/answer/sampleAnswer.JPG'
+import ans2 from './img/answer/DSC_0188.JPG'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -12,9 +13,9 @@ export const useQuestionList = () => {
           detailInfo: '大問1(1)',
           questionImg: [],
           questionSentence: '洞様毛細血管について、その構造を説明しなさい。',
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [ans2],
+          answer: '洞様毛細血管は一般の毛細血管よりはるかに太く、血管壁には大小の窓が空いている。',
+          commentary: '（肝臓：）小葉内には肝細胞索の間を洞様毛細血管（類洞）が流れ、小葉中心の中心静脈へ向かう。小さい窓は100nm以下、大きい窓は径1～3μm程度。内皮細胞のところどころではクッパー細胞という、異物を貪食して処理する細胞がある。内皮と無数の微絨毛をもつ肝細胞との間をディッセ腔という。ここには伊藤の脂肪摂取細胞があり、ビタミンAを取り込み、膠原繊維を作っている。',
         },
         {
           detailInfo: '大問1(2)',

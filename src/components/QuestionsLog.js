@@ -66,14 +66,14 @@ export const QuestionsLog = ({ questionList }) => {
                     textTransform="uppercase"
                     ml="2"
                   >
-                    {question.answer ? question.answer : "解答準備中"}
+                    {question.answer ? question.answer : '解答準備中'}
                   </Box>
                 </Box>
                 <Badge variant="solid" colorScheme="red">
                   解説
                 </Badge>
-                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
-                  {question.commentary ? question.commentary : "解説準備中"}
+                <Box mt="1" as="h4" lineHeight="tight">
+                  {question.commentary ? question.commentary : '解説準備中'}
                 </Box>
               </Box>
             </Box>

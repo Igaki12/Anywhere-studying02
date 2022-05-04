@@ -43,10 +43,10 @@ export const Setting = ({}) => {
 </RadioGroup>
 <CheckboxGroup colorScheme='green' defaultValue={['2021', '2020','2018']}>
   <Stack spacing={[2, 4]} direction={['column', 'row']} bg="blackAlpha.100" p={2} >
-    <Checkbox value='2021'>2021　(20問)</Checkbox>
-    <Checkbox value='2020'>2020　(18問)</Checkbox>
+    <Checkbox value='2020'>2020　(7問)</Checkbox>
     <Checkbox value='2020R'>2020再試　(5問)</Checkbox>
-    <Checkbox value='2018'>2018　(23問)</Checkbox>
+    <Checkbox value='2018'>2018　(7問)</Checkbox>
+    <Checkbox value='2018'>2017　(6問)</Checkbox>
   </Stack>
 </CheckboxGroup>
 <Divider orientation='horizontal' />

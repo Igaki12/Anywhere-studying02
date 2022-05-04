@@ -1,5 +1,5 @@
 import './App.css'
-import { Box, Heading, Text, Stack, Button } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Button,Badge } from '@chakra-ui/react'
 import { Setting } from './components/Setting'
 import { ResultBar } from './components/ResultBar'
 import { QuestionsLog } from './components/QuestionsLog'
@@ -9,8 +9,8 @@ import answerImg from './img/answer/sampleAnswer.JPG'
 import { useQuestionList } from './useQuestionList'
 
 function App() {
-  const {showQuestionList} = useQuestionList();
-  const questionList = showQuestionList();
+  const { showQuestionList } = useQuestionList()
+  const questionList = showQuestionList()
   // const questionList = {
   //   questionImgUrl: questionImg,
   //   answerImgUrl: answerImg,
@@ -32,6 +32,9 @@ function App() {
       <Heading mt={'3'} ml="3" color="teal">
         どこでも試験対策
       </Heading>
+      <Badge ml={3} mt="-3" borderRadius="full" px="2" colorScheme="teal">
+        第二解剖学・組織
+      </Badge>
       <Setting />
       <ResultBar />
       <QuestionsLog questionList={questionList} />
