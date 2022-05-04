@@ -50,7 +50,7 @@ export const Setting = ({}) => {
   </Stack>
 </CheckboxGroup>
 <Divider orientation='horizontal' />
-<Text fontSize='xs' textColor={"blackAlpha.500"} ml="7">©2022- IgaTatApps</Text>
+<Text fontSize='xs' textColor={"blackAlpha.500"} ml="4">©2022- IgaTatApps</Text>
     </>
   )
 }
