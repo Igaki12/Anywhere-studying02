@@ -7,11 +7,11 @@ export const ControlPanel = ({}) => {
       spacing={4}
       align="center"
       position={'fixed'}
-      bottom="0"
+      bottom="5"
+      right={"5"}
       alignItems={'end'}
-      width="100%"
     >
-      <Button colorScheme="teal" variant="outline">
+      <Button colorScheme="teal" variant="outline" borderRadius={'full'}>
         <ChevronDownIcon />
       </Button>
     </Stack>
