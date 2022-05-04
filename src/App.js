@@ -1,10 +1,9 @@
 import './App.css';
 import { Box,Image,Badge,Heading,Text, Stack,Button, Spacer, Flex} from '@chakra-ui/react'
 import {ArrowBackIcon,CheckIcon} from '@chakra-ui/icons'
-import questionImg from './img/question/sample.png'
-import answerImg from './img/answer/sampleAnswer.JPG'
 import { Setting } from './components/Setting';
 import {ResultBar} from './components/ResultBar';
+import { QuestionsLog } from './components/QuestionsLog';
 
 
 function App() {
@@ -27,37 +26,8 @@ function App() {
       <Heading mt={"3"} ml="3" color="teal">どこでも試験対策</Heading>
       <Setting />
       <ResultBar />
-      <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-      <Image src={questionImg} alt={property.imageAlt} />
+      <QuestionsLog questionsList={property} />
 
-      <Box p='6'>
-        <Box display='flex' alignItems='baseline'>
-          <Badge borderRadius='full' px='2' colorScheme='teal'>
-            {property.year}
-          </Badge>
-          <Box
-            color='gray.500'
-            fontWeight='semibold'
-            letterSpacing='wide'
-            fontSize='xs'
-            textTransform='uppercase'
-            ml='2'
-          >
-            {property.details}
-          </Box>
-        </Box>
-
-        <Box
-          mt='1'
-          fontWeight='semibold'
-          as='h4'
-          lineHeight='tight'
-        >
-          {property.question}
-        </Box>
-
-      </Box>
-    </Box>
 
     <Stack direction={"row"} m="2">
     <Button colorScheme='blue' size='md'>ア</Button>
@@ -76,36 +46,7 @@ function App() {
     <Text fontSize='md' color={'yellow.700'}>サンプル文章４</Text>
     </Stack>
 
-    <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' bg={"red.50"} pb="150px">
-      <Image src={answerImg} alt={property.imageAlt} />
-      <Box p='6'>
-        <Box display='flex' alignItems='baseline'>
-        <Badge variant='solid' colorScheme='red'>
-    解答・解説
-  </Badge>
-          <Box
-            color='gray.500'
-            fontWeight='semibold'
-            letterSpacing='wide'
-            fontSize='xs'
-            textTransform='uppercase'
-            ml='2'
-          >
-            {property.answerNum}
-          </Box>
-        </Box>
 
-        <Box
-          mt='1'
-          fontWeight='semibold'
-          as='h4'
-          lineHeight='tight'
-        >
-          {property.answer}
-        </Box>
-
-      </Box>
-    </Box>
     
 
     <Stack bg={"teal"} p="2" bottom={"0"} position={"fixed"} w="100%" mt={"auto"} direction="row">
