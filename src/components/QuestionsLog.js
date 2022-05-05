@@ -1,6 +1,7 @@
 import { Image, Box, Badge, Button, Text } from '@chakra-ui/react'
 import { ArrowDownIcon } from '@chakra-ui/icons'
 import { ResultBar } from './ResultBar'
+import '../App.css'
 
 export const QuestionsLog = ({
   questionList,
@@ -55,6 +56,7 @@ export const QuestionsLog = ({
                       fontSize="xs"
                       textTransform="uppercase"
                       ml="2"
+                      key={index + 'QuestionBox2'}
                     >
                       {question.detailInfo}
                     </Box>
@@ -99,6 +101,7 @@ export const QuestionsLog = ({
                       fontSize=""
                       textTransform="uppercase"
                       ml="2"
+                      key={index + 'AnswerBox2'}
                     >
                       {question.answer ? question.answer : '解答準備中'}
                     </Box>
@@ -127,6 +130,7 @@ export const QuestionsLog = ({
           overflow="hidden"
           mb={3}
           mt="3"
+          className="DownSlideIn"
         >
           {history[history.length - 1].askingQuestion.questionImg.map(
             (image, imageNum) => (
@@ -184,6 +188,7 @@ export const QuestionsLog = ({
           overflow="hidden"
           bg={'red.50'}
           pb="20px"
+          className="DownSlideIn"
         >
           {history[history.length - 1].askingQuestion.answerImg.map((image) => (
             <Image src={image} alt="写真読み込みエラー" />
@@ -231,7 +236,7 @@ export const QuestionsLog = ({
           variant={'outline'}
           onClick={() => {
             nextQuestion(settingDetail)
-            scrollToTheBottom()
+            // scrollToTheBottom()
           }}
         >
           次の問題へ
@@ -251,7 +256,7 @@ export const QuestionsLog = ({
           variant={'solid'}
           onClick={() => {
             checkAnswer()
-            scrollToTheBottom()
+            // scrollToTheBottom()
           }}
         >
           解答をみる

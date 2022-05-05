@@ -91,6 +91,7 @@ export const useHistory = () => {
         Math.random() *
           history[history.length - 1].remainingQuestionList.length,
       )
+      console.log('randomNum:' + randomNum)
       newHistory.askingQuestion = newHistory.remainingQuestionList[randomNum]
       newHistory.remainingQuestionList.splice(randomNum, 1)
       newHistory.isAnswered = false

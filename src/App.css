@@ -18,6 +18,22 @@
     transform: translateX(0);
   }
 }
+/* CSSアニメーションの指定 */
+.DownSlideIn{
+  animation: SlideIn 1.0s;
+}
+
+/* CSSアニメーションの設定 */
+@keyframes SlideIn {
+  0% {
+    opacity: 0;/*初期状態では透明に*/
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 /* .App-logo {
