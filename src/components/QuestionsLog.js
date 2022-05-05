@@ -228,7 +228,7 @@ export const QuestionsLog = ({
           ml="3"
           rightIcon={<ArrowDownIcon />}
           colorScheme="teal"
-          variant={'solid'}
+          variant={'outline'}
           onClick={() => {
             nextQuestion(settingDetail)
             scrollToTheBottom()
@@ -248,7 +248,7 @@ export const QuestionsLog = ({
           mt={-2}
           rightIcon={<ArrowDownIcon />}
           colorScheme="red"
-          variant={'outline'}
+          variant={'solid'}
           onClick={() => {
             checkAnswer()
             scrollToTheBottom()
