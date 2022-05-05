@@ -1,4 +1,4 @@
-import { Image, Box, Badge, Button, Text } from '@chakra-ui/react'
+import { Image, Box, Badge, Button, Text, useToast } from '@chakra-ui/react'
 import { ArrowDownIcon } from '@chakra-ui/icons'
 import { ResultBar } from './ResultBar'
 import '../App.css'
@@ -11,6 +11,19 @@ export const QuestionsLog = ({
   hideAnswer,
   showSettingDetail,
 }) => {
+  const toast = useToast()
+  const toastGoodJob = () => {
+    if (history[history.length - 1].remainingQuestionList.length === 0) {
+      toast({
+        position: 'top',
+        title: 'Good Job!',
+        description: '全ての問題が終わりました！',
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
+    }
+  }
   let history = showHistory()
   let settingDetail = showSettingDetail()
   console.log(history[history.length - 1].askedQuestionList)
@@ -236,7 +249,7 @@ export const QuestionsLog = ({
           variant={'outline'}
           onClick={() => {
             nextQuestion(settingDetail)
-            // scrollToTheBottom()
+            scrollToTheBottom()
           }}
         >
           次の問題へ
@@ -257,6 +270,7 @@ export const QuestionsLog = ({
           onClick={() => {
             checkAnswer()
             // scrollToTheBottom()
+            toastGoodJob()
           }}
         >
           解答をみる
