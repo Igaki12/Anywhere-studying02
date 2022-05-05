@@ -90,7 +90,7 @@ export const useHistory = () => {
       function compareFun(QListA, QListB) {
         return QListA.id - QListB.id
       }
-      if (newHistory.remainingQuestionList.length > 1) {
+      if (newHistory.remainingQuestionList.length > 0) {
         newHistory.remainingQuestionList.sort(compareFun)
         console.log(
           'RemainingQuestionList:' + newHistory.remainingQuestionList.length,

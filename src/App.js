@@ -1,14 +1,5 @@
 import './App.css'
-import {
-  Box,
-  Heading,
-  Text,
-  Stack,
-  Button,
-  Badge,
-  Grid,
-  GridItem,
-} from '@chakra-ui/react'
+import { Box, Heading, Badge } from '@chakra-ui/react'
 import { Setting } from './components/Setting'
 import { ResultBar } from './components/ResultBar'
 import { QuestionsLog } from './components/QuestionsLog'
@@ -62,11 +53,10 @@ function App() {
       )}
       {settingDetail.isSet ? (
         <>
-          {' '}
-          <ResultBar
+          {/* <ResultBar
             showHistory={showHistory}
             showSettingDetail={showSettingDetail}
-          />
+          /> */}
           <QuestionsLog
             questionList={questionList}
             showHistory={showHistory}
@@ -81,7 +71,7 @@ function App() {
           ) : (
             <></>
           )}
-          <Box h={'80px'} width="100px"></Box>
+          <Box h={'200px'} width="100px"></Box>
           <ControlPanel
             showSettingDetail={showSettingDetail}
             showHistory={showHistory}

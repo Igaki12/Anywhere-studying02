@@ -1,5 +1,6 @@
 import { Image, Box, Badge, Button, Text } from '@chakra-ui/react'
 import { ArrowDownIcon } from '@chakra-ui/icons'
+import { ResultBar } from './ResultBar'
 
 export const QuestionsLog = ({
   questionList,
@@ -12,6 +13,11 @@ export const QuestionsLog = ({
   let history = showHistory()
   let settingDetail = showSettingDetail()
   console.log(history[history.length - 1].askedQuestionList)
+  const scrollToTheBottom = () => {
+    let element = document.documentElement
+    let bottom = element.scrollHeight - element.clientHeight
+    window.scroll(0, bottom)
+  }
   return (
     <>
       <ul>
@@ -108,6 +114,10 @@ export const QuestionsLog = ({
             </>
           ))}
       </ul>
+      <ResultBar
+        showHistory={showHistory}
+        showSettingDetail={showSettingDetail}
+      />
       {/* 現在解いている問題askingQuestionはaskedQuestionとは分けて表示している。 */}
       {history[history.length - 1].askingQuestion.questionSentence ? (
         <Box
@@ -211,14 +221,18 @@ export const QuestionsLog = ({
         <></>
       )}
 
-      {history[history.length - 1].isAnswered ? (
+      {history[history.length - 1].isAnswered &&
+      history[history.length - 1].remainingQuestionList.length > 0 ? (
         <Button
           m={1}
           ml="3"
           rightIcon={<ArrowDownIcon />}
           colorScheme="teal"
           variant={'solid'}
-          onClick={() => nextQuestion(settingDetail)}
+          onClick={() => {
+            nextQuestion(settingDetail)
+            scrollToTheBottom()
+          }}
         >
           次の問題へ
         </Button>
@@ -235,7 +249,10 @@ export const QuestionsLog = ({
           rightIcon={<ArrowDownIcon />}
           colorScheme="red"
           variant={'outline'}
-          onClick={checkAnswer}
+          onClick={() => {
+            checkAnswer()
+            scrollToTheBottom()
+          }}
         >
           解答をみる
         </Button>

@@ -6,8 +6,8 @@ export const ResultBar = ({ showHistory, showSettingDetail }) => {
   return (
     <>
       {settingDetail.mode === 'training' ? (
-        <Flex ml={'4'} alignItems="baseline">
-          <Badge colorScheme="purple" height="100%" borderRadius={'full'}>
+        <Flex ml={'4'} alignItems="baseline" mt={3} mb="-2">
+          <Badge colorScheme="purple" height="100%">
             練習モード
           </Badge>
           <Text fontSize="md" color={'gray.500'} ml="2">
@@ -17,7 +17,7 @@ export const ResultBar = ({ showHistory, showSettingDetail }) => {
         </Flex>
       ) : (
         <Flex ml={'4'} alignItems="baseline">
-          <Badge colorScheme="purple" height="100%" borderRadius={'full'}>
+          <Badge colorScheme="purple" height="100%">
             テストモード
           </Badge>
           <Text fontSize="md" color={'gray.500'} ml="2">
