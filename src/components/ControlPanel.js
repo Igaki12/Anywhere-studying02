@@ -11,16 +11,19 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Divider,
+  Text,
+  Tag,
 } from '@chakra-ui/react'
 import { ArrowBackIcon, SettingsIcon, ChevronDownIcon } from '@chakra-ui/icons'
-export const ControlPanel = ({showSettingDetail}) => {
+export const ControlPanel = ({ showSettingDetail }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  let settingDetail = showSettingDetail();
-  console.log(settingDetail);
+  let settingDetail = showSettingDetail()
+  console.log(settingDetail)
   const scrollToTheBottom = () => {
-    let element = document.documentElement;
-    let bottom = element.scrollHeight - element.clientHeight;
-    window.scroll(0, bottom);
+    let element = document.documentElement
+    let bottom = element.scrollHeight - element.clientHeight
+    window.scroll(0, bottom)
   }
   return (
     <>
@@ -51,8 +54,17 @@ export const ControlPanel = ({showSettingDetail}) => {
           <ModalHeader>Settings</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            ここに設定の詳細を記述...........................
-            {/* {settingDetail} */}
+            <Text>出題パターン:</Text>
+            <Tag colorScheme="teal" m={1}>
+              {settingDetail.questionOrder}
+            </Tag>
+            <Text>出題範囲:</Text>
+            {settingDetail.questionRange.map((year) => (
+              <Tag colorScheme="teal" m="1">
+                {year}
+              </Tag>
+            ))}
+            <Divider orientation="horizontal" />
           </ModalBody>
 
           <ModalFooter>

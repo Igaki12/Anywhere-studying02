@@ -10,13 +10,13 @@ export const useSetting = () => {
     return settingDetail
   }
   const updateQuestionOrder = (order) => {
-    let updatedSettingDetail = [...settingDetail]
-    updatedSettingDetail.questionOrder = order;
+    let updatedSettingDetail = settingDetail
+    updatedSettingDetail.questionOrder = order
     console.log('updatedSettingDetail:' + updatedSettingDetail)
     setSettingDetail(updatedSettingDetail)
   }
   const toggleQuestionRange = (value) => {
-    let toggledSettingDetail = [...settingDetail]
+    let toggledSettingDetail = settingDetail
     if (toggledSettingDetail.questionRange.indexOf(value) === -1) {
       toggledSettingDetail.questionRange.push(value)
     } else {
@@ -32,5 +32,5 @@ export const useSetting = () => {
     showSettingDetail,
     updateQuestionOrder,
     toggleQuestionRange,
-  };
+  }
 }

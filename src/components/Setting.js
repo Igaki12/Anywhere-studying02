@@ -21,7 +21,7 @@ export const Setting = ({
 }) => {
   const settingDetail = showSettingDetail()
   const clickTest = () => {
-    console.log("clicked");
+    console.log('clicked')
   }
   return (
     <>
@@ -60,19 +60,21 @@ export const Setting = ({
           テストモード
         </Button>
       </Stack>
-      <RadioGroup defaultValue={settingDetail.questionOrder}>
+      <RadioGroup
+        defaultValue={settingDetail.questionOrder}
+      >
         <Stack spacing={5} direction="row" p={2}>
           <Radio
             colorScheme="red"
             value="random"
-            onClick={() => clickTest()}
+            onChange={() => updateQuestionOrder('random')}
           >
             ランダム出題
           </Radio>
           <Radio
             colorScheme="green"
             value="ascend"
-            onClick={() => updateQuestionOrder('ascend')}
+            onChange={() => updateQuestionOrder('ascend')}
           >
             順番通り出題
           </Radio>
@@ -89,7 +91,7 @@ export const Setting = ({
             <Checkbox
               value={group.groupTag}
               key={index}
-              onClick={() => toggleQuestionRange(group.groupTag)}
+              onChange={() => toggleQuestionRange(group.groupTag)}
             >
               {group.groupTag}(
               {group.groupContents ? group.groupContents.length : '0'}問)
