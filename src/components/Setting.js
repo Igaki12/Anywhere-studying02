@@ -18,6 +18,8 @@ export const Setting = ({
   showSettingDetail,
   updateQuestionOrder,
   toggleQuestionRange,
+  updateQuestionMode,
+  selectQuestionList,
 }) => {
   const settingDetail = showSettingDetail()
   const clickTest = () => {
@@ -49,20 +51,26 @@ export const Setting = ({
         </ListItem>
       </List>
       <Stack direction="row" spacing={4} align="center" m="2" ml={6}>
-        <Button colorScheme="teal" variant="outline">
+        <Button
+          colorScheme="teal"
+          variant="outline"
+          onClick={() => {
+            updateQuestionMode('training');
+            // selectQuestionList(questionList,settingDetail);
+          }}
+        >
           練習モード
         </Button>
         <Button
           bgGradient="linear(to bottom right, green.300, green.800)"
           color={'white'}
           variant="solid"
+          onClick={() => updateQuestionMode('practice')}
         >
           テストモード
         </Button>
       </Stack>
-      <RadioGroup
-        defaultValue={settingDetail.questionOrder}
-      >
+      <RadioGroup defaultValue={settingDetail.questionOrder}>
         <Stack spacing={5} direction="row" p={2}>
           <Radio
             colorScheme="red"

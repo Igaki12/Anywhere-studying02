@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 export const useSetting = () => {
   const [settingDetail, setSettingDetail] = useState({
+    mode: 'training',
     questionOrder: 'ascend',
     questionRange: ['2020本', '2018本'],
   })
@@ -12,7 +13,7 @@ export const useSetting = () => {
   const updateQuestionOrder = (order) => {
     let updatedSettingDetail = settingDetail
     updatedSettingDetail.questionOrder = order
-    console.log('updatedSettingDetail:' + updatedSettingDetail)
+    console.log('updatedQuestionOrder:' + updatedSettingDetail)
     setSettingDetail(updatedSettingDetail)
   }
   const toggleQuestionRange = (value) => {
@@ -27,10 +28,17 @@ export const useSetting = () => {
     console.log('toggledQuestionRange:' + toggledSettingDetail)
     setSettingDetail(toggledSettingDetail)
   }
+  const updateQuestionMode = (value) => {
+    let updatedSettingDetail = settingDetail
+    updatedSettingDetail.mode = value
+    console.log('updatedQuestionMode:' + value)
+    setSettingDetail(updatedSettingDetail)
+  }
   return {
     settingDetail,
     showSettingDetail,
     updateQuestionOrder,
     toggleQuestionRange,
+    updateQuestionMode,
   }
 }

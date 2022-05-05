@@ -16,10 +16,10 @@ import {
   Tag,
 } from '@chakra-ui/react'
 import { ArrowBackIcon, SettingsIcon, ChevronDownIcon } from '@chakra-ui/icons'
-export const ControlPanel = ({ showSettingDetail }) => {
+export const ControlPanel = ({ showSettingDetail, showHistory }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   let settingDetail = showSettingDetail()
-  console.log(settingDetail)
+  let history = showHistory()
   const scrollToTheBottom = () => {
     let element = document.documentElement
     let bottom = element.scrollHeight - element.clientHeight
@@ -54,6 +54,10 @@ export const ControlPanel = ({ showSettingDetail }) => {
           <ModalHeader>Settings</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
+            <Text>現在のモード:</Text>
+            <Tag colorScheme="teal" m={1}>
+              {settingDetail.mode}
+            </Tag>
             <Text>出題パターン:</Text>
             <Tag colorScheme="teal" m={1}>
               {settingDetail.questionOrder}
@@ -64,14 +68,19 @@ export const ControlPanel = ({ showSettingDetail }) => {
                 {year}
               </Tag>
             ))}
-            <Divider orientation="horizontal" />
+            <Divider orientation="horizontal" mt={3} mb="1" />
+            <Text>現在の成績:</Text>
+            <Text fontWeight={'bold'} pl="2">
+              {history[history.length - 1].askedQuestionList.length}問終了 /
+              残り{history[history.length - 1].remainingQuestionList.length}問
+            </Text>
           </ModalBody>
 
           <ModalFooter>
+            <Button variant="ghost">設定を変更する</Button>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">アプリを終了する</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

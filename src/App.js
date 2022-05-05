@@ -14,7 +14,8 @@ import { ResultBar } from './components/ResultBar'
 import { QuestionsLog } from './components/QuestionsLog'
 import { ControlPanel } from './components/ControlPanel'
 import { useQuestionList } from './useQuestionList'
-import { useSetting } from './hooks/useSetting.js'
+import { useSetting } from './hooks/useSetting'
+import { useHistory } from './hooks/useHistory'
 
 function App() {
   const { showQuestionList } = useQuestionList()
@@ -24,7 +25,9 @@ function App() {
     showSettingDetail,
     updateQuestionOrder,
     toggleQuestionRange,
+    updateQuestionMode,
   } = useSetting()
+  const { showHistory, selectQuestionList } = useHistory()
 
   return (
     <>
@@ -39,6 +42,9 @@ function App() {
         showSettingDetail={showSettingDetail}
         updateQuestionOrder={updateQuestionOrder}
         toggleQuestionRange={toggleQuestionRange}
+        updateQuestionMode={updateQuestionMode}
+        selectQuestionList={selectQuestionList}
+
       />
       <ResultBar />
       <QuestionsLog questionList={questionList} />
@@ -85,7 +91,7 @@ function App() {
       </Grid>
 
       <Box h={'80px'} width="100px"></Box>
-      <ControlPanel showSettingDetail={showSettingDetail} />
+      <ControlPanel showSettingDetail={showSettingDetail} showHistory={showHistory} />
     </>
   )
 }

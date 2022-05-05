@@ -13,7 +13,7 @@ export const useQuestionList = () => {
           detailInfo: '(1)',
           questionImg: [],
           questionSentence: 'Aortaについて誤っているものを選べ。',
-          Choices: [
+          choices: [
             '重層扁平上皮である',
             '遠心性である',
             '内膜に弾性繊維が多く含まれる',
