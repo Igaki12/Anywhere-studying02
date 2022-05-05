@@ -13,12 +13,14 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import { ArrowBackIcon, SettingsIcon, ChevronDownIcon } from '@chakra-ui/icons'
-export const ControlPanel = ({}) => {
+export const ControlPanel = ({showSettingDetail}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  let settingDetail = showSettingDetail();
+  console.log(settingDetail);
   const scrollToTheBottom = () => {
-    let element = document.documentElement
-    let bottom = element.scrollHeight - element.clientHeight
-    window.scroll(0, bottom)
+    let element = document.documentElement;
+    let bottom = element.scrollHeight - element.clientHeight;
+    window.scroll(0, bottom);
   }
   return (
     <>
@@ -50,6 +52,7 @@ export const ControlPanel = ({}) => {
           <ModalCloseButton />
           <ModalBody>
             ここに設定の詳細を記述...........................
+            {/* {settingDetail} */}
           </ModalBody>
 
           <ModalFooter>
