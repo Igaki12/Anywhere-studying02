@@ -1,12 +1,25 @@
-import { Image, Box, Badge, Button } from '@chakra-ui/react'
+import { Image, Box, Badge, Button, Text } from '@chakra-ui/react'
 import { ArrowDownIcon } from '@chakra-ui/icons'
 
-export const QuestionsLog = ({ questionList }) => {
+export const QuestionsLog = ({
+  questionList,
+  showHistory,
+  nextQuestion,
+  checkAnswer,
+  hideAnswer,
+  showSettingDetail,
+}) => {
+  let history = showHistory()
+  let settingDetail = showSettingDetail()
+  console.log(history[history.length - 1].askedQuestionList)
   return (
     <>
       <ul>
-        {questionList.map((group) =>
-          group.groupContents.map((question, index) => (
+        {/* {questionList.map((group) =>
+          group.groupContents.map((question, index) => ( */}
+        {history[history.length - 1].askedQuestionList
+          .filter((question) => question.id > -1)
+          .map((question, index) => (
             <>
               <Box
                 maxW="sm"
@@ -27,7 +40,7 @@ export const QuestionsLog = ({ questionList }) => {
                 <Box p="6">
                   <Box display="flex" alignItems="baseline">
                     <Badge borderRadius="full" px="2" colorScheme="teal">
-                      {group.groupTag}
+                      {question.groupTag}
                     </Badge>
                     <Box
                       color="gray.500"
@@ -43,6 +56,15 @@ export const QuestionsLog = ({ questionList }) => {
 
                   <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
                     {question.questionSentence}
+                    {question.randomizedChoices ? (
+                      question.randomizedChoices.map((choice, choiceIndex) => (
+                        <Text ml={4} fontWeight="normal">
+                          {choiceIndex + 1}.{choice}
+                        </Text>
+                      ))
+                    ) : (
+                      <></>
+                    )}
                   </Box>
                 </Box>
               </Box>
@@ -84,25 +106,140 @@ export const QuestionsLog = ({ questionList }) => {
                 </Box>
               </Box>
             </>
-          )),
-        )}
+          ))}
       </ul>
-      <Button
-        m={1}
-        rightIcon={<ArrowDownIcon />}
-        colorScheme="teal"
-        variant={'solid'}
-      >
-        次の問題へ
-      </Button>
-      <Button
-        m={1}
-        rightIcon={<ArrowDownIcon />}
-        colorScheme="red"
-        variant={'outline'}
-      >
-        解答をみる
-      </Button>
+      {/* 現在解いている問題askingQuestionはaskedQuestionとは分けて表示している。 */}
+      {history[history.length - 1].askingQuestion.questionSentence ? (
+        <Box
+          maxW="sm"
+          borderWidth="1px"
+          borderRadius="lg"
+          overflow="hidden"
+          mb={3}
+          mt="3"
+        >
+          {history[history.length - 1].askingQuestion.questionImg.map(
+            (image, imageNum) => (
+              <Image
+                src={image}
+                alt="写真読み込みエラー"
+                key={imageNum + 'QuestionImage'}
+              />
+            ),
+          )}
+          <Box p="6">
+            <Box display="flex" alignItems="baseline">
+              <Badge borderRadius="full" px="2" colorScheme="teal">
+                {history[history.length - 1].askingQuestion.groupTag}
+              </Badge>
+              <Box
+                color="gray.500"
+                fontWeight="semibold"
+                letterSpacing="wide"
+                fontSize="xs"
+                textTransform="uppercase"
+                ml="2"
+              >
+                {history[history.length - 1].askingQuestion.detailInfo}
+              </Box>
+            </Box>
+
+            <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
+              {history[history.length - 1].askingQuestion.questionSentence}
+              {history[history.length - 1].askingQuestion.randomizedChoices ? (
+                history[
+                  history.length - 1
+                ].askingQuestion.randomizedChoices.map(
+                  (choice, choiceIndex) => (
+                    <Text ml={4} fontWeight="normal">
+                      {choiceIndex + 1}.{choice}
+                    </Text>
+                  ),
+                )
+              ) : (
+                <></>
+              )}
+            </Box>
+          </Box>
+        </Box>
+      ) : (
+        <></>
+      )}
+      {/* 現在解いている問題の解答に関しても分けて表示する。isAnsweredに依る。 */}
+      {history[history.length - 1].isAnswered ? (
+        <Box
+          maxW="sm"
+          borderWidth="1px"
+          borderRadius="lg"
+          overflow="hidden"
+          bg={'red.50'}
+          pb="20px"
+        >
+          {history[history.length - 1].askingQuestion.answerImg.map((image) => (
+            <Image src={image} alt="写真読み込みエラー" />
+          ))}
+
+          <Box p="6">
+            <Box display="flex" alignItems="baseline">
+              <Badge variant="solid" colorScheme="red">
+                解答
+              </Badge>
+              <Box
+                color="red.700"
+                fontWeight="semibold"
+                letterSpacing="wide"
+                fontSize=""
+                textTransform="uppercase"
+                ml="2"
+              >
+                {history[history.length - 1].askingQuestion.answer
+                  ? history[history.length - 1].askingQuestion.answer
+                  : '解答準備中'}
+              </Box>
+            </Box>
+            <Badge variant="solid" colorScheme="red">
+              解説
+            </Badge>
+            <Box mt="1" as="h4" lineHeight="tight">
+              {history[history.length - 1].askingQuestion.commentary
+                ? history[history.length - 1].askingQuestion.commentary
+                : ''}
+            </Box>
+          </Box>
+        </Box>
+      ) : (
+        <></>
+      )}
+
+      {history[history.length - 1].isAnswered ? (
+        <Button
+          m={1}
+          ml="3"
+          rightIcon={<ArrowDownIcon />}
+          colorScheme="teal"
+          variant={'solid'}
+          onClick={() => nextQuestion(settingDetail)}
+        >
+          次の問題へ
+        </Button>
+      ) : (
+        <></>
+      )}
+      {history[history.length - 1].isAnswered ? (
+        <></>
+      ) : (
+        <Button
+          m={1}
+          ml="3"
+          mt={-2}
+          rightIcon={<ArrowDownIcon />}
+          colorScheme="red"
+          variant={'outline'}
+          onClick={checkAnswer}
+        >
+          解答をみる
+        </Button>
+      )}
     </>
   )
 }

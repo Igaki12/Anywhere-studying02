@@ -20,11 +20,10 @@ export const Setting = ({
   toggleQuestionRange,
   updateQuestionMode,
   selectQuestionList,
+  nextQuestion,
+  makeSetting,
 }) => {
   const settingDetail = showSettingDetail()
-  const clickTest = () => {
-    console.log('clicked')
-  }
   return (
     <>
       <List spacing={3} p={3} bgColor="green.50" fontSize={'sm'}>
@@ -56,7 +55,9 @@ export const Setting = ({
           variant="outline"
           onClick={() => {
             updateQuestionMode('training');
-            // selectQuestionList(questionList,settingDetail);
+            selectQuestionList(questionList,settingDetail);
+            nextQuestion(settingDetail);
+            makeSetting();
           }}
         >
           練習モード

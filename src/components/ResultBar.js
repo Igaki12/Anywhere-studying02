@@ -1,16 +1,30 @@
-import { Badge,Flex,Text } from "@chakra-ui/react";
+import { Badge, Flex, Text } from '@chakra-ui/react'
 
-export const ResultBar = ({}) => {
-  return(
+export const ResultBar = ({ showHistory, showSettingDetail }) => {
+  let history = showHistory()
+  let settingDetail = showSettingDetail()
+  return (
     <>
-          <Flex ml={"4"} alignItems="baseline">
-        <Badge  colorScheme='purple' height="100%" borderRadius={"full"}>練習モード</Badge>
-        <Text fontSize='md' color={"gray.500"} ml="2">現在24問目！/全60問中</Text>
-      </Flex>
-      <Flex ml={"4"} alignItems="baseline">
-        <Badge  colorScheme='purple' height="100%" borderRadius={"full"}>テストモード</Badge>
-        <Text fontSize='md' color={"gray.500"} ml="2">正解9/全10問中  正解率90.0%</Text>
-      </Flex>
+      {settingDetail.mode === 'training' ? (
+        <Flex ml={'4'} alignItems="baseline">
+          <Badge colorScheme="purple" height="100%" borderRadius={'full'}>
+            練習モード
+          </Badge>
+          <Text fontSize="md" color={'gray.500'} ml="2">
+            現在{history[history.length - 1].askedQuestionList.length}問目 /
+            残り{history[history.length - 1].remainingQuestionList.length}問
+          </Text>
+        </Flex>
+      ) : (
+        <Flex ml={'4'} alignItems="baseline">
+          <Badge colorScheme="purple" height="100%" borderRadius={'full'}>
+            テストモード
+          </Badge>
+          <Text fontSize="md" color={'gray.500'} ml="2">
+            正解9/全10問中 正解率90.0%
+          </Text>
+        </Flex>
+      )}
     </>
   )
 }

@@ -71,7 +71,7 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
             <Divider orientation="horizontal" mt={3} mb="1" />
             <Text>現在の成績:</Text>
             <Text fontWeight={'bold'} pl="2">
-              {history[history.length - 1].askedQuestionList.length}問終了 /
+              現在{history[history.length - 1].askedQuestionList.length}問目 /
               残り{history[history.length - 1].remainingQuestionList.length}問
             </Text>
           </ModalBody>

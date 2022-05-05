@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 export const useSetting = () => {
   const [settingDetail, setSettingDetail] = useState({
+    isSet: false,
     mode: 'training',
     questionOrder: 'ascend',
     questionRange: ['2020本', '2018本'],
@@ -34,11 +35,18 @@ export const useSetting = () => {
     console.log('updatedQuestionMode:' + value)
     setSettingDetail(updatedSettingDetail)
   }
+  const makeSetting = () => {
+    let updatedSettingDetail = settingDetail
+    updatedSettingDetail.isSet = true
+    console.log('make setting')
+    setSettingDetail(updatedSettingDetail)
+  }
   return {
     settingDetail,
     showSettingDetail,
     updateQuestionOrder,
     toggleQuestionRange,
     updateQuestionMode,
+    makeSetting,
   }
 }
