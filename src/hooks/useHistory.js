@@ -78,6 +78,26 @@ export const useHistory = () => {
     setHistory([...history, newHistory])
   }
   const nextQuestion = (settingDetail) => {
+    if (settingDetail.questionOrder === 'random') {
+      let newHistory = history[history.length - 1]
+      if (newHistory.askingQuestion) {
+        newHistory.askedQuestionList = [
+          ...history[history.length - 1].askedQuestionList,
+          newHistory.askingQuestion,
+        ]
+      }
+      newHistory.askingQuestion = {}
+      let randomNum = Math.floor(
+        Math.random() *
+          history[history.length - 1].remainingQuestionList.length,
+      )
+      newHistory.askingQuestion = newHistory.remainingQuestionList[randomNum]
+      newHistory.remainingQuestionList.splice(randomNum, 1)
+      newHistory.isAnswered = false
+      setHistory([...history, newHistory])
+      console.log('nextQuestion:')
+      console.log(history)
+    }
     if (settingDetail.questionOrder === 'ascend') {
       let newHistory = history[history.length - 1]
       if (newHistory.askingQuestion) {
