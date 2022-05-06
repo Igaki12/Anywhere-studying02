@@ -68,6 +68,12 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
                 {year}
               </Tag>
             ))}
+            <Text>単語絞り込み:</Text>
+            {settingDetail.wordFilter.map((word) => (
+              <Tag colorScheme="teal" m="1">
+                {word}
+              </Tag>
+            ))}
             <Divider orientation="horizontal" mt={3} mb="1" />
             <Text>現在の成績:</Text>
             <Text fontWeight={'bold'} pl="2">

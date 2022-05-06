@@ -1,7 +1,6 @@
 import './App.css'
 import { Box, Heading, Badge } from '@chakra-ui/react'
 import { Setting } from './components/Setting'
-import { ResultBar } from './components/ResultBar'
 import { QuestionsLog } from './components/QuestionsLog'
 import { ControlPanel } from './components/ControlPanel'
 import { useQuestionList } from './useQuestionList'
@@ -18,6 +17,8 @@ function App() {
     toggleQuestionRange,
     updateQuestionMode,
     makeSetting,
+    addWordFilter,
+    deleteWordFilter,
   } = useSetting()
   const settingDetail = showSettingDetail()
   const {
@@ -49,6 +50,8 @@ function App() {
           selectQuestionList={selectQuestionList}
           nextQuestion={nextQuestion}
           makeSetting={makeSetting}
+          addWordFilter={addWordFilter}
+          deleteWordFilter={deleteWordFilter}
         />
       )}
       {settingDetail.isSet ? (

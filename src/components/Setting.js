@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react'
 import { CheckCircleIcon, QuestionIcon, WarningIcon } from '@chakra-ui/icons'
 import '../App.css'
+import { SearchWord } from './SearchWord'
 export const Setting = ({
   questionList,
   showSettingDetail,
@@ -22,6 +23,8 @@ export const Setting = ({
   selectQuestionList,
   nextQuestion,
   makeSetting,
+  addWordFilter,
+  deleteWordFilter,
 }) => {
   const settingDetail = showSettingDetail()
   return (
@@ -54,10 +57,10 @@ export const Setting = ({
           colorScheme="teal"
           variant="outline"
           onClick={() => {
-            updateQuestionMode('training');
-            selectQuestionList(questionList,settingDetail);
-            nextQuestion(settingDetail);
-            makeSetting();
+            updateQuestionMode('training')
+            selectQuestionList(questionList, settingDetail)
+            nextQuestion(settingDetail)
+            makeSetting()
           }}
         >
           練習モード
@@ -95,6 +98,7 @@ export const Setting = ({
           direction={['column', 'row']}
           bg="blackAlpha.100"
           p={2}
+          mb="5"
         >
           {questionList.map((group, index) => (
             <Checkbox
@@ -108,6 +112,11 @@ export const Setting = ({
           ))}
         </Stack>
       </CheckboxGroup>
+      <SearchWord
+      showSettingDetail={showSettingDetail}
+        addWordFilter={addWordFilter}
+        deleteWordFilter={deleteWordFilter}
+      />
       <Divider orientation="horizontal" />
       <Text fontSize="xs" textColor={'blackAlpha.500'} ml="4">
         ©2022- IgaTatApps

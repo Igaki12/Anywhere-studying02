@@ -7,6 +7,7 @@ export const useSetting = () => {
     mode: 'training',
     questionOrder: 'ascend',
     questionRange: ['2020本', '2018本'],
+    wordFilter: [],
   })
   const showSettingDetail = () => {
     return settingDetail
@@ -41,6 +42,18 @@ export const useSetting = () => {
     console.log('make setting')
     setSettingDetail(updatedSettingDetail)
   }
+  const addWordFilter = (word) => {
+    let newSettingDetail = settingDetail
+    newSettingDetail.wordFilter.push(word)
+    console.log('addWOrdFilter:', word)
+    setSettingDetail(newSettingDetail)
+  }
+  const deleteWordFilter = (index) => {
+    let newSettingDetail = settingDetail
+    newSettingDetail.wordFilter.splice(index, 1)
+    console.log('deleteWOrdFilter:', index)
+    setSettingDetail(newSettingDetail)
+  }
   return {
     settingDetail,
     showSettingDetail,
@@ -48,5 +61,7 @@ export const useSetting = () => {
     toggleQuestionRange,
     updateQuestionMode,
     makeSetting,
+    addWordFilter,
+    deleteWordFilter,
   }
 }
