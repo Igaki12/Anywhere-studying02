@@ -69,12 +69,12 @@ export const Setting = ({
         settingDetail.wordFilter.length > 0 &&
         selectedQuestionList.length > 0
       ) {
-        setCheckMsg('現在' + selectedQuestionList.length + '件の問題が選択中')
+        setCheckMsg('現在' + selectedQuestionList.length + '件の質問を選択中')
       } else if (
         settingDetail.wordFilter.length > 0 &&
         selectedQuestionList === []
       ) {
-        setCheckMsg('条件を満たした問題が存在しません')
+        setCheckMsg('条件を満たした質問が存在しません')
       } else {
         setCheckMsg()
       }
@@ -106,7 +106,7 @@ export const Setting = ({
         </ListItem>
       </List>
 
-      {checkMsg === '条件を満たした問題が存在しません' ? (
+      {checkMsg === '条件を満たした質問が存在しません' ? (
         <>
           <Stack direction="row" spacing={4} align="center" m="2" ml={6}>
             <Button colorScheme="teal" variant="outline" isDisabled>
