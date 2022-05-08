@@ -16,6 +16,7 @@ export const SearchWord = ({
   deleteWordFilter,
   showSettingDetail,
   questionList,
+  checkSelection,
 }) => {
   const [predictionText, setPredictionText] = useState()
   const [predictionNum, setPredictionNum] = useState(0)
@@ -101,6 +102,7 @@ export const SearchWord = ({
             onClick={() => {
               addWordFilterTag()
               setPredictionText()
+              checkSelection()
             }}
           />
         ) : (
@@ -129,6 +131,7 @@ export const SearchWord = ({
               onClick={() => {
                 deleteWordFilter(index)
                 setPredictionText(`${word}タグが消去されました`)
+                checkSelection()
               }}
             />
           </Tag>
