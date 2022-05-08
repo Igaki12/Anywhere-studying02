@@ -14,6 +14,7 @@ import {
 import { CheckCircleIcon, QuestionIcon, WarningIcon } from '@chakra-ui/icons'
 import '../App.css'
 import { SearchWord } from './SearchWord'
+import { useState } from 'react'
 export const Setting = ({
   questionList,
   showSettingDetail,
@@ -113,9 +114,10 @@ export const Setting = ({
         </Stack>
       </CheckboxGroup>
       <SearchWord
-      showSettingDetail={showSettingDetail}
+        showSettingDetail={showSettingDetail}
         addWordFilter={addWordFilter}
         deleteWordFilter={deleteWordFilter}
+        questionList={questionList}
       />
       <Divider orientation="horizontal" />
       <Text fontSize="xs" textColor={'blackAlpha.500'} ml="4">

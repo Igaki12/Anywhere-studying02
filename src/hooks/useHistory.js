@@ -16,11 +16,6 @@ export const useHistory = () => {
     let newHistory = history[history.length - 1]
     newHistory.remainingQuestionList = []
     questionList.forEach((group, groupIndex) => {
-      console.log(
-        group.groupTag +
-          'のsettingDetail.questionRange.indexOf(group.groupTag):' +
-          settingDetail.questionRange.indexOf(group.groupTag),
-      )
       if (settingDetail.questionRange.indexOf(group.groupTag) === -1) {
         return
       }
@@ -30,11 +25,6 @@ export const useHistory = () => {
         newRemainingQuestion.groupTag = group.groupTag
 
         if (newRemainingQuestion.askedQuestionList) {
-          console.log(
-            question.questionSentence +
-              'のnewRemainingQuestion.askedQuestionList.findIndex' +
-              newRemainingQuestion.askedQuestionList,
-          )
           if (
             newRemainingQuestion.askedQuestionList.findIndex(
               (question) => question.id === newRemainingQuestion.id,
@@ -59,6 +49,27 @@ export const useHistory = () => {
         }
 
         // 検索機能はここに追加する。検索単語を配列にして、該当Questionになんの配列アイテムも見つからなかった場合はreturnで省く
+        let wordFilterFlag = 0
+        settingDetail.wordFilter.forEach((word) => {
+          if (question.detailInfo && question.detailInfo.indexOf(word) > -1)
+            wordFilterFlag = 1
+          if (
+            question.questionSentence &&
+            question.questionSentence.indexOf(word) > -1
+          )
+            wordFilterFlag = 1
+          if (question.answer && question.answer.indexOf(word) > -1)
+            wordFilterFlag = 1
+          if (question.commentary && question.commentary.indexOf(word) > -1)
+            wordFilterFlag = 1
+          if (
+            question.choices &&
+            question.choices.every((choice) => choice.indexOf(word) === -1) ===
+              false
+          )
+            wordFilterFlag = 1
+        })
+        if (wordFilterFlag === 0) return
         if (newRemainingQuestion.choices) {
           let choiceList = [...question.choices]
           newRemainingQuestion.randomizedChoices = []
@@ -71,7 +82,6 @@ export const useHistory = () => {
             )
           }
         }
-        console.log(newRemainingQuestion)
         newHistory.remainingQuestionList.push(newRemainingQuestion)
       })
     })
@@ -91,13 +101,10 @@ export const useHistory = () => {
         Math.random() *
           history[history.length - 1].remainingQuestionList.length,
       )
-      console.log('randomNum:' + randomNum)
       newHistory.askingQuestion = newHistory.remainingQuestionList[randomNum]
       newHistory.remainingQuestionList.splice(randomNum, 1)
       newHistory.isAnswered = false
       setHistory([...history, newHistory])
-      console.log('nextQuestion:')
-      console.log(history)
     }
     if (settingDetail.questionOrder === 'ascend') {
       let newHistory = history[history.length - 1]
