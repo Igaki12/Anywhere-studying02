@@ -35,11 +35,12 @@ export const Setting = ({
     let selectedQuestionList = []
     questionList.forEach((group) => {
       if (settingDetail.questionRange.indexOf(group.groupTag) === -1) {
+        console.log('この文章が2回表示される')
         return
       }
       group.groupContents.forEach((question) => {
         let flag = 0
-        if (settingDetail.wordFilter === []) {
+        if (settingDetail.wordFilter.length === 0) {
           flag = 1
         }
         settingDetail.wordFilter.forEach((word) => {
@@ -63,22 +64,20 @@ export const Setting = ({
         if (flag === 0) return
         selectedQuestionList.push(question)
       })
-      console.log('selectedQuestionList:')
-      console.log(selectedQuestionList)
-      if (
-        settingDetail.wordFilter.length > 0 &&
-        selectedQuestionList.length > 0
-      ) {
-        setCheckMsg('現在' + selectedQuestionList.length + '件の質問を選択中')
-      } else if (
-        settingDetail.wordFilter.length > 0 &&
-        selectedQuestionList === []
-      ) {
-        setCheckMsg('条件を満たした質問が存在しません')
-      } else {
-        setCheckMsg()
-      }
     })
+    console.log('selectedQuestionList:')
+    console.log(selectedQuestionList)
+    if (
+      settingDetail.wordFilter.length > 0 &&
+      selectedQuestionList.length > 0
+    ) {
+      setCheckMsg('現在' + selectedQuestionList.length + '件の質問を選択中')
+    } else if (selectedQuestionList.length === 0) {
+      setCheckMsg('条件を満たした質問が存在しません')
+    } else {
+      setCheckMsg()
+      console.log('1回だけ表示される')
+    }
   }
   return (
     <>

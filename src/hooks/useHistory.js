@@ -15,6 +15,7 @@ export const useHistory = () => {
   const selectQuestionList = (questionList, settingDetail) => {
     let newHistory = history[history.length - 1]
     newHistory.remainingQuestionList = []
+    console.log('selectQuestionList:Start')
     questionList.forEach((group, groupIndex) => {
       if (settingDetail.questionRange.indexOf(group.groupTag) === -1) {
         return
@@ -50,7 +51,9 @@ export const useHistory = () => {
 
         // 検索機能はここに追加する。検索単語を配列にして、該当Questionになんの配列アイテムも見つからなかった場合はreturnで省く
         let wordFilterFlag = 0
-        if (settingDetail.wordFilter === []) wordFilterFlag = 1
+        if (settingDetail.wordFilter.length === 0) {
+          wordFilterFlag = 1
+        }
         settingDetail.wordFilter.forEach((word) => {
           if (question.detailInfo && question.detailInfo.indexOf(word) > -1)
             wordFilterFlag = 1

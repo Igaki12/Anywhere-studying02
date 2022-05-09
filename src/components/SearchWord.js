@@ -130,7 +130,7 @@ export const SearchWord = ({
               key={index + 'searchTagCloseBtn'}
               onClick={() => {
                 deleteWordFilter(index)
-                setPredictionText(`${word}タグが消去されました`)
+                setPredictionText(`【${word}】タグが消去されました`)
                 checkSelection()
               }}
             />
