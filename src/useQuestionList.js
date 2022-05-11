@@ -23,7 +23,7 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             '交感神経の神経伝達物質は節前・節後線維ともにノルアドレナリンである',
-          commentary: '',
+          commentary: '交感神経の神経伝達物質は節前線維はアセチルコリン、節後線維はノルアドレナリンである（例外あり：副腎髄質）',
         },
         {
           detailInfo: '5/11出席確認',
@@ -37,7 +37,7 @@ export const useQuestionList = () => {
           ],
           answerImg: [],
           answer: '舌下神経は頚神経叢の一部である。',
-          commentary: '',
+          commentary: '舌下神経は頚神経叢の一部（上部）と伴行している部分もあるが、繋がりは無い。',
         },
         {
           detailInfo: '5/11出席確認',
@@ -51,7 +51,7 @@ export const useQuestionList = () => {
           ],
           answerImg: [],
           answer: '上部腕神経叢の損傷で尺骨神経と正中神経の機能が脱落する。',
-          commentary: '',
+          commentary: '尺骨神経と正中神経の機能が脱落するのは下部腕神経叢の損傷。',
         },
         {
           detailInfo: '5/11出席確認',
@@ -66,7 +66,7 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             '肋間神経ブロックのためには麻酔薬の入った注射針を必ず神経に当てなければならない。',
-          commentary: '',
+          commentary: '部分麻酔のときと同様に、注射は神経周辺であればよい。',
         },
         // {
         //   detailInfo: '5/11',
