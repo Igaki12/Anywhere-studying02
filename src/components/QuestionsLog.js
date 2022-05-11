@@ -1,5 +1,15 @@
-import { Image, Box, Badge, Button, Text, useToast } from '@chakra-ui/react'
-import { ArrowDownIcon } from '@chakra-ui/icons'
+import {
+  Image,
+  Box,
+  Badge,
+  Button,
+  Text,
+  useToast,
+  IconButton,
+  Flex,
+  Spacer,
+} from '@chakra-ui/react'
+import { ArrowDownIcon, RepeatIcon } from '@chakra-ui/icons'
 import { ResultBar } from './ResultBar'
 import '../App.css'
 
@@ -205,14 +215,13 @@ export const QuestionsLog = ({
           borderRadius="lg"
           overflow="hidden"
           bg={'red.50'}
-          pb="20px"
           className="DownSlideIn"
         >
           {history[history.length - 1].askingQuestion.answerImg.map((image) => (
             <Image src={image} alt="写真読み込みエラー" />
           ))}
 
-          <Box p="6">
+          <Box p="6" pb={0}>
             <Box display="flex" alignItems="baseline">
               <Badge variant="solid" colorScheme="red">
                 解答
@@ -239,6 +248,10 @@ export const QuestionsLog = ({
                 : ''}
             </Box>
           </Box>
+          <Flex pr={4} pb={4}>
+            <Spacer />
+            <IconButton aria-label="Search database" icon={<RepeatIcon />} />
+          </Flex>
         </Box>
       ) : (
         <></>
