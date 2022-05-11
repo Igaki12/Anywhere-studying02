@@ -27,6 +27,8 @@ function App() {
     nextQuestion,
     checkAnswer,
     hideAnswer,
+    reviewQuestion,
+    reviewAskingQuestion,
   } = useHistory()
   const history = showHistory()
 
@@ -67,6 +69,8 @@ function App() {
             checkAnswer={checkAnswer}
             hideAnswer={hideAnswer}
             showSettingDetail={showSettingDetail}
+            reviewQuestion={reviewQuestion}
+            reviewAskingQuestion={reviewAskingQuestion}
           />
           {settingDetail.mode === 'practice' &&
           history[history.length - 1].askingQuestion.choices.length > 1 ? (

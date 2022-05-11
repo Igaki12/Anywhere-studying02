@@ -20,6 +20,8 @@ export const QuestionsLog = ({
   checkAnswer,
   hideAnswer,
   showSettingDetail,
+  reviewQuestion,
+  reviewAskingQuestion,
 }) => {
   const toast = useToast()
   const toastGoodJob = () => {
@@ -94,9 +96,10 @@ export const QuestionsLog = ({
                     {question.questionSentence}
                     {question.randomizedChoices ? (
                       question.randomizedChoices.map((choice, choiceIndex) => (
-                        <Text ml={4} fontWeight="normal">
-                          {choiceIndex + 1}.{choice}
-                        </Text>
+                        <Flex ml={4} fontWeight="normal">
+                          <Text>{choiceIndex + 1}.</Text>
+                          <Text pl={2}>{choice}</Text>
+                        </Flex>
                       ))
                     ) : (
                       <></>
@@ -110,14 +113,13 @@ export const QuestionsLog = ({
                 borderRadius="lg"
                 overflow="hidden"
                 bg={'red.50'}
-                pb="20px"
                 key={index + 'AnswerBox'}
               >
                 {question.answerImg.map((image) => (
                   <Image src={image} alt="写真読み込みエラー" />
                 ))}
 
-                <Box p="6">
+                <Box p="6" pb={0}>
                   <Box display="flex" alignItems="baseline">
                     <Badge variant="solid" colorScheme="red">
                       解答
@@ -141,6 +143,30 @@ export const QuestionsLog = ({
                     {question.commentary ? question.commentary : ''}
                   </Box>
                 </Box>
+                {question.id < 100000000 ? (
+                  <Flex pr={4} pb={4}>
+                    <Spacer />
+                    <IconButton
+                      colorScheme={'red'}
+                      variant="ghost"
+                      aria-label="review this question"
+                      onClick={() => {
+                        reviewQuestion(index)
+                        toast({
+                          title: 'この質問はもう一度出題されます',
+                          position: 'top',
+                          // description: "We've created your account for you.",
+                          status: 'info',
+                          duration: 9000,
+                          isClosable: true,
+                        })
+                      }}
+                      icon={<RepeatIcon />}
+                    />
+                  </Flex>
+                ) : (
+                  <Flex pr={4} pb="4"></Flex>
+                )}
               </Box>
             </>
           ))}
@@ -193,9 +219,10 @@ export const QuestionsLog = ({
                   history.length - 1
                 ].askingQuestion.randomizedChoices.map(
                   (choice, choiceIndex) => (
-                    <Text ml={4} fontWeight="normal">
-                      {choiceIndex + 1}.{choice}
-                    </Text>
+                    <Flex ml={4} fontWeight="normal">
+                      <Text>{choiceIndex + 1}.</Text>
+                      <Text pl={2}>{choice}</Text>
+                    </Flex>
                   ),
                 )
               ) : (
@@ -248,9 +275,39 @@ export const QuestionsLog = ({
                 : ''}
             </Box>
           </Box>
-          <Flex pr={4} pb={4}>
+          {/* バグが発生しているため機能停止 */}
+          {/* {history[history.length - 1].askingQuestion.id < 100000000 ? (
+            <Flex pr={4} pb={4}>
+              <Spacer />
+              <IconButton
+                colorScheme={'red'}
+                variant="ghost"
+                aria-label="review this question"
+                onClick={() => {
+                  reviewAskingQuestion()
+                  toast({
+                    title: 'この質問は再び出題されます',
+                    position: 'top',
+                    // description: "We've created your account for you.",
+                    status: 'info',
+                    duration: 9000,
+                    isClosable: true,
+                  })
+                }}
+                icon={<RepeatIcon />}
+              />
+            </Flex>
+          ) : (
+            
+          )} */}
+          <Flex pr={4} pb="4">
             <Spacer />
-            <IconButton aria-label="Search database" icon={<RepeatIcon />} />
+            <IconButton
+              colorScheme={'red'}
+              variant="ghost"
+              aria-label="review this question"
+              icon={<RepeatIcon />}
+            />
           </Flex>
         </Box>
       ) : (

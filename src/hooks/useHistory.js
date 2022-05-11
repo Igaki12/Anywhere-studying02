@@ -152,6 +152,36 @@ export const useHistory = () => {
     newHistory.isAnswered = false
     setHistory([...history, newHistory])
   }
+  const reviewQuestion = (index) => {
+    let newHistory = history[history.length - 1]
+    if (
+      newHistory.askedQuestionList[index + 1] &&
+      newHistory.askedQuestionList[index + 1].id < 100000000
+    ) {
+      newHistory.askedQuestionList[index + 1].id += 100000000
+      newHistory.remainingQuestionList.push(
+        newHistory.askedQuestionList[index + 1],
+      )
+      newHistory.askedQuestionList.splice(index + 1, 1)
+
+      setHistory([...history, newHistory])
+      console.log(history)
+    }
+    // 現在作業途中
+  }
+  const reviewAskingQuestion = () => {
+    let newHistory = history[history.length - 1]
+    if (newHistory.askingQuestion && newHistory.askingQuestion.id < 100000000) {
+      newHistory.askingQuestion.id += 100000000
+      newHistory.remainingQuestionList.push(newHistory.askingQuestion)
+      newHistory.askingQuestion = {}
+      setHistory([...history, newHistory])
+      console.log(
+        'reviewAskingQuestion:',
+        history[history.length - 1].askingQuestion.id,
+      )
+    }
+  }
   return {
     history,
     showHistory,
@@ -159,5 +189,7 @@ export const useHistory = () => {
     nextQuestion,
     checkAnswer,
     hideAnswer,
+    reviewQuestion,
+    reviewAskingQuestion,
   }
 }
