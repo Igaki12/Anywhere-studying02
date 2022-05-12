@@ -25,7 +25,7 @@ export const useQuestionList = () => {
           choices: ['三叉神経', '動眼神経', '外転神経', '滑車神経','顔面神経'],
           answerImg: [],
           answer: '',
-          commentary: '三叉神経は角膜反射（眼臉の反射的閉合）に関与する体性求心性線維を出す。',
+          commentary: '三叉神経は角膜反射（眼臉の反射的閉合）に関与する体性求心性線維を出す。実際に眼臉を閉合するのは顔面神経。',
         },
         {
           detailInfo: '5/11',
