@@ -165,7 +165,7 @@ export const QuestionsLog = ({
                     />
                   </Flex>
                 ) : (
-                  <Flex pr={4} pb="4"></Flex>
+                  <Flex pr={4} pb="4" pt="40px"></Flex>
                 )}
               </Box>
             </>
@@ -276,7 +276,7 @@ export const QuestionsLog = ({
             </Box>
           </Box>
           {/* バグが発生しているため機能停止 */}
-          {/* {history[history.length - 1].askingQuestion.id < 100000000 ? (
+          {history[history.length - 1].askingQuestion.id < 100000000 ? (
             <Flex pr={4} pb={4}>
               <Spacer />
               <IconButton
@@ -284,9 +284,9 @@ export const QuestionsLog = ({
                 variant="ghost"
                 aria-label="review this question"
                 onClick={() => {
-                  reviewAskingQuestion()
+                  reviewAskingQuestion(settingDetail)
                   toast({
-                    title: 'この質問は再び出題されます',
+                    title: 'この質問はもう一度出題されます',
                     position: 'top',
                     // description: "We've created your account for you.",
                     status: 'info',
@@ -298,17 +298,8 @@ export const QuestionsLog = ({
               />
             </Flex>
           ) : (
-            
-          )} */}
-          <Flex pr={4} pb="4">
-            <Spacer />
-            <IconButton
-              colorScheme={'red'}
-              variant="ghost"
-              aria-label="review this question"
-              icon={<RepeatIcon />}
-            />
-          </Flex>
+            <Flex pr={4} pb="4" pt="40px"></Flex>
+          )}
         </Box>
       ) : (
         <></>

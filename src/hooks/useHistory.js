@@ -169,13 +169,16 @@ export const useHistory = () => {
     }
     // 現在作業途中
   }
-  const reviewAskingQuestion = () => {
+  const reviewAskingQuestion = (settingDetail) => {
     let newHistory = history[history.length - 1]
     if (newHistory.askingQuestion && newHistory.askingQuestion.id < 100000000) {
       newHistory.askingQuestion.id += 100000000
+      newHistory.isAnswered = false
+
       newHistory.remainingQuestionList.push(newHistory.askingQuestion)
       newHistory.askingQuestion = {}
       setHistory([...history, newHistory])
+      nextQuestion(settingDetail)
       console.log(
         'reviewAskingQuestion:',
         history[history.length - 1].askingQuestion.id,
