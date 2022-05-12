@@ -75,6 +75,12 @@ export const useHistory = () => {
         })
         if (wordFilterFlag === 0) return
         if (newRemainingQuestion.choices) {
+          // answerのない問題に自動的に解を追加
+          if (newRemainingQuestion.answer === '') {
+            newRemainingQuestion.answer = newRemainingQuestion.choices[0]
+            console.log('解のない問題に解を自動追加')
+          }
+          // 選択肢をランダムに配置
           let choiceList = [...question.choices]
           newRemainingQuestion.randomizedChoices = []
           for (let i = 0; i < question.choices.length; i++) {
