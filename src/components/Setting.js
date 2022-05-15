@@ -177,7 +177,10 @@ export const Setting = ({
           </Radio>
         </Stack>
       </RadioGroup>
-      <CheckboxGroup colorScheme="green" defaultValue={['2020本', '2018本']}>
+      <CheckboxGroup
+        colorScheme="green"
+        defaultValue={settingDetail.questionRange}
+      >
         <Stack
           spacing={[2, 4]}
           direction={['column', 'row']}

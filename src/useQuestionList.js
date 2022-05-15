@@ -2,6 +2,9 @@ import { useState } from 'react'
 import imageSample1 from './img/question/sample.png'
 import imageSample2 from './img/answer/sampleAnswer.JPG'
 import ans2 from './img/answer/DSC_0188.JPG'
+import attendance1 from './img/answer/attendance1-1.jpg'
+import attendance2 from './img/answer/attendance2-1.jpg'
+import attendance3 from './img/answer/attendance3-1.jpg'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -97,15 +100,16 @@ export const useQuestionList = () => {
           questionSentence:
             '右眼に光を当てると右眼縮瞳（−）、左眼縮瞳（−）、左眼に光を当てると左眼縮瞳（＋）、右眼縮瞳（＋）だった。障害されているのはどれか？',
           choices: [
-            '左視神経',
             '右視神経',
+            '左視神経',
             '左動眼神経',
             '右動眼神経',
             '視交差',
           ],
-          answerImg: [],
+          answerImg: [attendance2, attendance3],
           answer: '',
-          commentary: '',
+          commentary:
+            '視交叉以降では視神経線維の半分は反対側に行くため、左右のどちらかからの光刺激もE-W核に届き縮瞳する。',
         },
         {
           detailInfo: '5/13',
@@ -117,9 +121,9 @@ export const useQuestionList = () => {
             '網膜ー視神経ー視交差ー視索ー視放線ー外側膝状体ー視覚中枢',
             '網膜ー視索ー視交差ー視神経ー外側膝状体ー視放線ー視覚中枢 ',
           ],
-          answerImg: [],
+          answerImg: [attendance1],
           answer: '',
-          commentary: '',
+          commentary: '外側膝状体は視床の部位。',
         },
         {
           detailInfo: '5/13',
