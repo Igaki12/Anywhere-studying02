@@ -172,7 +172,7 @@ export const useQuestionList = () => {
         {
           detailInfo: '5/18',
           questionImg: [],
-          questionSentence: 'レンズ隔を潅流する動脈は次のどれか？',
+          questionSentence: 'レンズ核を潅流する動脈は次のどれか？',
           choices: [
             '中大脳動脈',
             '前交通動脈',
@@ -220,6 +220,45 @@ export const useQuestionList = () => {
           answer: '',
           commentary:
             'ウィリス動脈輪は下垂体と視交叉を取り囲む輪状の動脈群で、前交通動脈・前大脳動脈・後交通動脈・内頚動脈（中大脳動脈）・後大脳動脈で構成される。',
+        },
+        {
+          detailInfo: '5/20',
+          questionImg: [],
+          questionSentence: '痛覚の伝導に関与するのはどれか？',
+          choices: [
+            '脊髄神経節',
+            '上顎神経節',
+            '毛様体神経節',
+            '心臓神経節',
+            '膀胱神経節',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: '体性求心性一次ニューロンは脊髄神経節に細胞体をもつ。',
+        },
+        {
+          detailInfo: '5/20',
+          questionImg: [],
+          questionSentence: '温度覚を伝える伝導路で正しいのは次のどれか？',
+          choices: [
+            '脊髄神経節-脊髄後角-反対側前索-視床VPL核-大脳皮質感覚野',
+            '脊髄神経節-脊髄前角-同側前索-視床VPL核-大脳皮質感覚野',
+            '脊髄神経節-脊髄後角-同側後索-楔状束核-内側毛帯-視床VPL核-大脳皮質感覚野',
+            '脊髄神経節-脊髄後角-反対側後索-楔状束核-小脳皮質',
+            '脊髄神経節-脊髄前角-同側後索-楔状束核-内側毛帯-扁桃体',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: '温痛覚は外側脊髄視床路を通って大脳皮質（体性感覚野）に至る。末梢神経が脊髄に入った段階で中継し、すぐに交叉する。',
+        },
+        {
+          detailInfo: '5/20',
+          questionImg: [],
+          questionSentence: '識別性触覚を伝える伝導路はどれか？',
+          choices: ['後索-内側毛帯路','外側脊髄視床路', '前脊髄視床路', '脊髄小脳路', '皮質脊髄路'],
+          answerImg: [],
+          answer: '',
+          commentary: '繊細な触圧核と深部感覚は延髄下部楔状束核で中継し延髄下部で交叉する後索-内側毛帯路を通り、大脳皮質（体性感覚野）に至る。',
         },
         // {
         //   detailInfo: '5/11',
