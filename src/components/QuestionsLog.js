@@ -22,7 +22,6 @@ export const QuestionsLog = ({
   showSettingDetail,
   reviewQuestion,
   reviewAskingQuestion,
-  addQuestionNum,
 }) => {
   const toast = useToast()
   const toastGoodJob = () => {
@@ -285,7 +284,6 @@ export const QuestionsLog = ({
                 aria-label="review this question"
                 onClick={() => {
                   reviewAskingQuestion(settingDetail)
-                  addQuestionNum(1)
                   toast({
                     title: 'この質問はもう一度出題されます',
                     position: 'top',
@@ -317,7 +315,6 @@ export const QuestionsLog = ({
           onClick={() => {
             nextQuestion(settingDetail)
             scrollToTheBottom()
-            addQuestionNum(1)
           }}
         >
           次の問題へ

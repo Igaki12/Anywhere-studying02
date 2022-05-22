@@ -28,7 +28,6 @@ export const Setting = ({
   makeSetting,
   addWordFilter,
   deleteWordFilter,
-  addQuestionNum,
   saveSetting,
 }) => {
   const settingDetail = showSettingDetail()
@@ -111,7 +110,7 @@ export const Setting = ({
         <>
           <Stack direction="row" spacing={4} align="center" m="2" ml={6}>
             <Button colorScheme="teal" variant="outline" isDisabled>
-              練習モード
+              はじめから
             </Button>
             <Button
               bgGradient="linear(to bottom right, green.300, green.800)"
@@ -119,7 +118,7 @@ export const Setting = ({
               variant="solid"
               isDisabled
             >
-              テストモード
+              0問目から再開
             </Button>
           </Stack>
           <Alert status="error" fontWeight={'semibold'}>
@@ -138,19 +137,19 @@ export const Setting = ({
                 selectQuestionList(questionList, settingDetail)
                 nextQuestion(settingDetail)
                 makeSetting()
-                addQuestionNum(1)
                 saveSetting(settingDetail)
               }}
             >
-              練習モード
+              はじめから
             </Button>
             <Button
               bgGradient="linear(to bottom right, green.300, green.800)"
               color={'white'}
               variant="solid"
               onClick={() => updateQuestionMode('practice')}
+              isDisabled
             >
-              テストモード
+              0問目から再開
             </Button>
           </Stack>
           {checkMsg ? (

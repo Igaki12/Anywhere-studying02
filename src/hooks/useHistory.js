@@ -7,6 +7,7 @@ export const useHistory = () => {
       askingQuestion: {},
       remainingQuestionList: [],
       isAnswered: false,
+      questionNum: 0,
     },
   ])
   const showHistory = () => {
@@ -114,6 +115,7 @@ export const useHistory = () => {
       newHistory.askingQuestion = newHistory.remainingQuestionList[randomNum]
       newHistory.remainingQuestionList.splice(randomNum, 1)
       newHistory.isAnswered = false
+      newHistory.questionNum += 1
       setHistory([...history, newHistory])
     }
     if (settingDetail.questionOrder === 'ascend') {
@@ -141,6 +143,7 @@ export const useHistory = () => {
         console.log(newHistory.remainingQuestionList[0])
         newHistory.remainingQuestionList.shift()
         newHistory.isAnswered = false
+        newHistory.questionNum += 1
         setHistory([...history, newHistory])
         console.log('nextQuestion:')
         console.log(history)
@@ -171,7 +174,6 @@ export const useHistory = () => {
       newHistory.askedQuestionList.splice(index + 1, 1)
 
       setHistory([...history, newHistory])
-      console.log(history)
     }
     // 現在作業途中
   }
@@ -185,12 +187,14 @@ export const useHistory = () => {
       newHistory.askingQuestion = {}
       setHistory([...history, newHistory])
       nextQuestion(settingDetail)
-      console.log(
-        'reviewAskingQuestion:',
-        history[history.length - 1].askingQuestion.id,
-      )
     }
   }
+  // const addQuestionNum = (num) => {
+  //   if (num === '') {
+  //     num = 1
+  //   }
+  //   let newHistory = history[history.length - 1]
+  // }
   return {
     history,
     showHistory,

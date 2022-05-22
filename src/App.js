@@ -22,7 +22,6 @@ function App() {
     makeSetting,
     addWordFilter,
     deleteWordFilter,
-    addQuestionNum,
     updateAllSettings,
   } = useSetting()
   const settingDetail = showSettingDetail()
@@ -38,23 +37,31 @@ function App() {
   const history = showHistory()
   // ここからCookieを使った設定の引継ぎ
   let savedSettingDetail = showSettingDetail()
-  savedSettingDetail.questionOrder = jsCookie.get('questionOrder')
+  let getCookiesFlag = 0
+  if (jsCookie.get('questionOrder')) {
+    savedSettingDetail.questionOrder = jsCookie.get('questionOrder')
+    getCookiesFlag = 1
+  }
+
   if (jsCookie.get('questionRange')) {
     savedSettingDetail.questionRange = jsCookie.get('questionRange').split(',')
+    getCookiesFlag = 1
   }
   if (jsCookie.get('wordFilter')) {
     savedSettingDetail.wordFilter = jsCookie.get('wordFilter').split(',')
+    getCookiesFlag = 1
   }
 
-  if (savedSettingDetail !== settingDetail) {
-    toast({
-      title: '前回の設定を引継ぎました',
-      position: 'top',
-      status: 'info',
-      // isClosable: true,
-    })
-    updateAllSettings(savedSettingDetail)
-  }
+  // if (savedSettingDetail !== settingDetail) {
+  //   console.log('savedSettingDetail:')
+  //   toast({
+  //     title: '前回の設定を引継ぎました',
+  //     position: 'top',
+  //     status: 'info',
+  //     // isClosable: true,
+  //   })
+  //   updateAllSettings(savedSettingDetail)
+  // }
   const saveSetting = (settingDetail) => {
     jsCookie.set('locale', 'ja-JP')
     jsCookie.set('questionOrder', settingDetail.questionOrder)
@@ -69,7 +76,7 @@ function App() {
         どこでも試験対策
       </Heading>
       <Badge ml={3} mt="-3" borderRadius="full" px="2" colorScheme="teal">
-        第二解剖学・組織
+        第二解剖学
       </Badge>
       {settingDetail.isSet ? (
         <></>
@@ -85,7 +92,6 @@ function App() {
           makeSetting={makeSetting}
           addWordFilter={addWordFilter}
           deleteWordFilter={deleteWordFilter}
-          addQuestionNum={addQuestionNum}
           saveSetting={saveSetting}
         />
       )}
@@ -104,7 +110,6 @@ function App() {
             showSettingDetail={showSettingDetail}
             reviewQuestion={reviewQuestion}
             reviewAskingQuestion={reviewAskingQuestion}
-            addQuestionNum={addQuestionNum}
           />
           {settingDetail.mode === 'practice' &&
           history[history.length - 1].askingQuestion.choices.length > 1 ? (
