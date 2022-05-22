@@ -23,7 +23,7 @@ export const useHistory = () => {
       }
       group.groupContents.forEach((question, questionIndex) => {
         let newRemainingQuestion = question
-        newRemainingQuestion.id = groupIndex * 10000 + questionIndex
+        newRemainingQuestion.id = groupIndex * 1000 + questionIndex
         newRemainingQuestion.groupTag = group.groupTag
 
         if (newRemainingQuestion.askedQuestionList) {
@@ -165,9 +165,9 @@ export const useHistory = () => {
     let newHistory = history[history.length - 1]
     if (
       newHistory.askedQuestionList[index + 1] &&
-      newHistory.askedQuestionList[index + 1].id < 100000000
+      newHistory.askedQuestionList[index + 1].id < 1000000
     ) {
-      newHistory.askedQuestionList[index + 1].id += 100000000
+      newHistory.askedQuestionList[index + 1].id += 1000000
       newHistory.remainingQuestionList.push(
         newHistory.askedQuestionList[index + 1],
       )
@@ -179,8 +179,8 @@ export const useHistory = () => {
   }
   const reviewAskingQuestion = (settingDetail) => {
     let newHistory = history[history.length - 1]
-    if (newHistory.askingQuestion && newHistory.askingQuestion.id < 100000000) {
-      newHistory.askingQuestion.id += 100000000
+    if (newHistory.askingQuestion && newHistory.askingQuestion.id < 1000000) {
+      newHistory.askingQuestion.id += 1000000
       newHistory.isAnswered = false
 
       newHistory.remainingQuestionList.push(newHistory.askingQuestion)

@@ -12,11 +12,13 @@ import {
   Text,
   Alert,
   AlertIcon,
+  useToast,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, QuestionIcon, WarningIcon } from '@chakra-ui/icons'
 import '../App.css'
 import { SearchWord } from './SearchWord'
 import { useState } from 'react'
+import jsCookie from 'js-cookie'
 export const Setting = ({
   questionList,
   showSettingDetail,
@@ -28,10 +30,11 @@ export const Setting = ({
   makeSetting,
   addWordFilter,
   deleteWordFilter,
-  saveSetting,
+  updateAllSettings,
 }) => {
   const settingDetail = showSettingDetail()
   const [checkMsg, setCheckMsg] = useState()
+  const toast = useToast()
   const checkSelection = () => {
     let selectedQuestionList = []
     questionList.forEach((group) => {
@@ -80,6 +83,41 @@ export const Setting = ({
       console.log('1回だけ表示される')
     }
   }
+  // ここからCookieを使った設定の引継ぎ
+  let savedSettingDetail = showSettingDetail()
+  let getCookiesFlag = 0
+  // let isLoaded
+  jsCookie.set('locale', 'ja-JP')
+  if (jsCookie.get('questionOrder')) {
+    savedSettingDetail.questionOrder = jsCookie.get('questionOrder')
+    getCookiesFlag = 1
+  }
+
+  if (jsCookie.get('questionRange')) {
+    savedSettingDetail.questionRange = jsCookie.get('questionRange').split(',')
+    getCookiesFlag = 1
+  }
+  if (jsCookie.get('wordFilter')) {
+    savedSettingDetail.wordFilter = jsCookie.get('wordFilter').split(',')
+    getCookiesFlag = 1
+  }
+  // if (isLoaded !== true && getCookiesFlag === 1) {
+  //   console.log('savedSettingDetail:' + isLoaded + getCookiesFlag)
+  //   toast({
+  //     title: '前回の設定を引継ぎました',
+  //     position: 'top',
+  //     status: 'info',
+  //     isClosable: true,
+  //   })
+  //   // updateAllSettings(savedSettingDetail)
+  //   isLoaded = true
+  // }
+  const saveSetting = (settingDetail) => {
+    jsCookie.set('questionOrder', settingDetail.questionOrder)
+    jsCookie.set('questionRange', settingDetail.questionRange)
+    jsCookie.set('wordFilter', settingDetail.wordFilter)
+    console.log(jsCookie.get())
+  }
   return (
     <>
       <List spacing={3} p={3} bgColor="green.50" fontSize={'sm'}>
@@ -118,7 +156,7 @@ export const Setting = ({
               variant="solid"
               isDisabled
             >
-              0問目から再開
+              続きから再開
             </Button>
           </Stack>
           <Alert status="error" fontWeight={'semibold'}>
@@ -149,7 +187,7 @@ export const Setting = ({
               onClick={() => updateQuestionMode('practice')}
               isDisabled
             >
-              0問目から再開
+              続きから再開
             </Button>
           </Stack>
           {checkMsg ? (
@@ -167,14 +205,20 @@ export const Setting = ({
           <Radio
             colorScheme="red"
             value="random"
-            onChange={() => updateQuestionOrder('random')}
+            onChange={() => {
+              updateQuestionOrder('random')
+              saveSetting(settingDetail)
+            }}
           >
             ランダム出題
           </Radio>
           <Radio
             colorScheme="green"
             value="ascend"
-            onChange={() => updateQuestionOrder('ascend')}
+            onChange={() => {
+              updateQuestionOrder('ascend')
+              saveSetting(settingDetail)
+            }}
           >
             順番通り出題
           </Radio>
@@ -198,6 +242,7 @@ export const Setting = ({
               onChange={() => {
                 toggleQuestionRange(group.groupTag)
                 checkSelection()
+                saveSetting(settingDetail)
               }}
             >
               {group.groupTag}(
@@ -212,6 +257,7 @@ export const Setting = ({
         deleteWordFilter={deleteWordFilter}
         questionList={questionList}
         checkSelection={checkSelection}
+        saveSetting={saveSetting}
       />
       <Divider orientation="horizontal" />
       <Text fontSize="xs" textColor={'blackAlpha.500'} ml="4">

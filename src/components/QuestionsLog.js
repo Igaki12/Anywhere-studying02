@@ -143,7 +143,7 @@ export const QuestionsLog = ({
                     {question.commentary ? question.commentary : ''}
                   </Box>
                 </Box>
-                {question.id < 100000000 ? (
+                {question.id < 1000000 ? (
                   <Flex pr={4} pb={4}>
                     <Spacer />
                     <IconButton
@@ -275,7 +275,7 @@ export const QuestionsLog = ({
                 : ''}
             </Box>
           </Box>
-          {history[history.length - 1].askingQuestion.id < 100000000 ? (
+          {history[history.length - 1].askingQuestion.id < 1000000 ? (
             <Flex pr={4} pb={4}>
               <Spacer />
               <IconButton
