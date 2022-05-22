@@ -11,8 +11,8 @@ export const ResultBar = ({ showHistory, showSettingDetail }) => {
             練習モード
           </Badge>
           <Text fontSize="md" color={'gray.500'} ml="2">
-            現在{history[history.length - 1].askedQuestionList.length}問目 /
-            残り{history[history.length - 1].remainingQuestionList.length}問
+            現在{settingDetail.questionNum}問目 / 残り
+            {history[history.length - 1].remainingQuestionList.length}問
           </Text>
         </Flex>
       ) : (

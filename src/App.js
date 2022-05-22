@@ -19,6 +19,7 @@ function App() {
     makeSetting,
     addWordFilter,
     deleteWordFilter,
+    addQuestionNum,
   } = useSetting()
   const settingDetail = showSettingDetail()
   const {
@@ -54,6 +55,7 @@ function App() {
           makeSetting={makeSetting}
           addWordFilter={addWordFilter}
           deleteWordFilter={deleteWordFilter}
+          addQuestionNum={addQuestionNum}
         />
       )}
       {settingDetail.isSet ? (
@@ -71,6 +73,7 @@ function App() {
             showSettingDetail={showSettingDetail}
             reviewQuestion={reviewQuestion}
             reviewAskingQuestion={reviewAskingQuestion}
+            addQuestionNum={addQuestionNum}
           />
           {settingDetail.mode === 'practice' &&
           history[history.length - 1].askingQuestion.choices.length > 1 ? (

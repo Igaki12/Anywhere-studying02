@@ -22,6 +22,7 @@ export const QuestionsLog = ({
   showSettingDetail,
   reviewQuestion,
   reviewAskingQuestion,
+  addQuestionNum,
 }) => {
   const toast = useToast()
   const toastGoodJob = () => {
@@ -275,7 +276,6 @@ export const QuestionsLog = ({
                 : ''}
             </Box>
           </Box>
-          {/* バグが発生しているため機能停止 */}
           {history[history.length - 1].askingQuestion.id < 100000000 ? (
             <Flex pr={4} pb={4}>
               <Spacer />
@@ -285,6 +285,7 @@ export const QuestionsLog = ({
                 aria-label="review this question"
                 onClick={() => {
                   reviewAskingQuestion(settingDetail)
+                  addQuestionNum(1)
                   toast({
                     title: 'この質問はもう一度出題されます',
                     position: 'top',
@@ -316,6 +317,7 @@ export const QuestionsLog = ({
           onClick={() => {
             nextQuestion(settingDetail)
             scrollToTheBottom()
+            addQuestionNum(1)
           }}
         >
           次の問題へ
