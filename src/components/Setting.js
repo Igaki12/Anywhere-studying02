@@ -29,6 +29,7 @@ export const Setting = ({
   addWordFilter,
   deleteWordFilter,
   addQuestionNum,
+  saveSetting,
 }) => {
   const settingDetail = showSettingDetail()
   const [checkMsg, setCheckMsg] = useState()
@@ -138,6 +139,7 @@ export const Setting = ({
                 nextQuestion(settingDetail)
                 makeSetting()
                 addQuestionNum(1)
+                saveSetting(settingDetail)
               }}
             >
               練習モード

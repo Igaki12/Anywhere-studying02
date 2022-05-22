@@ -1,5 +1,5 @@
 import './App.css'
-import { Box, Heading, Badge } from '@chakra-ui/react'
+import { Box, Heading, Badge, useToast } from '@chakra-ui/react'
 import { Setting } from './components/Setting'
 import { QuestionsLog } from './components/QuestionsLog'
 import { ControlPanel } from './components/ControlPanel'
@@ -7,9 +7,12 @@ import { useQuestionList } from './useQuestionList'
 import { useSetting } from './hooks/useSetting'
 import { useHistory } from './hooks/useHistory'
 import { ChoicePanel } from './components/ChoicePanel'
+import jsCookie from 'js-cookie'
+import { InfoIcon } from '@chakra-ui/icons'
 
 function App() {
   const { showQuestionList } = useQuestionList()
+  const toast = useToast()
   const questionList = showQuestionList()
   const {
     showSettingDetail,
@@ -20,6 +23,7 @@ function App() {
     addWordFilter,
     deleteWordFilter,
     addQuestionNum,
+    updateAllSettings,
   } = useSetting()
   const settingDetail = showSettingDetail()
   const {
@@ -32,6 +36,32 @@ function App() {
     reviewAskingQuestion,
   } = useHistory()
   const history = showHistory()
+  // ここからCookieを使った設定の引継ぎ
+  let savedSettingDetail = showSettingDetail()
+  savedSettingDetail.questionOrder = jsCookie.get('questionOrder')
+  if (jsCookie.get('questionRange')) {
+    savedSettingDetail.questionRange = jsCookie.get('questionRange').split(',')
+  }
+  if (jsCookie.get('wordFilter')) {
+    savedSettingDetail.wordFilter = jsCookie.get('wordFilter').split(',')
+  }
+
+  if (savedSettingDetail !== settingDetail) {
+    toast({
+      title: '前回の設定を引継ぎました',
+      position: 'top',
+      status: 'info',
+      // isClosable: true,
+    })
+    updateAllSettings(savedSettingDetail)
+  }
+  const saveSetting = (settingDetail) => {
+    jsCookie.set('locale', 'ja-JP')
+    jsCookie.set('questionOrder', settingDetail.questionOrder)
+    jsCookie.set('questionRange', settingDetail.questionRange)
+    jsCookie.set('wordFilter', settingDetail.wordFilter)
+    console.log(jsCookie.get())
+  }
 
   return (
     <>
@@ -56,6 +86,7 @@ function App() {
           addWordFilter={addWordFilter}
           deleteWordFilter={deleteWordFilter}
           addQuestionNum={addQuestionNum}
+          saveSetting={saveSetting}
         />
       )}
       {settingDetail.isSet ? (

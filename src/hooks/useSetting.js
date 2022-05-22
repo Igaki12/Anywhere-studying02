@@ -8,7 +8,7 @@ export const useSetting = () => {
     questionOrder: 'ascend',
     questionRange: ['出席確認など', '2020本', '2018本'],
     wordFilter: [],
-    questionNum:0,
+    questionNum: 0,
   })
   const showSettingDetail = () => {
     return settingDetail
@@ -56,13 +56,17 @@ export const useSetting = () => {
     setSettingDetail(newSettingDetail)
   }
   const addQuestionNum = (num) => {
-    if(num === '') {
-      num = 1;
+    if (num === '') {
+      num = 1
     }
     let newSettingDetail = settingDetail
     newSettingDetail.questionNum += num
     setSettingDetail(newSettingDetail)
-    console.log("addQuestionNum:" + num)
+    console.log('addQuestionNum:' + num)
+  }
+  const updateAllSettings = (newSettingDetail) => {
+    setSettingDetail(newSettingDetail)
+    console.log(newSettingDetail)
   }
   return {
     settingDetail,
@@ -74,5 +78,6 @@ export const useSetting = () => {
     addWordFilter,
     deleteWordFilter,
     addQuestionNum,
+    updateAllSettings,
   }
 }
