@@ -122,8 +122,8 @@ export const Setting = ({
   let remainingNum = 0
   if (jsCookie.get('history')) {
     remainingNum = jsCookie.get('history').split(',').length - 1
+    console.log(jsCookie.get('history').split(','))
   }
-  console.log(jsCookie.get('history').split(','))
   return (
     <>
       <List spacing={3} p={3} bgColor="green.50" fontSize={'sm'}>
