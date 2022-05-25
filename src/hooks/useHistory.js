@@ -13,10 +13,70 @@ export const useHistory = () => {
   const showHistory = () => {
     return history
   }
+  const loadHistory = (savedStrHistory, questionList) => {
+    let newHistory = history[history.length - 1]
+
+    const savedArrayHistory = savedStrHistory.split(',')
+    newHistory.questionNum = parseInt(savedArrayHistory[0])
+    newHistory.remainingQuestionList = []
+    savedArrayHistory.splice(1).forEach((id, index) => {
+      if (newHistory.askedQuestionList) {
+        newHistory.askedQuestionList.forEach((question) => {
+          if (question.id === id) {
+            console.log(
+              '被った問題が既に出題されているため、出題から省きました',
+            )
+            return
+          }
+        })
+      }
+      if (index > 1) {
+        savedArrayHistory.splice(1, index - 1).forEach((comparedId) => {
+          if (id === comparedId) {
+            console.log('保存されたIDが重複していました。:' + comparedId)
+            return
+          }
+        })
+      }
+      let addingQuestion = {}
+      addingQuestion.id = parseInt(id)
+      if (
+        // id > 999999 &&
+        questionList[Math.floor(parseInt(id) / 1000) % 1000].groupContents[
+          parseInt(id) % 1000
+        ]
+      ) {
+        addingQuestion =
+          questionList[Math.floor(parseInt(id) / 1000) % 1000].groupContents[
+            parseInt(id) % 1000
+          ]
+        addingQuestion.groupTag =
+          questionList[Math.floor(parseInt(id) / 1000) % 1000].groupTag
+      }
+      if (addingQuestion.choices) {
+        if (addingQuestion.answer === '') {
+          addingQuestion.answer = addingQuestion.choices[0]
+        }
+        // 選択肢をランダムに配置
+        let choiceList = [...addingQuestion.choices]
+        addingQuestion.randomizedChoices = []
+        for (let i = 0; i < addingQuestion.choices.length; i++) {
+          addingQuestion.randomizedChoices.push(
+            choiceList.splice(Math.floor(Math.random() * choiceList.length), 1),
+          )
+        }
+      }
+      if (addingQuestion.questionSentence) {
+        newHistory.remainingQuestionList.push(addingQuestion)
+      } else {
+        console.log('保存されたIDに対応する問題が見つかりませんでした:' + id)
+      }
+    })
+    setHistory([...history, newHistory])
+  }
   const selectQuestionList = (questionList, settingDetail) => {
     let newHistory = history[history.length - 1]
     newHistory.remainingQuestionList = []
-    console.log('selectQuestionList:Start')
     questionList.forEach((group, groupIndex) => {
       if (settingDetail.questionRange.indexOf(group.groupTag) === -1) {
         return
@@ -204,5 +264,6 @@ export const useHistory = () => {
     hideAnswer,
     reviewQuestion,
     reviewAskingQuestion,
+    loadHistory,
   }
 }

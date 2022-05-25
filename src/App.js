@@ -7,6 +7,7 @@ import { useQuestionList } from './useQuestionList'
 import { useSetting } from './hooks/useSetting'
 import { useHistory } from './hooks/useHistory'
 import { ChoicePanel } from './components/ChoicePanel'
+import jsCookie from 'js-cookie'
 
 function App() {
   const { showQuestionList } = useQuestionList()
@@ -30,8 +31,20 @@ function App() {
     hideAnswer,
     reviewQuestion,
     reviewAskingQuestion,
+    loadHistory,
   } = useHistory()
   const history = showHistory()
+  // ここからCookieを利用した設定の引継ぎ
+  const saveHistory = (latestHistory) => {
+    let savingHistory = latestHistory.questionNum + ','
+    latestHistory.remainingQuestionList.forEach((question) => {
+      savingHistory += question.id
+      savingHistory += ','
+    })
+    savingHistory = savingHistory.substring(0, savingHistory.length - 1)
+    jsCookie.set('history', savingHistory)
+    console.log('saveHistory:' + jsCookie.get('history'))
+  }
   return (
     <>
       <Heading mt={'3'} ml="3" color="teal">
@@ -55,6 +68,7 @@ function App() {
           addWordFilter={addWordFilter}
           deleteWordFilter={deleteWordFilter}
           updateAllSettings={updateAllSettings}
+          loadHistory={loadHistory}
         />
       )}
       {settingDetail.isSet ? (
@@ -72,6 +86,7 @@ function App() {
             showSettingDetail={showSettingDetail}
             reviewQuestion={reviewQuestion}
             reviewAskingQuestion={reviewAskingQuestion}
+            saveHistory={saveHistory}
           />
           {settingDetail.mode === 'practice' &&
           history[history.length - 1].askingQuestion.choices.length > 1 ? (

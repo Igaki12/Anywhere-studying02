@@ -22,6 +22,7 @@ export const QuestionsLog = ({
   showSettingDetail,
   reviewQuestion,
   reviewAskingQuestion,
+  saveHistory,
 }) => {
   const toast = useToast()
   const toastGoodJob = () => {
@@ -336,6 +337,7 @@ export const QuestionsLog = ({
             checkAnswer()
             // scrollToTheBottom()
             toastGoodJob()
+            saveHistory(history[history.length - 1])
           }}
         >
           解答をみる

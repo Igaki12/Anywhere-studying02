@@ -31,6 +31,7 @@ export const Setting = ({
   addWordFilter,
   deleteWordFilter,
   updateAllSettings,
+  loadHistory,
 }) => {
   const settingDetail = showSettingDetail()
   const [checkMsg, setCheckMsg] = useState()
@@ -118,6 +119,8 @@ export const Setting = ({
     jsCookie.set('wordFilter', settingDetail.wordFilter)
     console.log(jsCookie.get())
   }
+  const remainingNum = jsCookie.get('history').split(',').length - 1
+  console.log(jsCookie.get('history').split(','))
   return (
     <>
       <List spacing={3} p={3} bgColor="green.50" fontSize={'sm'}>
@@ -144,52 +147,78 @@ export const Setting = ({
         </ListItem>
       </List>
 
+      <Stack direction="row" spacing={4} align="center" m="2" ml={6}>
+        {checkMsg === '条件を満たした質問が存在しません' ? (
+          <Button colorScheme="teal" variant="outline" isDisabled>
+            はじめから
+          </Button>
+        ) : (
+          <Button
+            colorScheme="teal"
+            variant="outline"
+            onClick={() => {
+              updateQuestionMode('training')
+              selectQuestionList(questionList, settingDetail)
+              nextQuestion(settingDetail)
+              makeSetting()
+              saveSetting(settingDetail)
+            }}
+          >
+            はじめから
+          </Button>
+        )}
+
+        {jsCookie.get('history').split(',').length > 1 ? (
+          <Button
+            bgGradient="linear(to bottom right, green.300, green.800)"
+            color={'white'}
+            variant="solid"
+            onClick={() => {
+              // updateQuestionMode('practice')
+              loadHistory(jsCookie.get('history'), questionList)
+              updateAllSettings({
+                isSet: false,
+                mode: 'training',
+                questionOrder: jsCookie.get('questionOrder'),
+                questionRange: jsCookie.get('questionRange').split(','),
+                wordFilter: jsCookie.get('wordFilter').split(','),
+              })
+              nextQuestion(settingDetail)
+              makeSetting()
+              saveSetting(settingDetail)
+            }}
+          >
+            続きから(あと{remainingNum}問)
+          </Button>
+        ) : (
+          <Button
+            bgGradient="linear(to bottom right, green.300, green.800)"
+            color={'white'}
+            variant="solid"
+            onClick={() => updateQuestionMode('practice')}
+            isDisabled
+          >
+            続きから再開
+          </Button>
+        )}
+
+        {/* <Button
+          bgGradient="linear(to bottom right, green.300, green.800)"
+          color={'white'}
+          variant="solid"
+          onClick={() => updateQuestionMode('practice')}
+          isDisabled
+        >
+          続きから再開
+        </Button> */}
+      </Stack>
       {checkMsg === '条件を満たした質問が存在しません' ? (
-        <>
-          <Stack direction="row" spacing={4} align="center" m="2" ml={6}>
-            <Button colorScheme="teal" variant="outline" isDisabled>
-              はじめから
-            </Button>
-            <Button
-              bgGradient="linear(to bottom right, green.300, green.800)"
-              color={'white'}
-              variant="solid"
-              isDisabled
-            >
-              続きから再開
-            </Button>
-          </Stack>
-          <Alert status="error" fontWeight={'semibold'}>
-            <AlertIcon />
-            {checkMsg}
-          </Alert>
-        </>
+        <Alert status="error" fontWeight={'semibold'}>
+          <AlertIcon />
+          {checkMsg}
+        </Alert>
       ) : (
         <>
-          <Stack direction="row" spacing={4} align="center" m="2" ml={6}>
-            <Button
-              colorScheme="teal"
-              variant="outline"
-              onClick={() => {
-                updateQuestionMode('training')
-                selectQuestionList(questionList, settingDetail)
-                nextQuestion(settingDetail)
-                makeSetting()
-                saveSetting(settingDetail)
-              }}
-            >
-              はじめから
-            </Button>
-            <Button
-              bgGradient="linear(to bottom right, green.300, green.800)"
-              color={'white'}
-              variant="solid"
-              onClick={() => updateQuestionMode('practice')}
-              isDisabled
-            >
-              続きから再開
-            </Button>
-          </Stack>
           {checkMsg ? (
             <Alert status="success">
               <AlertIcon />
@@ -200,6 +229,7 @@ export const Setting = ({
           )}
         </>
       )}
+
       <RadioGroup defaultValue={settingDetail.questionOrder}>
         <Stack spacing={5} direction="row" p={2}>
           <Radio

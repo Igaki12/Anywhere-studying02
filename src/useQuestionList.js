@@ -5,6 +5,7 @@ import ans2 from './img/answer/DSC_0188.JPG'
 import attendance1 from './img/answer/attendance1-1.jpg'
 import attendance2 from './img/answer/attendance2-1.jpg'
 import attendance3 from './img/answer/attendance3-1.jpg'
+import attendance4 from './img/answer/attendance4.JPG'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -272,28 +273,44 @@ export const useQuestionList = () => {
           detailInfo: '5/25',
           questionImg: [],
           questionSentence: '大脳皮質左中心前回の障害で出る症状はどれか？',
-          choices: ['右の感覚異常', '右の運動麻痺', '左の運動麻痺', '左の感覚異常','いずれでもない'],
+          choices: [
+            '右の感覚異常',
+            '右の運動麻痺',
+            '左の運動麻痺',
+            '左の感覚異常',
+            'いずれでもない',
+          ],
           answerImg: [],
           answer: '',
-          commentary: '',
+          commentary:
+            '中心前回：一次運動野。外側皮質脊髄路を通り、延髄下部の錐体で交叉し病変の反対側に運動麻痺が出現する。',
         },
         {
           detailInfo: '5/25',
           questionImg: [],
-          questionSentence: '56歳男性。指先をピタッと目標に止めることや、両手を同時に同じリズムで動かすことが困難となった。考えられる障害部位はどれか？',
-          choices: ['小脳虫部', '大脳皮質', '小脳半球', '尾状核'],
+          questionSentence:
+            '56歳男性。指先をピタッと目標に止めることや、両手を同時に同じリズムで動かすことが困難となった。考えられる障害部位はどれか？',
+          choices: ['小脳半球', '大脳皮質', '小脳虫部', '尾状核'],
           answerImg: [],
           answer: '',
-          commentary: '',
+          commentary:
+            '小脳半球（大脳小脳）は四肢の運動の調節・言語を担当する。　小脳虫部（脊髄小脳）は体幹の運動の調節（歩行・姿勢）を担当する。　前庭小脳（片葉小節葉）は平衡・眼球運動の調節を担当する。',
         },
         {
           detailInfo: '5/25',
           questionImg: [],
-          questionSentence: '錐体部（皮質脊髄路）の障害で見られない所見はどれか？',
-          choices: ['不随意運動', '腱反射亢進', 'バビンスキー反射陽性', '筋緊張異常'],
-          answerImg: [],
+          questionSentence:
+            '錐体部（皮質脊髄路）の障害で見られない所見はどれか？',
+          choices: [
+            '不随意運動',
+            '腱反射亢進',
+            'バビンスキー反射陽性',
+            '筋緊張異常',
+          ],
+          answerImg: [attendance4],
           answer: '',
-          commentary: '',
+          commentary:
+            '上位運動ニューロン障害（錐体路障害）では、運動の指令を伝える直接賦活経路とともに、過度の収縮を抑制する間接賦活経路も障害されるため、腱反射亢進・バビンスキー反射陽性・筋トーヌス亢進などがみられる。',
         },
         // {
         //   detailInfo: '5/25',
