@@ -119,7 +119,10 @@ export const Setting = ({
     jsCookie.set('wordFilter', settingDetail.wordFilter)
     console.log(jsCookie.get())
   }
-  const remainingNum = jsCookie.get('history').split(',').length - 1
+  let remainingNum = 0
+  if (jsCookie.get('history')) {
+    remainingNum = jsCookie.get('history').split(',').length - 1
+  }
   console.log(jsCookie.get('history').split(','))
   return (
     <>
