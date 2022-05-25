@@ -1,6 +1,6 @@
 {
-  "short_name": "どこでも",
-  "name": "どこでも第2解剖試験対策",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
