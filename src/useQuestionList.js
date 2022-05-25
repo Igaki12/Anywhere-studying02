@@ -143,7 +143,7 @@ export const useQuestionList = () => {
           choices: ['膝神経節', '顎下神経節', '耳神経節', '翼口蓋神経節'],
           answerImg: [],
           answer: '',
-          commentary: '',
+          commentary: '顎下神経節：舌下腺・顎下腺へ　翼口蓋神経節：涙腺・鼻腺へ　耳神経節：耳下腺などへ　膝神経節：内耳道にあり、顔面神経はここを通過する。',
         },
         {
           detailInfo: '5/18',
