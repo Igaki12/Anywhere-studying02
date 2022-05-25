@@ -168,7 +168,8 @@ export const Setting = ({
           </Button>
         )}
 
-        {jsCookie.get('history').split(',').length > 1 ? (
+        {jsCookie.get('history') &&
+        jsCookie.get('history').split(',').length > 1 ? (
           <Button
             bgGradient="linear(to bottom right, green.300, green.800)"
             color={'white'}
