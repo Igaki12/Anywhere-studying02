@@ -10,6 +10,10 @@ import keiroMatome from './img/answer/keiroMatome.png'
 import cerebellum from './img/answer/cerebellum.png'
 import sentuusi from './img/answer/sentuusi.png'
 import willis from './img/answer/willis.png'
+import bronchiole from './img/answer/bronchiole.png'
+import gastricGland from './img/answer/gastricGland.png'
+import marrow from './img/answer/marrow.png'
+import spleen from './img/answer/spleen.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -279,8 +283,8 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: '大脳皮質左中心前回の障害で出る症状はどれか？',
           choices: [
-            '右の感覚異常',
             '右の運動麻痺',
+            '右の感覚異常',
             '左の運動麻痺',
             '左の感覚異常',
             'いずれでもない',
@@ -329,7 +333,7 @@ export const useQuestionList = () => {
       ],
     },
     {
-      groupTag: '2018本',
+      groupTag: '2018各論',
       groupContents: [
         {
           detailInfo: '(1)',
@@ -346,6 +350,278 @@ export const useQuestionList = () => {
           commentary:
             'Aorta（大動脈）は最も太い動脈で、全身に血液を送り出す（遠心性）本幹である。弾性動脈(elastic artery)とも呼ばれ、弾性繊維が平滑筋の量をしのぎ、板状の弾性繊維が何層も重なり、その間に平滑筋が入っている。血管の壁は毛細血管capillaryを除き3層構造で、内皮は単層の扁平な内皮細胞からなる。',
         },
+        {
+          detailInfo: '(2)',
+          questionImg: [],
+          questionSentence: 'Arterioleについて誤っているものを選べ。',
+          choices: [
+            '周皮細胞を持つ',
+            '中膜に平滑筋を持つ',
+            '抵抗血管と呼ばれる',
+            '筋性動脈である',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            'Arteriole:細動脈。周皮細胞を持つのは毛細血管Capillaryと細静脈Venuleである。',
+        },
+        {
+          detailInfo: '(3)',
+          questionImg: [],
+          questionSentence:
+            'Postcapillary venuleについて誤っているものを選べ。',
+          choices: [
+            '内弾性板を持つ',
+            '毛細血管と繋がる',
+            'リンパ節の傍皮質に存在する',
+            '高い内皮細胞を持つ',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '内・外弾性板が存在するのは筋性動脈以上の大きさの動脈である。',
+        },
+        {
+          detailInfo: '(4)',
+          questionImg: [],
+          questionSentence: 'Endothelial cellについて誤っているものを選べ。',
+          choices: [
+            '消化管の内腔',
+            '血液凝固に関係している',
+            '血管とリンパ管の内膜',
+            '周皮細胞と基底膜を共有する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            'Endothelial cell:内皮細胞。消化管・気管・尿管など外界に開く管の内面を覆うのは上皮細胞Epitheliumである。',
+        },
+        {
+          detailInfo: '(5)',
+          questionImg: [],
+          questionSentence: 'リンパ小節について誤っているものを選べ。',
+          choices: [
+            '一次リンパ小節はT細胞の集まりである',
+            '皮質は辺縁洞に接する',
+            '輸入リンパ管の方が輸出リンパ管より多い',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: '一次リンパ小節はB細胞の集まりである',
+        },
+        {
+          detailInfo: '(6)',
+          questionImg: [],
+          questionSentence: '脾臓について、誤っているものを選べ。',
+          choices: [
+            '人体ではほぼ閉鎖循環系である',
+            '脾洞は毛細血管である',
+            '人体最大のリンパ組織だ',
+            '脾索は細胞組織で構成される',
+          ],
+          answerImg: [spleen],
+          answer:
+            '人体ではほぼ閉鎖循環系である。/脾洞は毛細血管である（両方正解）',
+          commentary:
+            'さや動脈の先端は脾索内で開放性に終わり（開放循環）、血液は脾索の細胞組織内をゆっくり流れて脾洞へ向かう。※脾洞は毛細血管とするものと、細静脈が特殊化したものとする記述が両方あったため、これも正解となった',
+        },
+        {
+          detailInfo: '(8)',
+          questionImg: [],
+          questionSentence: '骨髄について、誤っているものを選べ。',
+          choices: [
+            '2次リンパ性器官だ',
+            '青年期以降、赤色髄質から黄色髄質になる',
+            '洞様毛細血管がある',
+            '赤芽球が島をつくる',
+          ],
+          answerImg: [marrow],
+          answer: '',
+          commentary:
+            '骨髄は胸腺と同様、リンパ球が発生・分化する一次リンパ器官である。また、成長につれ体幹部の一部の骨（胸骨など）を除き赤色髄質から黄色髄質になる。',
+        },
+        {
+          detailInfo: '(9)',
+          questionImg: [],
+          questionSentence: '鼻腔について誤っているものを選べ。',
+          choices: [
+            '鼻前庭は匂いを甘受するところである',
+            '鼻腔の嗅部は多列線毛上皮である',
+            '多列線毛上皮である',
+            '鼻前庭は重層円柱上皮である',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: 'においを甘受するのは嗅部である',
+        },
+        {
+          detailInfo: '(11)',
+          questionImg: [],
+          questionSentence: 'Tracheaについて誤っているものを選べ。',
+          choices: [
+            '非角化重層扁平上皮である',
+            '食道の前に憩室が発生する',
+            '外膜に気管軟骨をもつ',
+            '固有腺をもつ',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '気管Tracheaは多列線毛上皮。非角化重層扁平上皮は食道Esophagusである',
+        },
+        {
+          detailInfo: '(12)',
+          questionImg: [],
+          questionSentence: 'クララ細胞について誤っているものを選べ。',
+          choices: [
+            '線毛がある',
+            'Bronchioleの上皮細胞に存在する',
+            'サーファクタントを分泌する',
+            '丈の高い細胞である',
+          ],
+          answerImg: [bronchiole],
+          answer: '',
+          commentary: 'クララ細胞は線毛を持たない',
+        },
+        {
+          detailInfo: '(13)',
+          questionImg: [],
+          questionSentence: '肺胞について誤っているものを選べ。',
+          choices: [
+            '重層扁平上皮を持つ',
+            '2型が大きい球状の細胞を持つ',
+            '1型が95%を占める',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '肺胞は単層扁平上皮。呼吸器系の上皮は形態は変われどすべて単層上皮である',
+        },
+        {
+          detailInfo: '(16)',
+          questionImg: [],
+          questionSentence: '消化管について誤っているものを選べ。',
+          choices: [
+            'アウエルバッハ神経叢は粘膜下層にある',
+            '内腔が上皮で覆われている',
+            '粘膜筋板は粘膜固有層と粘膜下層をわける',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '粘膜下層に存在するのはマイスネル神経叢。アウエルバッハ神経叢は筋間にある',
+        },
+        {
+          detailInfo: '(17)',
+          questionImg: [],
+          questionSentence: '次のうち誤っているものを選べ。',
+          choices: [
+            '上皮は内皮へ移行する',
+            '消化管の内面は上皮',
+            '皮膚は表皮',
+            '血管の内面は内皮',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: '上皮と移行するのは表皮である。',
+        },
+        {
+          detailInfo: '(18)',
+          questionImg: [],
+          questionSentence: '食道について誤っているものを選べ。',
+          choices: [
+            '粘膜固有層が発達している',
+            '非角化重層扁平上皮である',
+            '上部1/3は横紋筋である',
+            '漿膜がない',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '食道の粘膜固有層は発達がわるい。代わりに粘膜下層が発達している',
+        },
+        {
+          detailInfo: '(19)',
+          questionImg: [],
+          questionSentence: '固有胃腺について誤っているものを選べ。',
+          choices: [
+            '壁細胞は好塩基性である',
+            '表層上皮細胞はムチンと重炭酸塩を分泌する',
+            '頚部の粘液分泌細胞は副細胞である',
+            '主細胞はゴルジ装置と粗面小胞体が発達している',
+          ],
+          answerImg: [gastricGland],
+          answer: '',
+          commentary: '壁細胞は好酸性。固有胃腺で好塩基性なのは主細胞である',
+        },
+        {
+          detailInfo: '(20)',
+          questionImg: [],
+          questionSentence: '小腸について誤っているものを選べ。',
+          choices: [
+            '筋層は半月ヒダを形成する',
+            '吸収上皮細胞は微絨毛を持つ',
+            '粘膜固有層は繊毛を形成する',
+            '粘膜筋板は輪状ヒダを形成する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '半月ヒダは筋層により形成された結腸膨起の間を境ずるものであり、筋層によるものといえるが小腸には存在しない。小腸に存在するのは輪状ヒダである。',
+        },
+        {
+          detailInfo: '(21)',
+          questionImg: [],
+          questionSentence: 'パネート細胞について誤っているものを選べ。',
+          choices: [
+            '小腸より大腸で発達している',
+            'デフェンシンを分泌する',
+            '好酸性の顆粒を持つ',
+            '陰窩の底部に存在している',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            'パネート細胞は小腸にしか存在しない（特に空腸に多い）。小腸より大腸で発達しているのは杯細胞',
+        },
+        {
+          detailInfo: '(22)',
+          questionImg: [],
+          questionSentence: '小腸の吸収上皮細胞について誤っているものを選べ。',
+          choices: [
+            'ムチノーゲンを分泌する',
+            '小腸の上皮細胞で一番多い',
+            'Junction complexで結合する',
+            '陰窩の底部にも存在する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            'ムチノーゲンを分泌するのは杯細胞である。吸収上皮細胞は何も分泌しない',
+        },
+        {
+          detailInfo: '(23)',
+          questionImg: [],
+          questionSentence: '小腸のM細胞について誤っているものを選べ。',
+          choices: [
+            '微絨毛が発達している',
+            '内腔の高原を貪食して固有層へ抗原提示',
+            '腸内免疫の主役',
+            'パイエル板の表層の上皮に存在',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: 'M細胞は微絨毛に乏しく、微小ヒダをもつ。',
+        },
+        // {
+        //   detailInfo: '()',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   choices: ['', '', '', ''],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
       ],
     },
     {
