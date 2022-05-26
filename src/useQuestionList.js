@@ -6,6 +6,7 @@ import attendance1 from './img/answer/attendance1-1.jpg'
 import attendance2 from './img/answer/attendance2-1.jpg'
 import attendance3 from './img/answer/attendance3-1.jpg'
 import attendance4 from './img/answer/attendance4.JPG'
+import keiroMatome from './img/answer/keiroMatome.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -143,7 +144,8 @@ export const useQuestionList = () => {
           choices: ['膝神経節', '顎下神経節', '耳神経節', '翼口蓋神経節'],
           answerImg: [],
           answer: '',
-          commentary: '顎下神経節：舌下腺・顎下腺へ　翼口蓋神経節：涙腺・鼻腺へ　耳神経節：耳下腺などへ　膝神経節：内耳道にあり、顔面神経はここを通過する。',
+          commentary:
+            '顎下神経節：舌下腺・顎下腺へ　翼口蓋神経節：涙腺・鼻腺へ　耳神経節：耳下腺などへ　膝神経節：内耳道にあり、顔面神経はここを通過する。',
         },
         {
           detailInfo: '5/18',
@@ -248,7 +250,7 @@ export const useQuestionList = () => {
             '脊髄神経節-脊髄後角-反対側後索-楔状束核-小脳皮質',
             '脊髄神経節-脊髄前角-同側後索-楔状束核-内側毛帯-扁桃体',
           ],
-          answerImg: [],
+          answerImg: [keiroMatome],
           answer: '',
           commentary:
             '温痛覚は外側脊髄視床路を通って大脳皮質（体性感覚野）に至る。末梢神経が脊髄に入った段階で中継し、すぐに交叉する。',
@@ -264,7 +266,7 @@ export const useQuestionList = () => {
             '脊髄小脳路',
             '皮質脊髄路',
           ],
-          answerImg: [],
+          answerImg: [keiroMatome],
           answer: '',
           commentary:
             '繊細な触圧核と深部感覚は延髄下部楔状束核で中継し延髄下部で交叉する後索-内側毛帯路を通り、大脳皮質（体性感覚野）に至る。',
