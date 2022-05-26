@@ -20,6 +20,8 @@ import hepaticLobule from './img/answer/hepaticLobule.png'
 import liver from './img/answer/liver.png'
 import thalamusSyndrome from './img/answer/thalamusSyndrome.png'
 import crossSectionOfCNS from './img/answer/crossSectionOfCNS.png'
+import CN10 from './img/answer/CN10.png'
+import CN11 from './img/answer/CN11.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1015,9 +1017,10 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '70歳の女性が突然、右上肢、下肢の麻痺と舌の運動障害を認めた。 発症数時間後に救急外来で診察を受けたところ、右上下肢の筋力低下、右半身の固有感覚及び識別性触覚の低下が認められた。また舌を 突き出してもらうと舌は左側に偏位した。それぞれの症状を起こしている原因となる解剖学的構造を推測してみて下さい。',
-          answerImg: [thalamusSyndrome,crossSectionOfCNS],
+          answerImg: [thalamusSyndrome, crossSectionOfCNS],
           answer: 'Dejerine症候群（延髄左内側の障害）',
-          commentary: '舌に運動障害がみられるので延髄かそれより上の中枢神経に異常があると推測できる。Wallenberg症候群（延髄外側の障害）でみられる温痛覚障害・Horner症候群などがみられていないことから、これ以外の延髄内側の部分で障害が起こっていると推測できる。これは舌だけ左側異常であることとも一致している（延髄より上の障害だと舌も同じ対側の異常になる）。',
+          commentary:
+            '舌の左側に運動障害がみられるので延髄付近の中枢神経に異常があると推測できる（延髄より上だと舌の右側、下だと舌に障害がみられない）。Wallenberg症候群（延髄外側の障害）でみられる温痛覚障害・Horner症候群などがみられていないことから、これ以外の延髄内側の部分で障害が起こっていると推測できる。',
         },
         {
           detailInfo: '症例2',
@@ -1034,9 +1037,10 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             'これまで健康であった50歳男性が6ヶ月前から物を飲み込みにくい、水を飲むときに気管に入って むせるというような症状が現れてきた。 約3ヶ月前から声が徐々にかすれてきて、右肩を挙上 することが困難になってきた。神経内科を受診し、診察を受けたところ以下のような所見が得られた。　1) 右軟口蓋の下垂があり、 右の咽頭を刺激しても軟口蓋は挙上せず、 患者は咽頭に刺激を 加えられたかどうかも分からないと述べた。 反対側の咽頭は刺激すると挙上した。　2) 喉頭をファイバースコープで観察すると発生時の右の声帯の動きが認められなかった。　3)右の僧帽筋と胸鎖乳突筋の筋力低下、 及び筋萎縮が認められた。　どの脳神経に異常があるか (複数です) ? また、 全ての症状及び経過を一元的に解釈出来る病変とは? (これは少し難しいです)',
-          answerImg: [],
-          answer: '準備中',
-          commentary: '',
+          answerImg: [CN11, CN10],
+          answer: '右頚静脈孔の異常？',
+          commentary:
+            '右迷走神経（咽頭・喉頭障害）、右副神経（僧帽筋・胸鎖乳突筋障害）の異常がみられる。これらの脳神経はいずれも頚静脈孔を通る',
         },
         {
           detailInfo: '症例4',
