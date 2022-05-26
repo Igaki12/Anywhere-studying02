@@ -7,6 +7,9 @@ import attendance2 from './img/answer/attendance2-1.jpg'
 import attendance3 from './img/answer/attendance3-1.jpg'
 import attendance4 from './img/answer/attendance4.JPG'
 import keiroMatome from './img/answer/keiroMatome.png'
+import cerebellum from './img/answer/cerebellum.png'
+import sentuusi from './img/answer/sentuusi.png'
+import willis from './img/answer/willis.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -183,7 +186,7 @@ export const useQuestionList = () => {
             '後交通動脈',
             '後大脳動脈',
           ],
-          answerImg: [],
+          answerImg: [sentuusi],
           answer: '',
           commentary:
             'レンズ核線条体動脈は脳血管中心枝で穿通枝ともよばれる。動脈硬化の影響をもっとも受けやすい脳動脈。',
@@ -219,10 +222,10 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: 'ウィリス動脈輪を構成しない血管はどれか？',
           choices: ['脳底動脈', '前大脳動脈', '後交通動脈', '中大脳動脈'],
-          answerImg: [],
+          answerImg: [willis],
           answer: '',
           commentary:
-            'ウィリス動脈輪は下垂体と視交叉を取り囲む輪状の動脈群で、前交通動脈・前大脳動脈・後交通動脈・内頚動脈（中大脳動脈）・後大脳動脈で構成される。',
+            'ウィリス動脈輪は下垂体と視交叉を取り囲む輪状の動脈群で、前交通動脈・前大脳動脈・後交通動脈・内頚動脈（中大脳動脈）・後大脳動脈で構成される?',
         },
         {
           detailInfo: '5/20',
@@ -293,7 +296,7 @@ export const useQuestionList = () => {
           questionSentence:
             '56歳男性。指先をピタッと目標に止めることや、両手を同時に同じリズムで動かすことが困難となった。考えられる障害部位はどれか？',
           choices: ['小脳半球', '大脳皮質', '小脳虫部', '尾状核'],
-          answerImg: [],
+          answerImg: [cerebellum],
           answer: '',
           commentary:
             '小脳半球（大脳小脳）は四肢の運動の調節・言語を担当する。　小脳虫部（脊髄小脳）は体幹の運動の調節（歩行・姿勢）を担当する。　前庭小脳（片葉小節葉）は平衡・眼球運動の調節を担当する。',
