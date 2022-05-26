@@ -822,7 +822,7 @@ export const useQuestionList = () => {
           ],
           answerImg: [],
           answer: '',
-          commentary: '',
+          commentary: 'PAS 染色に陽性である。',
         },
         {
           detailInfo: '(42)',
