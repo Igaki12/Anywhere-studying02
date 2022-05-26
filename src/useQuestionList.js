@@ -14,6 +14,10 @@ import bronchiole from './img/answer/bronchiole.png'
 import gastricGland from './img/answer/gastricGland.png'
 import marrow from './img/answer/marrow.png'
 import spleen from './img/answer/spleen.png'
+import adrenalGland from './img/answer/adrenalGland.png'
+import bloodUrineBarrier from './img/answer/bloodUrineBarrier.png'
+import hepaticLobule from './img/answer/hepaticLobule.png'
+import liver from './img/answer/liver.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -613,15 +617,332 @@ export const useQuestionList = () => {
           answer: '',
           commentary: 'M細胞は微絨毛に乏しく、微小ヒダをもつ。',
         },
-        // {
-        //   detailInfo: '()',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   choices: ['', '', '', ''],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '(24)',
+          questionImg: [],
+          questionSentence: '小腸組織について誤っているものを選べ。',
+          choices: [
+            '腸腺以外で固有腺があるのは空腸だけである',
+            '杯細胞はすべての小腸上皮に存在する',
+            'すべての小腸にはリンパ小節が存在する',
+            'すべての小腸では絨毛が発達している',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: '固有線があるのは十二指腸だけである。',
+        },
+        {
+          detailInfo: '(25)',
+          questionImg: [],
+          questionSentence: '十二指腸腺について誤っているものを選べ。',
+          choices: [
+            'リーベルキューン腺とも呼ばれる',
+            'おもに粘膜下層にあり、陰窩に開口する',
+            '粘液線である',
+            'ウロガストロンを分泌する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            'リーベルキューン腺とも呼ばれるのは腸腺。十二指腸腺はブルンネル腺である。',
+        },
+        {
+          detailInfo: '(26)',
+          questionImg: [],
+          questionSentence: '結腸について誤っているものを選べ。',
+          choices: [
+            '杯細胞よりパネート細胞が発達している',
+            '輪状ひだはないが半月ひだがある',
+            '筋層の外縦筋を結腸ひもと呼ぶ',
+            '漿膜が伸びだして脂肪が入り、腹膜垂を作る',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            'パネート細胞は小腸にしか存在しない(特に空腸に存在)。小腸より大腸で発達しているのは杯細胞。',
+        },
+        {
+          detailInfo: '(27)',
+          questionImg: [],
+          questionSentence: '肝小葉について誤っているものを選べ。',
+          choices: [
+            'その中心に中心動脈がある',
+            '基本的に六角形の構造である',
+            '血管は中心に向かって流れる',
+            '胆汁は毛細胆管に集まる',
+          ],
+          answerImg: [hepaticLobule],
+          answer: '',
+          commentary: '肝小葉の中心に存在するのは中心静脈である。',
+        },
+        {
+          detailInfo: '(29)',
+          questionImg: [],
+          questionSentence: '肝臓について誤っているものを選べ。',
+          choices: [
+            'クッパー細胞はディッセ腔内にある',
+            '伊東細胞はディッセ腔内にある',
+            ' 伊東細胞は肝障害によりコラーゲンを産生する',
+            'クッパー細胞は肝臓のマクロファージである',
+          ],
+          answerImg: [liver],
+          answer: '',
+          commentary:
+            'クッパー細胞が存在するのは類洞内である。ここには免疫細胞としてピット細胞も存在する。',
+        },
+        {
+          detailInfo: '(30)',
+          questionImg: [],
+          questionSentence: '肝臓の小葉間組織について',
+          choices: [
+            '中心静脈が通る',
+            'グリソン鞘という',
+            '単層立方上皮である小葉間胆管が通る',
+            'アザン染色で青に染まる',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '中心静脈が通るのは肝小葉の中心であり、小葉間組織に通る静脈は小葉間静脈。',
+        },
+        {
+          detailInfo: '(31)',
+          questionImg: [],
+          questionSentence: '膵臓について誤っているものを選べ。',
+          choices: [
+            '筋上皮細胞をもつ',
+            '中心腺房細胞が発達する',
+            '線条部導管をもたない',
+            'エオジン好染',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '膵臓の外分泌部は筋上皮細胞をもたない。このほかに、問題の通り線条部導管も持たない',
+        },
+        {
+          detailInfo: '(32)',
+          questionImg: [],
+          questionSentence: '原始卵胞について誤っているものを選べ。',
+          choices: [
+            'その周りを発達した卵胞膜が取り囲む',
+            '新生児に多く見られる',
+            '基底膜は卵胞上皮細胞の外側にある',
+            '単層の扁平な卵胞上皮細胞に包まれる',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '原始卵胞を取り囲むのは卵胞上皮細胞と基底膜である。卵胞膜が取り囲むようになるのは一次卵胞になってから。',
+        },
+        {
+          detailInfo: '(33)',
+          questionImg: [],
+          questionSentence:
+            '卵母細胞(グラーフ細胞)について誤っているものを選べ。',
+          choices: [
+            '放出されるのは卵子細胞である',
+            '卵胞に含まれるのは全て一次卵母細胞である',
+            '放線冠と透明層はくっついている',
+            '',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            'グラーフ卵胞から放出されるのは二次卵母細胞で、それが受精して初めて卵子となる(卵子細胞という言葉は厳密にはないようである)。',
+        },
+        {
+          detailInfo: '(37)',
+          questionImg: [],
+          questionSentence: '胎盤について誤っているものを選べ。',
+          choices: [
+            '絨毛内部に母体の血液が入っている',
+            '受精卵が栄養膜と内細胞塊に分化',
+            '栄養膜が胎盤になる',
+            '栄養膜には合胞体性と細胞性がある',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '絨毛は胎児側に形成され、基底脱落膜まで流れる母体の血液は胎盤膜を隔てて胎児の血液と混じらないようになっている。',
+        },
+        {
+          detailInfo: '(38)',
+          questionImg: [],
+          questionSentence: '大人の曲精細管について誤っているものを選べ。',
+          choices: [
+            '単層扁平上皮である',
+            '精上皮と呼ばれる',
+            '基底膜に囲まれている',
+            '筋上皮細胞が存在する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '曲精細管は重層上皮。そもそも男性生殖器系で単層扁平上皮である組織は存在しない。',
+        },
+        {
+          detailInfo: '(39)',
+          questionImg: [],
+          questionSentence: 'セルトリ細胞について誤っているものを選べ。',
+          choices: [
+            '基底膜に接していない',
+            '貪食能を持つ',
+            'tight junction により、管腔内を基底区画と傍腔区画に分けられる',
+            '円柱状の細胞で、大きな核小体をもつ',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: 'セルトリ細胞は基底膜に接している。',
+        },
+        {
+          detailInfo: '(40)',
+          questionImg: [],
+          questionSentence: '精路について誤っているものを選べ。',
+          choices: [
+            '精巣輸出管は単一の管である',
+            '精巣上体管は不動毛を持つ',
+            '精管の筋層は内縦、中輪、外縦の 3 層からなる',
+            '精管は休止状態の精子を数週間貯蔵する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '精巣輸出管は 12 本くらいの管である。単一の管であるのは精巣上体管以降。',
+        },
+        {
+          detailInfo: '(41)',
+          questionImg: [],
+          questionSentence: '腎臓のメサンギウムについて誤っているものを選べ。',
+          choices: [
+            'PAS 染色に陰性である',
+            '特殊な結合組織を意味する',
+            'メサンギウム細胞とその基質からなる',
+            '糸球体内、外に存在する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
+        {
+          detailInfo: '(42)',
+          questionImg: [],
+          questionSentence: '傍糸球体装置について誤っているものを選べ。',
+          choices: [
+            '緻密斑は近位尿細管に存在する',
+            '血管極に存在する',
+            'グールマーティ細胞は PAS 染色陽性である',
+            '傍糸球体細胞は輸入細動脈の平滑筋由来である',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary: '緻密斑は遠位尿細管の一部の上皮が分化したものである。',
+        },
+        {
+          detailInfo: '(43)',
+          questionImg: [],
+          questionSentence: '尿細菅の上皮について誤っているものを選べ。',
+          choices: [
+            '基底線条は遠位尿細菅で発達している',
+            '最も扁平なのは中間尿細菅',
+            '細胞質が明るく細胞境界が鮮明なのは集合菅',
+            '刷子縁を持つのは近位尿細菅',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '遠位尿細管は基底線条に乏しく、近位尿細管ではわかりやすい。',
+        },
+        {
+          detailInfo: '(45)',
+          questionImg: [],
+          questionSentence: '内分泌腺について誤っているものを選べ。',
+          choices: [
+            '導管をもつ',
+            'もともと上皮由来である',
+            '毛細血管が発達する',
+            'ホルモンを産生する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '内分泌腺は導管を持たない。毛細血管が発達し血行性で標的器官へホルモンを分泌する。',
+        },
+        {
+          detailInfo: '(46)',
+          questionImg: [],
+          questionSentence: '下垂体前葉について誤っているものを選べ。',
+          choices: [
+            '神経性下垂体と呼ばれる',
+            '酸好性の成長ホルモン分泌細胞が多く存在する',
+            '色素嫌性の細胞は副腎皮質刺激ホルモンを分泌する',
+            '毛細血管は遊窓性である',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            '下垂体前葉は腺性下垂体。後葉が神経性下垂体(cf.下垂体の発生)。',
+        },
+        {
+          detailInfo: '(48)',
+          questionImg: [],
+          questionSentence: '副腎皮質について誤っているものを選べ。',
+          choices: [
+            'クロム親和性細胞が配列する',
+            '球状層、束状層、網状層の 3 層に区分される',
+            '中胚葉由来である',
+            '洞様毛細血管が発達する',
+          ],
+          answerImg: [adrenalGland],
+          answer: '',
+          commentary:
+            'クロム親和性細胞が配列するのは副腎髄質。このほかにも胃腸などにもクロム親和性細胞が存在する(ex:EC 細胞、ECL 細胞)。',
+        },
+        {
+          detailInfo: '(49)',
+          questionImg: [],
+          questionSentence: '副腎髄質について誤っているものを選べ。',
+          choices: [
+            '輪層筋がなす中心動脈をもつ',
+            '神経節細胞がある',
+            '外胚葉由来である',
+            'アドレナリンを分泌する',
+          ],
+          answerImg: [adrenalGland],
+          answer: '',
+          commentary: '副腎髄質の中心静脈はすべて縦走筋からなる。',
+        },
+        {
+          detailInfo: '(50)',
+          questionImg: [],
+          questionSentence: '膵臓内分泌部について誤っているものを選べ。',
+          choices: [
+            'A 細胞はインスリンを分泌する',
+            'ランゲルハンス島という',
+            'B 細胞が全体の 60〜70%を占めている',
+            'B 細胞が中心に存在する',
+          ],
+          answerImg: [],
+          answer: '',
+          commentary:
+            'A 細胞が分泌するのはグルカゴン。インスリンは B 細胞が分泌する。',
+        },
+        {
+          detailInfo: '大問2',
+          questionImg: [],
+          questionSentence: '脾臓について血管構造を明らかにしつつ説明せよ。',
+          answerImg: [spleen],
+          answer: '準備中',
+          commentary: '',
+        },
+        {
+          detailInfo: '大問3',
+          questionImg: [],
+          questionSentence: '血液尿関門について説明せよ。',
+          answerImg: [bloodUrineBarrier],
+          answer: '準備中',
+          commentary: '',
+        },
       ],
     },
     {
