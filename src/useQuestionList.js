@@ -18,6 +18,8 @@ import adrenalGland from './img/answer/adrenalGland.png'
 import bloodUrineBarrier from './img/answer/bloodUrineBarrier.png'
 import hepaticLobule from './img/answer/hepaticLobule.png'
 import liver from './img/answer/liver.png'
+import thalamusSyndrome from './img/answer/thalamusSyndrome.png'
+import crossSectionOfCNS from './img/answer/crossSectionOfCNS.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1013,9 +1015,9 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '70歳の女性が突然、右上肢、下肢の麻痺と舌の運動障害を認めた。 発症数時間後に救急外来で診察を受けたところ、右上下肢の筋力低下、右半身の固有感覚及び識別性触覚の低下が認められた。また舌を 突き出してもらうと舌は左側に偏位した。それぞれの症状を起こしている原因となる解剖学的構造を推測してみて下さい。',
-          answerImg: [],
-          answer: '準備中',
-          commentary: '',
+          answerImg: [thalamusSyndrome,crossSectionOfCNS],
+          answer: 'Dejerine症候群（延髄左内側の障害）',
+          commentary: '舌に運動障害がみられるので延髄かそれより上の中枢神経に異常があると推測できる。Wallenberg症候群（延髄外側の障害）でみられる温痛覚障害・Horner症候群などがみられていないことから、これ以外の延髄内側の部分で障害が起こっていると推測できる。これは舌だけ左側異常であることとも一致している（延髄より上の障害だと舌も同じ対側の異常になる）。',
         },
         {
           detailInfo: '症例2',
