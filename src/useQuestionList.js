@@ -25,6 +25,9 @@ import CN11 from './img/answer/CN11.png'
 import nidusAVM from './img/answer/nidusAVM.png'
 import complexParalyzedCN from './img/answer/complexParalyzedCN.png'
 import pyramidalTract from './img/answer/InkedpyramidalTract_LI.jpg'
+import CN12 from './img/answer/CN12.JPG'
+import brainStem from './img/question/220528brainStem.png'
+import mesencephalon from './img/answer/mesencephalon.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -331,6 +334,57 @@ export const useQuestionList = () => {
           answer: '',
           commentary:
             '上位運動ニューロン障害（錐体路障害）では、運動の指令を伝える直接賦活経路とともに、過度の収縮を抑制する間接賦活経路も障害されるため、腱反射亢進・バビンスキー反射陽性・筋トーヌス亢進などがみられる。',
+        },
+        {
+          detailInfo: '5/27',
+          questionImg: [],
+          questionSentence:
+            '70歳女性、突然右上肢、下肢の麻痺と舌の運動障害を認めた。診断では舌を突き出すと舌は左に偏位した。この患者の舌の症状は以下のどの構造の異常からくるか？',
+          choices: [
+            '左舌下神経',
+            '右舌下神経',
+            '右舌咽神経',
+            '左舌咽神経',
+            '左迷走神経',
+          ],
+          answerImg: [CN12],
+          answer: '',
+          commentary:
+            '舌の運動は全て舌下神経が支配する。大脳皮質→（左右で交叉）→延髄の舌下神経核→舌下神経→舌の経路のため、今回は同側の舌下神経が選ばれる。',
+        },
+        {
+          detailInfo: '5/27',
+          questionImg: [],
+          questionSentence:
+            '70歳女性、 突然右上肢、 下肢の麻痺と舌の運動障害を認めた。診察では右上下肢の筋 力低下、 右半身の固有感覚および触覚の低下が認められた。この患者の固有感覚、触覚の低下は以下のどの構造が障害されて起こっているか? ',
+          choices: [
+            '左内側毛帯',
+            '右内側毛帯',
+            '左外側脊髄視床路',
+            '右外側脊髄視床路',
+            'どれでもない',
+          ],
+          answerImg: [keiroMatome, crossSectionOfCNS],
+          answer: '左内側毛帯？',
+          commentary:
+            '固有感覚：筋紡錘などからの意識できない感覚。意識できる触覚は後索→（左右で交叉）→逆側の内側毛帯を上行する経路で視床まで進む。固有感覚も一部この経路を通過する。',
+        },
+        {
+          detailInfo: '5/27',
+          questionImg: [brainStem],
+          questionSentence:
+            '中脳の中心部に出血が生じた。次のうち起こらない症状はどれか',
+          choices: [
+            '四肢麻痺',
+            '意識障害',
+            '感覚異常',
+            '眼球運動異常',
+            '視野障害',
+          ],
+          answerImg: [mesencephalon],
+          answer: '',
+          commentary:
+            '皮質脊髄路（錐体路）の運動ニューロンの線維は大脳皮質→内包→大脳脚の中央部→橋縦束（橋腹側部）→錐体の経路を下行するため、出血部分を通過していない。',
         },
         // {
         //   detailInfo: '5/25',
@@ -1023,7 +1077,7 @@ export const useQuestionList = () => {
           answerImg: [thalamusSyndrome, crossSectionOfCNS],
           answer: 'Dejerine症候群（延髄左内側の障害）',
           commentary:
-            '舌の左側に運動障害がみられるので延髄付近の中枢神経に異常があると推測できる（延髄より上だと舌の右側、下だと舌に障害がみられない）。Wallenberg症候群（延髄外側の障害）でみられる温痛覚障害・Horner症候群などが生じていないことから、これ以外の延髄内側の部分で障害が起こっていると推測できる。延髄の前脊髄動脈の虚血が原因。',
+            '舌の左側に運動障害がみられるので延髄付近の中枢神経に異常があると推測できる（延髄より上だと舌の右側、下だと舌に障害がみられない）。Wallenberg症候群（延髄外側の障害）でみられる温痛覚障害・Horner症候群などが生じていないことから、これ以外の延髄内側の部分で障害が起こっていると推測できる。脳底動脈の傍正中枝の閉塞が原因',
         },
         {
           detailInfo: '症例2',
@@ -1033,7 +1087,7 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             'Millard-Gubler (ミヤールーギュブレール) 症候群、橋下部腹側症候群 外転神経麻痺と顔面神経麻痺が同時に出現するのが特徴',
-          commentary: '準備中',
+          commentary: '橋の部分で',
         },
         {
           detailInfo: '症例3',
@@ -1052,7 +1106,8 @@ export const useQuestionList = () => {
             '72歳女性、 朝起きると左半身が動かせない (上肢、下肢共に) ことに気付いた。家人の助けを借りてベッドから起床したが、 物が2重に見え、まぶしいと訴える。家人が患者の顔を正面から見ると、 右の上眼瞼が下がっており、 左眼は正面 を向いているのに右眼は下外側を向いた状態となっていることに気付いた。救急外来に運ばれ、診察を受けた結果、 左半身の片麻痺、 右動眼神経の麻痺 であると診断された。診断はついたが、 この患者さんは脳のどの部分に障害が起きているのだろうか?',
           answerImg: [nidusAVM, complexParalyzedCN, pyramidalTract],
           answer: '脳動静脈奇形AVMによる複合神経麻痺？',
-          commentary: '脳動脈瘤奇形AVMにより脳の一部が損傷しており、右動眼神経麻痺、左半身片麻痺はいずれも視床付近の狭い範囲を通過している神経の障害で起こる',
+          commentary:
+            '脳動脈瘤奇形AVMにより脳の一部が損傷しており、右動眼神経麻痺、左半身片麻痺はいずれも視床付近の狭い範囲を通過している神経の障害で起こる',
         },
         // {
         //   detailInfo:'症例1',
