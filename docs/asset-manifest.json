@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.f6a05b59.js",
+    "main.js": "/Anywhere-studying02/static/js/main.96b0e5c9.js",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/liver.png": "/Anywhere-studying02/static/media/liver.db5c84a18c380ee2f687.png",
     "static/media/marrow.png": "/Anywhere-studying02/static/media/marrow.45fab6b0f528b6add20a.png",
@@ -30,10 +30,10 @@
     "static/media/bloodUrineBarrier.png": "/Anywhere-studying02/static/media/bloodUrineBarrier.490d202838ef52e06df9.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.f6a05b59.js.map": "/Anywhere-studying02/static/js/main.f6a05b59.js.map"
+    "main.96b0e5c9.js.map": "/Anywhere-studying02/static/js/main.96b0e5c9.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.f6a05b59.js"
+    "static/js/main.96b0e5c9.js"
   ]
 }
