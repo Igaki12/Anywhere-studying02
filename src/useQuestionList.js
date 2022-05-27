@@ -22,6 +22,9 @@ import thalamusSyndrome from './img/answer/thalamusSyndrome.png'
 import crossSectionOfCNS from './img/answer/crossSectionOfCNS.png'
 import CN10 from './img/answer/CN10.png'
 import CN11 from './img/answer/CN11.png'
+import nidusAVM from './img/answer/nidusAVM.png'
+import complexParalyzedCN from './img/answer/complexParalyzedCN.png'
+import pyramidalTract from './img/answer/InkedpyramidalTract_LI.jpg'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1047,9 +1050,9 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '72歳女性、 朝起きると左半身が動かせない (上肢、下肢共に) ことに気付いた。家人の助けを借りてベッドから起床したが、 物が2重に見え、まぶしいと訴える。家人が患者の顔を正面から見ると、 右の上眼瞼が下がっており、 左眼は正面 を向いているのに右眼は下外側を向いた状態となっていることに気付いた。救急外来に運ばれ、診察を受けた結果、 左半身の片麻痺、 右動眼神経の麻痺 であると診断された。診断はついたが、 この患者さんは脳のどの部分に障害が起きているのだろうか?',
-          answerImg: [],
-          answer: '準備中',
-          commentary: '',
+          answerImg: [nidusAVM, complexParalyzedCN, pyramidalTract],
+          answer: '脳動静脈奇形AVMによる複合神経麻痺？',
+          commentary: '脳動脈瘤奇形AVMにより脳の一部が損傷しており、右動眼神経麻痺、左半身片麻痺はいずれも視床付近の狭い範囲を通過している神経の障害で起こる',
         },
         // {
         //   detailInfo:'症例1',
