@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.82a4af5a.js",
+    "main.js": "/Anywhere-studying02/static/js/main.61f69c7e.js",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/liver.png": "/Anywhere-studying02/static/media/liver.db5c84a18c380ee2f687.png",
     "static/media/marrow.png": "/Anywhere-studying02/static/media/marrow.45fab6b0f528b6add20a.png",
@@ -20,6 +20,7 @@
     "static/media/thalamusSyndrome.png": "/Anywhere-studying02/static/media/thalamusSyndrome.ea9d472e539ab7561729.png",
     "static/media/attendance4.JPG": "/Anywhere-studying02/static/media/attendance4.7463ce523c9c8ae04a14.JPG",
     "static/media/attendance1-1.jpg": "/Anywhere-studying02/static/media/attendance1-1.b26ea93e3ac179317656.jpg",
+    "static/media/intestine.png": "/Anywhere-studying02/static/media/intestine.ff5787b36a8c56e72111.png",
     "static/media/CN10.png": "/Anywhere-studying02/static/media/CN10.faf47ba23a318a14f05a.png",
     "static/media/attendance2-1.jpg": "/Anywhere-studying02/static/media/attendance2-1.a3efa170c5a5efacac51.jpg",
     "static/media/cerebellum.png": "/Anywhere-studying02/static/media/cerebellum.3f5203f250181c2a79fe.png",
@@ -33,10 +34,10 @@
     "static/media/bloodUrineBarrier.png": "/Anywhere-studying02/static/media/bloodUrineBarrier.490d202838ef52e06df9.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.82a4af5a.js.map": "/Anywhere-studying02/static/js/main.82a4af5a.js.map"
+    "main.61f69c7e.js.map": "/Anywhere-studying02/static/js/main.61f69c7e.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.82a4af5a.js"
+    "static/js/main.61f69c7e.js"
   ]
 }

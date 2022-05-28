@@ -28,6 +28,7 @@ import pyramidalTract from './img/answer/InkedpyramidalTract_LI.jpg'
 import CN12 from './img/answer/CN12.JPG'
 import brainStem from './img/question/220528brainStem.png'
 import mesencephalon from './img/answer/mesencephalon.png'
+import intestine from './img/answer/intestine.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -644,7 +645,7 @@ export const useQuestionList = () => {
             '好酸性の顆粒を持つ',
             '陰窩の底部に存在している',
           ],
-          answerImg: [],
+          answerImg: [intestine],
           answer: '',
           commentary:
             'パネート細胞は小腸にしか存在しない（特に空腸に多い）。小腸より大腸で発達しているのは杯細胞',
@@ -670,11 +671,11 @@ export const useQuestionList = () => {
           questionSentence: '小腸のM細胞について誤っているものを選べ。',
           choices: [
             '微絨毛が発達している',
-            '内腔の高原を貪食して固有層へ抗原提示',
+            '内腔の抗原を貪食して固有層へ抗原提示',
             '腸内免疫の主役',
             'パイエル板の表層の上皮に存在',
           ],
-          answerImg: [],
+          answerImg: [intestine],
           answer: '',
           commentary: 'M細胞は微絨毛に乏しく、微小ヒダをもつ。',
         },
