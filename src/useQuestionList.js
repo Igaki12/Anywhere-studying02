@@ -29,6 +29,13 @@ import CN12 from './img/answer/CN12.JPG'
 import brainStem from './img/question/220528brainStem.png'
 import mesencephalon from './img/answer/mesencephalon.png'
 import intestine from './img/answer/intestine.png'
+import centralMotorNeuron from './img/answer/centralMotorNeuron.png'
+import MillaredGubler from './img/answer/Millared-Gubler.png'
+import alveolus from './img/answer/alveolus.png'
+import BloodAir from './img/answer/BloodAir.png'
+import capillary from './img/answer/capillary.png'
+import lipidInIntestine from './img/answer/lipidInIntestine.png'
+import sinusoid from './img/answer/sinusoid.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1008,63 +1015,119 @@ export const useQuestionList = () => {
       ],
     },
     {
-      groupTag: '2020本',
+      groupTag: '2020各論',
       groupContents: [
         {
           detailInfo: '大問1(1)',
           questionImg: [],
           questionSentence: '洞様毛細血管について、その構造を説明しなさい。',
-          answerImg: [ans2],
+          answerImg: [sinusoid],
           answer:
-            '洞様毛細血管は一般の毛細血管よりはるかに太く、血管壁には大小の窓が空いている。',
+            '洞様毛細血管（類洞）は一般の毛細血管よりはるかに太く、血流は穏やかである。単層扁平上皮で内皮細胞間で広い間隙が空いている非連続型毛細血管に分類される',
           commentary:
-            '（肝臓：）小葉内には肝細胞索の間を洞様毛細血管（類洞）が流れ、小葉中心の中心静脈へ向かう。小さい窓は100nm以下、大きい窓は径1～3μm程度。内皮細胞のところどころではクッパー細胞という、異物を貪食して処理する細胞がある。内皮と無数の微絨毛をもつ肝細胞との間をディッセ腔という。ここには伊藤の脂肪摂取細胞があり、ビタミンAを取り込み、膠原繊維を作っている。',
+            '（一般的な毛細血管の）直径は約8マイクロメートルほどであるが、なかには赤血球がやっと通るほどの細い毛細血管もあるし、直径30～40マイクロメートルの太い毛細血管もある。このような太い毛細血管を洞様(どうよう)毛細血管（類洞）とよび、肝臓、脾臓(ひぞう)、骨髄などの毛細血管にみられる。毛細血管の壁は、単層扁平(へんぺい)上皮細胞（内皮細胞という）からできている薄い壁である。毛細血管壁には、この内皮細胞が完全に連続して配列する無窓(むそう)型（連続型）毛細血管と、内皮細胞体がきわめて薄くなり（厚さ500オングストロームほど）、その部分に細胞質を貫いて多数の小窓が形成される、いわゆる有窓型（有孔型）毛細血管とがある。このほか、内皮細胞間に広い間隙(かんげき)があいている非連続型毛細血管というのがある。この型の毛細血管は内腔(ないくう)が広く、洞様毛細血管はこの型である。',
         },
         {
           detailInfo: '大問1(2)',
           questionImg: [],
           questionSentence:
             '洞様毛細血管を持つ臓器を一つ選び、その臓器の組織構造を図示して説明しなさい。(図中には洞様毛細血管を含むこと)',
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [hepaticLobule, liver],
+          answer:
+            '【解答例：肝臓】中心を中心静脈が走り、角にはグリソン鞘という小葉間胆管・肝動脈・門脈・リンパ管が通る結合組織が配置された6角柱の肝小葉が肝組織の構造単位である。中心静脈から周囲に肝細胞索が放射状に並んでいる。',
+          commentary:
+            '洞様毛細血管sinusoidは類洞とも呼ばれ、肝臓の他に骨髄・脾臓・内分泌器官などでもみられる',
         },
         {
           detailInfo: '大問2(1)',
           questionImg: [],
           questionSentence:
             '肺胞を構成する2種類の細胞について、その名称と細胞の特徴を答えなさい。',
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [alveolus],
+          answer:
+            'Ⅰ型肺胞上位細胞（扁平肺胞上皮細胞）は、極めて薄い膜状の細胞で、細胞表面のほとんどを覆っている。細胞質のほとんどが0.05~0.2μm厚の薄い膜のようになっていて、この薄い細胞質をガスが拡散していく。　Ⅱ型肺胞上皮細胞（大肺胞上皮細胞）は、背の高い膨隆した大型の細胞で、Ⅰ型肺胞上皮細胞に挟まって散在する。表面に少量の微絨毛を持ち、表面活性物質を含んだ分泌顆粒を開口分泌によって放出する。',
+          commentary:
+            '細胞内小器官は1型では核の周囲のみに存在し発達していない。2型ではゴルジ装置・ミトコンドリア・粗面小胞体・ライソソームなどの他核上部にオスミウムに国選する特有の小体を含む。この招待は直径数μmの球状を呈し内部に同心円状の層板構造がみられることから層板小体とよばれる。層板小体は表面活性物質surfactantを含んだ分泌顆粒で、この物質の働きで肺胞内の表面張力が減少し、肺胞は虚脱を免れている。他、肺胞内には肺胞マクロファージが存在する。マクロファージは肺胞腔を自由に移動し、一部は間質や血管内にも存在する。胎児は28周ごろに2型肺胞上皮細胞が出現するため、この時期を過ぎれば早期産児でも理論的には肺呼吸が可能となる',
         },
         {
           detailInfo: '大問2(2)',
           questionImg: [],
           questionSentence: '血液空気関門について、図示して説明しなさい。',
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [BloodAir],
+          answer:
+            '酸素や二酸化炭素が肺胞と毛細血管を行き来するためには、肺胞上皮・基底膜・毛細血管内皮の3層を通過する必要がある。この3層で構成される厚さ0.5μm程度の障壁を血液空気関門と呼び、ガス（気体）はこの関門を通過できるが水や他のほとんどの分子は通過できない。',
+          commentary:
+            '血液空気関門：Blood-air barrier。毛細血管内皮細胞は小孔を持たず、内皮細胞どうしはタイト結合tight junctionで繋がれている。間の1枚の基底膜は肺胞上皮の基底膜と血管内皮の基底膜が融合したものである。',
         },
         {
           detailInfo: '大問3(1)',
           questionImg: [],
           questionSentence:
             '小腸の粘膜上皮を構成する細胞を全て挙げ、それぞれについて説明しなさい。',
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [intestine],
+          answer: '吸収上皮細胞、杯細胞、M細胞、（パネート細胞）',
+          commentary:
+            '吸収上皮細胞absorptive epithelial cellは高さ25μmの六角形の大型円柱上皮細胞で、核は中央にある。細胞表面には微絨毛micro villiがびっしり生え、膜消化に関与する。杯細胞goblet cellは吸収上皮細胞の間に散在し、多数の粘膜顆粒を含んで膨らんでいる。核は基底側に押しやられて変形し、全体として杯のような形を呈する。この細胞は粘液を分泌し、特に大腸で発達したものがみられる。M細胞microfold cellは特殊な吸収上皮細胞で、微絨毛は少なく、microfoldというしわのような構造が形成される。細胞体は薄く伸び、数個のリンパ球を抱え込んでいる。小腸の免疫（特にIgA産生）に深く関与している。パイエル板の表層に存在する。パネート細胞paneth cellは小腸に特有の細胞である。陰窩の底に数個固まって存在する。漿液細胞でエオジンに染まる（好酸性）大型の2種類の顆粒を持つ。陰窩の底にはパネート細胞と並んでCBC細胞が分布する。CBC細胞は自己複製と全ての上皮細胞の産生を行う幹細胞である。',
         },
         {
           detailInfo: '大問3(2)',
           questionImg: [imageSample1],
           questionSentence:
             'これは小腸粘膜上皮を構成する細胞の電子顕微鏡写真である。細胞面を答え、この写真を説明しなさい。',
-          answerImg: [imageSample2],
+          answerImg: [lipidInIntestine],
           answer:
-            '小腸粘膜上皮では...........................................................................................................................',
-          commentary: 'くわしい解説',
+            '小腸表面は多数の絨毛が並んでおり、それぞれの絨毛を構成する吸収上皮細胞には膜消化を行う微絨毛がびっしり生え、冊子縁として映っている。その管腔側では消化中のミセル？が集まっている。',
+          commentary:
+            '胆汁やリパーゼで加水分解されたトリグリセリドは脂肪酸と2-モノアシルグリセロールになり、コレステロールや胆汁酸とともに親水性部分を外側に向けた直径30~100nmのミセルを形成する。ミセルは濃度勾配に従い、小腸粘膜細胞表面に向かって拡散する。',
         },
+        {
+          detailInfo: '再試験大問1(1)',
+          questionImg: [],
+          questionSentence:
+            'グラーフ卵胞（卵胞膜を含む）を図示して、それぞれを名称とともに説明しなさい。 ',
+          questionSentence: '',
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
+        {
+          detailInfo: '再試験大問1(2)',
+          questionImg: [],
+          questionSentence: '排卵後の卵胞の組織変化について説明しなさい。',
+          questionSentence: '',
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
+        {
+          detailInfo: '再試験大問2(1)',
+          questionImg: [],
+          questionSentence:
+            '内分泌腺と外分泌腺の発生の違いを図示して説明しなさい。※（それぞれの構造の違いについても説明すること）',
+          questionSentence: '',
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
+        {
+          detailInfo: '再試験大問1(2)',
+          questionImg: [],
+          questionSentence:
+            '内分泌腺と外分泌腺を各々1 つずつ選び、図示して説明しなさい。 ',
+          questionSentence: '',
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
+        // {
+        //   detailInfo:'再試験大問1(1)',
+        //   questionImg:[],
+        //   questionSentence:'',
+        //   questionSentence:'',
+        //   answerImg:[],
+        //   answer:'',
+        //   commentary:'',
+        // }
       ],
     },
     {
@@ -1085,10 +1148,11 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '60歳男性、心筋梗塞を起こした5日後に左側を見ると物が2重に見え、また右手を使いにくい と突然訴えるようになった。 脳神経系の検査で左外直筋麻痺が認められた。 発語が少し不明瞭 で、左側の鼻唇溝は右に比較して浅い。 左眼を強く閉じることが出来ず、 左側の眉毛を挙上 させようとしても右側ほど充分に出来なかった。 顔面の感覚全般と味覚は正常であった。 四肢の検査では右上下肢に筋力の低下が認められ、 右側のバビンスキー反射が陽性であった。 位置覚と振動覚の消失が右上下肢に認められた。',
-          answerImg: [],
+          answerImg: [centralMotorNeuron, MillaredGubler],
           answer:
             'Millard-Gubler (ミヤールーギュブレール) 症候群、橋下部腹側症候群 外転神経麻痺と顔面神経麻痺が同時に出現するのが特徴',
-          commentary: '橋の部分で',
+          commentary:
+            '橋下部左側腹側が障害され左側橋縦束（→右上下肢）と左側外転神経・左側顔面神経が麻痺した。一方で感覚系ニューロンは背側を通過するため、正常であった。',
         },
         {
           detailInfo: '症例3',
