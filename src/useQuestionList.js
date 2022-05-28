@@ -1085,7 +1085,6 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             'グラーフ卵胞（卵胞膜を含む）を図示して、それぞれを名称とともに説明しなさい。 ',
-          questionSentence: '',
           answerImg: [],
           answer: '',
           commentary: '',
@@ -1094,7 +1093,7 @@ export const useQuestionList = () => {
           detailInfo: '再試験大問1(2)',
           questionImg: [],
           questionSentence: '排卵後の卵胞の組織変化について説明しなさい。',
-          questionSentence: '',
+          // questionSentence: '',
           answerImg: [],
           answer: '',
           commentary: '',
@@ -1104,7 +1103,7 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '内分泌腺と外分泌腺の発生の違いを図示して説明しなさい。※（それぞれの構造の違いについても説明すること）',
-          questionSentence: '',
+          // questionSentence: '',
           answerImg: [],
           answer: '',
           commentary: '',
@@ -1114,7 +1113,7 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '内分泌腺と外分泌腺を各々1 つずつ選び、図示して説明しなさい。 ',
-          questionSentence: '',
+          // questionSentence: '',
           answerImg: [],
           answer: '',
           commentary: '',
