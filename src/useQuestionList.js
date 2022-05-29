@@ -42,6 +42,7 @@ import testis from './img/answer/testis.png'
 import renalTubule from './img/answer/renalTubule.png'
 import pancreasTissue from './img/answer/pancreasTissue.png'
 import graafianFollicle from './img/answer/graafianFollicle.png'
+import releasedFollicle from './img/answer/releasedFollicle.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1584,18 +1585,18 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             'グラーフ卵胞（卵胞膜を含む）を図示して、それぞれを名称とともに説明しなさい。 ',
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [graafianFollicle],
+          answer: '第1分裂を終え、二次卵母細胞となった卵母細胞は上皮細胞との間に透明帯を形成している。その外層は放線上に並んだ顆粒膜細胞の放線冠が覆う。卵胞液によって卵胞腔の片隅に押しやられた卵母細胞を卵丘といい、最外層を内外卵胞膜が包む。排卵直前の卵胞はグラーフ細胞あるいは成熟細胞と呼ばれる。',
+          commentary: 'グラーフ卵胞Graafian follicle=成熟卵胞Mature follicle。排卵直前の卵胞は直径15～20nmに達し、その頂部は卵巣表面に膨起して透けて見えるようになる（卵胞班）。この時期下垂体から放出される大量のLHに刺激されて卵胞液が急激に増量する。',
         },
         {
           detailInfo: '再試験大問1(2)',
           questionImg: [],
           questionSentence: '排卵後の卵胞の組織変化について説明しなさい。',
           // questionSentence: '',
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [releasedFollicle],
+          answer: '放線冠はほどけ、卵母細胞表面には微絨毛が多くなり、分裂中期を示す赤道板は卵表面に対して垂直に位置するようになる。',
+          commentary: '同時期に成長を開始した複数の卵胞のうち、通常1個の卵胞のみが完全に成熟し排卵に至る。他の卵胞は途中で成長を止め、退化する。これは卵胞閉鎖atresiaと呼ばれる。',
         },
         {
           detailInfo: '再試験大問2(1)',
