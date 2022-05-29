@@ -1,5 +1,5 @@
 import './App.css'
-import { Box, Heading, Badge } from '@chakra-ui/react'
+import { Box, Heading, Badge, Flex, Text, Button } from '@chakra-ui/react'
 import { Setting } from './components/Setting'
 import { QuestionsLog } from './components/QuestionsLog'
 import { ControlPanel } from './components/ControlPanel'
@@ -47,12 +47,31 @@ function App() {
   }
   return (
     <>
-      <Heading mt={'3'} ml="3" color="teal">
+      <Heading mt={'3'} ml="3" color="teal" mb={-1.5}>
         どこでも試験対策
       </Heading>
-      <Badge ml={3} mt="-3" borderRadius="full" px="2" colorScheme="teal">
-        第二解剖学
-      </Badge>
+      <Flex>
+        <Badge
+          m={1}
+          ml={3}
+          borderRadius="full"
+          px="2"
+          colorScheme="teal"
+          mr={3}
+        >
+          第二解剖学
+        </Badge>
+        <Text
+          colorScheme={'teal'}
+          variant="ghost"
+          size={'xs'}
+          as="button"
+          color={'blackAlpha.800'}
+        >
+          Ver0.7
+        </Text>
+      </Flex>
+
       {settingDetail.isSet ? (
         <></>
       ) : (

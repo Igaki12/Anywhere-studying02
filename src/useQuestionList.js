@@ -41,7 +41,7 @@ import placenta from './img/answer/placenta.png'
 import testis from './img/answer/testis.png'
 import renalTubule from './img/answer/renalTubule.png'
 import pancreasTissue from './img/answer/pancreasTissue.png'
-import graafianFollicle from './img/answer/graafianFollicle.png'
+import graafianFollicle from './img/answer/GraafianFollicle.png'
 import releasedFollicle from './img/answer/releasedFollicle.png'
 
 export const useQuestionList = () => {
