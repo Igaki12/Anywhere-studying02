@@ -1,5 +1,5 @@
 import './App.css'
-import { Box, Heading, Badge, Flex, Text, Button } from '@chakra-ui/react'
+import { Box, Heading, Badge, Flex, Text, } from '@chakra-ui/react'
 import { Setting } from './components/Setting'
 import { QuestionsLog } from './components/QuestionsLog'
 import { ControlPanel } from './components/ControlPanel'
@@ -61,7 +61,7 @@ function App() {
         >
           第二解剖学
         </Badge>
-        <Text size={'xs'} color={'blackAlpha.700'}>
+        <Text size={'xs'} color={'teal.800'}>
           Ver0.7
         </Text>
       </Flex>
