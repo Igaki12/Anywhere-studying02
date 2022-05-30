@@ -61,13 +61,7 @@ function App() {
         >
           第二解剖学
         </Badge>
-        <Text
-          colorScheme={'teal'}
-          variant="ghost"
-          size={'xs'}
-          as="button"
-          color={'blackAlpha.800'}
-        >
+        <Text size={'xs'} color={'blackAlpha.700'}>
           Ver0.7
         </Text>
       </Flex>
