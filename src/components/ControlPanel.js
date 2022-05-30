@@ -80,6 +80,11 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
               現在{history[history.length - 1].questionNum}問目 / 残り
               {history[history.length - 1].remainingQuestionList.length}問
             </Text>
+            <Divider orientation="horizontal" mt={3} mb="1" />
+            <Text fontSize={'lg'}>更新履歴</Text>
+            <Text>2022-05-25 Ver0.7-”続きから再開”機能を仮実装</Text>
+            <Text>2022-05-22 Ver0.6-cookieを設定の引継ぎに利用</Text>
+            <Text>2022-05-09 Ver0.4-”キーワード絞り込み”機能を本格実装</Text>
           </ModalBody>
 
           <ModalFooter>
