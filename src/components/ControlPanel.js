@@ -81,7 +81,7 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
               {history[history.length - 1].remainingQuestionList.length}問
             </Text>
             <Divider orientation="horizontal" mt={3} mb="1" />
-            <Text>アップデート履歴</Text>
+            <Text>アップデート履歴:</Text>
             <Text fontSize={'sm'}>
               2022-05-25_Ver0.7-”続きから再開”機能を仮実装
             </Text>
@@ -89,7 +89,7 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
               2022-05-22_Ver0.6-cookieを設定の引継ぎに利用
             </Text>
             <Text fontSize={'sm'}>
-              2022-05-09_Ver0.4-”キーワード絞り込み”機能を本格実装
+              2022-05-09_Ver0.4-”キーワード絞り込み”機能を実装
             </Text>
             <Text fontSize={'sm'}>
               2022-05-05_Ver0.1-仮リリース

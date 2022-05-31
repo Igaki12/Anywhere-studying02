@@ -133,16 +133,15 @@ export const Setting = ({
         </ListItem>
         <ListItem transitionDelay="100s" className="Headline1">
           <ListIcon as={CheckCircleIcon} color="green.500" />
-          練習モードで解説をインプットし,テストモードでアウトプットを実践しよう
+          出題パターンや出題範囲・キーワードを自由に設定して、自分好みの問題集を作ろう
         </ListItem>
         <ListItem transitionDelay="5s" className="Headline1">
           <ListIcon as={CheckCircleIcon} color="green.500" />
-          出題パターンや細かい出題範囲設定にも対応済み。
+          途中でアプリを消してしまっても、安心して続きから再開できる
         </ListItem>
-        {/* You can also use custom icons from react-icons */}
         <ListItem transitionDelay="6s" className="Headline1">
           <ListIcon as={WarningIcon} color="green.500" />
-          問題・解答解説の正誤に関しては責任を持ちません
+          問題は一部機械作成されているので誤字があり、解答解説は間違っている可能性があります。
         </ListItem>
         <ListItem transitionDelay="6s" className="Headline1">
           <ListIcon as={QuestionIcon} color="green.500" />
