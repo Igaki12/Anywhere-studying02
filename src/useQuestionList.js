@@ -1749,6 +1749,141 @@ export const useQuestionList = () => {
           commentary:
             '脳梗塞により脳の一部が損傷している。右動眼神経麻痺（右動眼神経末梢）、左半身片麻痺(右中脳大脳脚）はいずれも狭い範囲（中脳右腹側）を通過している神経の障害で起こる。このとき右動眼神経麻痺によって左右どちらの目に光が入っても（対光反射）、右眼は縮瞳しない。',
         },
+        {
+          detailInfo: '5/30 Forms(1)',
+          questionSentence:
+            '70歳の女性が突然、 右上肢、下肢の麻痺と舌の運動障害を認めた。 発症数時間後に救 急外来で診察を受けたところ、 右上下肢の筋力低下、 右半身の固有感覚及び識別性触 覚の低下が認められた。 また舌を突き出してもらうと舌は左側に偏位した。この患者の異常は何個に抽出できるか?',
+          choices: ['2個', '3個', '4個', '5個'],
+          answer: '3個',
+          commentary:
+            '異常は3つに分類される（右半身片麻痺・右半身の感覚麻痺・舌の運動障害）。',
+        },
+        {
+          detailInfo: '5/30 Forms(2)',
+          questionImg: [],
+          questionSentence:
+            ' 右半身の固有感覚 (深部感覚) と識別性触覚の低下は次のどの構造の異常に起因する か?',
+          answerImg: [],
+          answer: '左内側毛帯',
+          commentary: '',
+          choices: [
+            '右外側脊髓視床路',
+            '左內側毛带',
+            '右内側毛帯',
+            '左三叉神経脊髄路核',
+          ],
+        },
+        {
+          detailInfo: '5/30 Forms(3)',
+          questionImg: [],
+          questionSentence:
+            ' 舌を突き出した際に左側に舌が偏位したのはどの構造の異常か?',
+          answerImg: [],
+          answer: '左舌下神経',
+          commentary: '',
+          choices: ['右舌下神経', '左疑核', '左舌下神経', '左迷走神経背側核'],
+        },
+        {
+          detailInfo: '5/30 Forms(4)',
+          questionImg: [],
+          questionSentence:
+            '右上下肢の麻痺 (片麻痺とも言います) 、 筋力低下は以下のどの構造の異常に起因す るか?',
+          answerImg: [],
+          answer: '左錐体',
+          commentary: '',
+          choices: ['右錐体', '右下オリーブ核', '左錐体', '左疑核'],
+        },
+        {
+          detailInfo: '5/30 Forms2(1)',
+          questionImg: [],
+          questionSentence: ' 右上下肢の位置覚、振動覚の消失はどの構造の障害?',
+          answerImg: [],
+          answer: '左内側毛帯？',
+          commentary: '',
+          choices: [
+            '右楔状束核',
+            '左前脊髄視床路',
+            '右内側毛帯',
+            '左內側毛带',
+            '左內側縱束',
+          ],
+        },
+        {
+          detailInfo: '5/30 Forms2(2)',
+          questionImg: [],
+          questionSentence:
+            ' この患者さんの複視 (物が2重に見える) 原因は次のどの構造に起因するか?',
+          answerImg: [],
+          answer: '左外転神経',
+          commentary: '',
+          choices: ['左動眼神経', '左滑車神経', '左外転神経', '右滑車神経'],
+        },
+        {
+          detailInfo: '5/30 Forms2(3)',
+          questionImg: [],
+          questionSentence:
+            ' この患者さんの顔面の症状は次のどの構造に由来するものか?',
+          answerImg: [],
+          answer: '左顔面神経',
+          commentary: '',
+          choices: [
+            '左三叉神経',
+            '右三叉神経',
+            '左顔面神経',
+            '右顔面神経',
+            '左迷走神経',
+          ],
+        },
+        {
+          detailInfo: '5/30 Forms3(1)',
+          questionImg: [],
+          questionSentence:
+            ' この症例で障害されている脳神経の組み合わせは以下のどれか?',
+          answerImg: [],
+          answer: '舌咽神経+迷走神経+副神経',
+          commentary: '',
+          choices: [
+            ' 顔面神経+三叉神経',
+            '舌咽神経+迷走神経+副神経',
+            '迷走神経+副神経 +舌下神経',
+            ' 顔面神経+ 前庭蝸牛神経',
+          ],
+        },
+        {
+          detailInfo: '5/30 Forms3(2)',
+          questionImg: [],
+          questionSentence:
+            ' この症例で症状を起こす元となっている病変はどこに位置している可能性が高い?',
+          answerImg: [],
+          answer: '頚静脈孔',
+          commentary: '',
+          choices: [' 内耳道', '上眼窩裂', '卵円孔', '頸靜脈孔', '舌下神経管'],
+        },
+        {
+          detailInfo: '5/30 Forms4(1)',
+          questionImg: [],
+          questionSentence:
+            'この女性は脳梗塞を起こしているが、 どの部分に病変は位置しているか?',
+          answerImg: [],
+          choices: ['中脳腹側', '橋腹側', '中脳背側', '延髄腹側', '橋外側'],
+          answer: '',
+          commentary: '',
+        },
+        {
+          detailInfo: '5/30 Forms4(2)',
+          questionImg: [],
+          questionSentence: 'この女性の対光反射は以下のどのパターンを呈するか?',
+          answerImg: [],
+          choices: [
+            '右眼に光を入れると、右眼は散瞳、左目は縮瞳する',
+            '右眼に光を入れても、両眼ともに散瞳したまま',
+            '右眼に光を入れると右眼は縮瞳、左目は散瞳したまま',
+            '右眼に光を入れると、両側で縮瞳する',
+          ],
+          answer: '',
+          commentary:
+            '右動眼神経麻痺によって左右どちらの目に光が入っても（対光反射）、右眼は縮瞳しない。',
+        },
         // {
         //   detailInfo:'症例1',
         //   questionImg:[],
