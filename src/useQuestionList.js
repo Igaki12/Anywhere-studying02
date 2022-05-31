@@ -1751,10 +1751,12 @@ export const useQuestionList = () => {
         },
         {
           detailInfo: '5/30 Forms(1)',
+          questionImg: [],
           questionSentence:
             '70歳の女性が突然、 右上肢、下肢の麻痺と舌の運動障害を認めた。 発症数時間後に救 急外来で診察を受けたところ、 右上下肢の筋力低下、 右半身の固有感覚及び識別性触 覚の低下が認められた。 また舌を突き出してもらうと舌は左側に偏位した。この患者の異常は何個に抽出できるか?',
           choices: ['2個', '3個', '4個', '5個'],
           answer: '3個',
+          answerImg: [],
           commentary:
             '異常は3つに分類される（右半身片麻痺・右半身の感覚麻痺・舌の運動障害）。',
         },
@@ -1763,7 +1765,7 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             ' 右半身の固有感覚 (深部感覚) と識別性触覚の低下は次のどの構造の異常に起因する か?',
-          answerImg: [],
+          answerImg: [keiroMatome],
           answer: '左内側毛帯',
           commentary: '',
           choices: [
@@ -1778,7 +1780,7 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             ' 舌を突き出した際に左側に舌が偏位したのはどの構造の異常か?',
-          answerImg: [],
+          answerImg: [CN12],
           answer: '左舌下神経',
           commentary: '',
           choices: ['右舌下神経', '左疑核', '左舌下神経', '左迷走神経背側核'],
@@ -1788,7 +1790,7 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '右上下肢の麻痺 (片麻痺とも言います) 、 筋力低下は以下のどの構造の異常に起因す るか?',
-          answerImg: [],
+          answerImg: [pyramidalTract],
           answer: '左錐体',
           commentary: '',
           choices: ['右錐体', '右下オリーブ核', '左錐体', '左疑核'],
@@ -1797,7 +1799,7 @@ export const useQuestionList = () => {
           detailInfo: '5/30 Forms2(1)',
           questionImg: [],
           questionSentence: ' 右上下肢の位置覚、振動覚の消失はどの構造の障害?',
-          answerImg: [],
+          answerImg: [keiroMatome],
           answer: '左内側毛帯？',
           commentary: '',
           choices: [
