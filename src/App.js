@@ -54,6 +54,7 @@ function App() {
         <Badge
           m={1}
           mr="0"
+          mt={'0'}
           ml={3}
           borderRadius="full"
           px="2"
@@ -62,7 +63,7 @@ function App() {
         >
           Ver.0.7
         </Badge>
-        <Badge m={1} borderRadius="full" px="2" colorScheme="teal">
+        <Badge m={1} mt="0" borderRadius="full" px="2" colorScheme="teal">
           第二解剖学
         </Badge>
       </Flex>
