@@ -50,127 +50,139 @@ export const QuestionsLog = ({
       <ul>
         {/* {questionList.map((group) =>
           group.groupContents.map((question, index) => ( */}
-        {history[history.length - 1].askedQuestionList
-          .filter((question) => question.id > -1)
-          .map((question, index) => (
-            <>
-              <Box
-                maxW="sm"
-                borderWidth="1px"
-                borderRadius="lg"
-                overflow="hidden"
-                mb={3}
-                mt="3"
-                key={index + 'QuestionBox'}
-              >
-                {question.questionImg.map((image, imageNum) => (
-                  <Image
-                    src={image}
-                    alt="写真読み込みエラー"
-                    key={index + imageNum + 'QuestionImage'}
-                  />
-                ))}
-                <Box p="6">
-                  <Box display="flex" alignItems="baseline">
-                    <Badge
-                      borderRadius="full"
-                      px="2"
-                      colorScheme="teal"
-                      key={index + 'questionBadge'}
-                    >
-                      {question.groupTag}
-                    </Badge>
-                    <Box
-                      color="gray.500"
-                      fontWeight="semibold"
-                      letterSpacing="wide"
-                      fontSize="xs"
-                      textTransform="uppercase"
-                      ml="2"
-                      key={index + 'QuestionBox2'}
-                    >
-                      {question.detailInfo}
-                    </Box>
-                  </Box>
-
-                  <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
-                    {question.questionSentence}
-                    {question.randomizedChoices ? (
-                      question.randomizedChoices.map((choice, choiceIndex) => (
-                        <Flex ml={4} fontWeight="normal">
-                          <Text>{choiceIndex + 1}.</Text>
-                          <Text pl={2}>{choice}</Text>
-                        </Flex>
-                      ))
-                    ) : (
-                      <></>
-                    )}
-                  </Box>
-                </Box>
-              </Box>
-              <Box
-                maxW="sm"
-                borderWidth="1px"
-                borderRadius="lg"
-                overflow="hidden"
-                bg={'red.50'}
-                key={index + 'AnswerBox'}
-              >
-                {question.answerImg.map((image) => (
-                  <Image src={image} alt="写真読み込みエラー" />
-                ))}
-
-                <Box p="6" pb={0}>
-                  <Box display="flex" alignItems="baseline">
-                    <Badge variant="solid" colorScheme="red">
-                      解答
-                    </Badge>
-                    <Box
-                      color="red.700"
-                      fontWeight="semibold"
-                      letterSpacing="wide"
-                      fontSize=""
-                      textTransform="uppercase"
-                      ml="2"
-                      key={index + 'AnswerBox2'}
-                    >
-                      {question.answer ? question.answer : '解答準備中'}
-                    </Box>
-                  </Box>
-                  <Badge variant="solid" colorScheme="red">
-                    解説
-                  </Badge>
-                  <Box mt="1" as="h4" lineHeight="tight">
-                    {question.commentary ? question.commentary : ''}
-                  </Box>
-                </Box>
-                {question.id < 1000000 ? (
-                  <Flex pr={4} pb={4}>
-                    <Spacer />
-                    <IconButton
-                      colorScheme={'red'}
-                      variant="ghost"
-                      aria-label="review this question"
-                      onClick={() => {
-                        reviewQuestion(index)
-                        toast({
-                          title: 'この質問はもう一度出題されます',
-                          position: 'top',
-                          // description: "We've created your account for you.",
-                          status: 'info',
-                          duration: 9000,
-                          isClosable: true,
-                        })
-                      }}
-                      icon={<RepeatIcon />}
+        {history[history.length - 1] &&
+        history[history.length - 1].askedQuestionList.length > 0 ? (
+          history[history.length - 1].askedQuestionList
+            .filter((question) => question.id)
+            .map((question, index) => (
+              <>
+                <Box
+                  maxW="sm"
+                  borderWidth="1px"
+                  borderRadius="lg"
+                  overflow="hidden"
+                  mb={3}
+                  mt="3"
+                  key={index + 'QuestionBox'}
+                >
+                  {question.questionImg.map((image, imageNum) => (
+                    <Image
+                      src={image}
+                      alt="写真読み込みエラー"
+                      key={index + imageNum + 'QuestionImage'}
                     />
-                  </Flex>
-                ) : (
-                  <Flex pr={4} pb="4" pt="40px"></Flex>
-                )}
-              </Box>
-            </>
-          ))}
+                  ))}
+                  <Box p="6">
+                    <Box display="flex" alignItems="baseline">
+                      <Badge
+                        borderRadius="full"
+                        px="2"
+                        colorScheme="teal"
+                        key={index + 'questionBadge'}
+                      >
+                        {question.groupTag}
+                      </Badge>
+                      <Box
+                        color="gray.500"
+                        fontWeight="semibold"
+                        letterSpacing="wide"
+                        fontSize="xs"
+                        textTransform="uppercase"
+                        ml="2"
+                        key={index + 'QuestionBox2'}
+                      >
+                        {question.detailInfo}
+                      </Box>
+                    </Box>
+
+                    <Box
+                      mt="1"
+                      fontWeight="semibold"
+                      as="h4"
+                      lineHeight="tight"
+                    >
+                      {question.questionSentence}
+                      {question.randomizedChoices ? (
+                        question.randomizedChoices.map(
+                          (choice, choiceIndex) => (
+                            <Flex ml={4} fontWeight="normal">
+                              <Text>{choiceIndex + 1}.</Text>
+                              <Text pl={2}>{choice}</Text>
+                            </Flex>
+                          ),
+                        )
+                      ) : (
+                        <></>
+                      )}
+                    </Box>
+                  </Box>
+                </Box>
+                <Box
+                  maxW="sm"
+                  borderWidth="1px"
+                  borderRadius="lg"
+                  overflow="hidden"
+                  bg={'red.50'}
+                  key={index + 'AnswerBox'}
+                >
+                  {question.answerImg.map((image) => (
+                    <Image src={image} alt="写真読み込みエラー" />
+                  ))}
+
+                  <Box p="6" pb={0}>
+                    <Box display="flex" alignItems="baseline">
+                      <Badge variant="solid" colorScheme="red">
+                        解答
+                      </Badge>
+                      <Box
+                        color="red.700"
+                        fontWeight="semibold"
+                        letterSpacing="wide"
+                        fontSize=""
+                        textTransform="uppercase"
+                        ml="2"
+                        key={index + 'AnswerBox2'}
+                      >
+                        {question.answer ? question.answer : '解答準備中'}
+                      </Box>
+                    </Box>
+                    <Badge variant="solid" colorScheme="red">
+                      解説
+                    </Badge>
+                    <Box mt="1" as="h4" lineHeight="tight">
+                      {question.commentary ? question.commentary : ''}
+                    </Box>
+                  </Box>
+                  {question.id.indexOf('r') === -1 ? (
+                    <Flex pr={4} pb={4}>
+                      <Spacer />
+                      <IconButton
+                        colorScheme={'red'}
+                        variant="ghost"
+                        aria-label="review this question"
+                        onClick={() => {
+                          reviewQuestion(index)
+                          toast({
+                            title: 'この質問はもう一度出題されます',
+                            position: 'top',
+                            // description: "We've created your account for you.",
+                            status: 'info',
+                            duration: 9000,
+                            isClosable: true,
+                          })
+                        }}
+                        icon={<RepeatIcon />}
+                      />
+                    </Flex>
+                  ) : (
+                    <Flex pr={4} pb="4" pt="40px"></Flex>
+                  )}
+                </Box>
+              </>
+            ))
+        ) : (
+          <></>
+        )}
       </ul>
       <ResultBar
         showHistory={showHistory}
@@ -276,7 +288,7 @@ export const QuestionsLog = ({
                 : ''}
             </Box>
           </Box>
-          {history[history.length - 1].askingQuestion.id < 1000000 ? (
+          {history[history.length - 1].askingQuestion.id.indexOf('r') === -1 ? (
             <Flex pr={4} pb={4}>
               <Spacer />
               <IconButton

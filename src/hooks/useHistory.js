@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export const useHistory = () => {
   const [history, setHistory] = useState([
@@ -19,10 +19,11 @@ export const useHistory = () => {
     const savedArrayHistory = savedStrHistory.split(',')
     newHistory.questionNum = parseInt(savedArrayHistory[0])
     newHistory.remainingQuestionList = []
-    savedArrayHistory.splice(1).forEach((id, index) => {
-      if (newHistory.askedQuestionList) {
-        newHistory.askedQuestionList.forEach((question) => {
-          if (question.id === id) {
+    savedArrayHistory.splice(1).forEach((savedId, index) => {
+      if (newHistory.askedQuestionList.length > 0) {
+        console.log(newHistory)
+        newHistory.forEach((question) => {
+          if (question.id === savedId) {
             console.log(
               '被った問題が既に出題されているため、出題から省きました',
             )
@@ -32,26 +33,28 @@ export const useHistory = () => {
       }
       if (index > 1) {
         savedArrayHistory.splice(1, index - 1).forEach((comparedId) => {
-          if (id === comparedId) {
+          if (savedId === comparedId) {
             console.log('保存されたIDが重複していました。:' + comparedId)
             return
           }
         })
       }
       let addingQuestion = {}
-      addingQuestion.id = parseInt(id)
+      addingQuestion.id = savedId
+      console.log('addingQUestion.id:' + addingQuestion.id)
+      let savedGroupId = Math.floor(parseInt(savedId.replace('r', '')) / 1000)
+      let savedContentsId = parseInt(savedId.replace('r', '')) % 1000
       if (
         // id > 999999 &&
-        questionList[Math.floor(parseInt(id) / 1000) % 1000].groupContents[
-          parseInt(id) % 1000
-        ]
+        questionList[savedGroupId].groupContents[savedContentsId]
       ) {
+        questionList[savedGroupId].groupContents[
+          savedContentsId
+        ].id = savedId.toString()
+
         addingQuestion =
-          questionList[Math.floor(parseInt(id) / 1000) % 1000].groupContents[
-            parseInt(id) % 1000
-          ]
-        addingQuestion.groupTag =
-          questionList[Math.floor(parseInt(id) / 1000) % 1000].groupTag
+          questionList[savedGroupId].groupContents[savedContentsId]
+        addingQuestion.groupTag = questionList[savedGroupId].groupTag
       }
       if (addingQuestion.choices) {
         if (addingQuestion.answer === '') {
@@ -69,7 +72,9 @@ export const useHistory = () => {
       if (addingQuestion.questionSentence) {
         newHistory.remainingQuestionList.push(addingQuestion)
       } else {
-        console.log('保存されたIDに対応する問題が見つかりませんでした:' + id)
+        console.log(
+          '保存されたIDに対応する問題が見つかりませんでした:' + savedId,
+        )
       }
     })
     setHistory([...history, newHistory])
@@ -83,7 +88,7 @@ export const useHistory = () => {
       }
       group.groupContents.forEach((question, questionIndex) => {
         let newRemainingQuestion = question
-        newRemainingQuestion.id = groupIndex * 1000 + questionIndex
+        newRemainingQuestion.id = (groupIndex * 1000 + questionIndex).toString()
         newRemainingQuestion.groupTag = group.groupTag
 
         if (newRemainingQuestion.askedQuestionList) {
@@ -163,7 +168,9 @@ export const useHistory = () => {
       let newHistory = history[history.length - 1]
       if (newHistory.askingQuestion) {
         newHistory.askedQuestionList = [
-          ...history[history.length - 1].askedQuestionList,
+          ...history[history.length - 1].askedQuestionList.filter(
+            (question) => question.id,
+          ),
           newHistory.askingQuestion,
         ]
       }
@@ -182,13 +189,24 @@ export const useHistory = () => {
       let newHistory = history[history.length - 1]
       if (newHistory.askingQuestion) {
         newHistory.askedQuestionList = [
-          ...history[history.length - 1].askedQuestionList,
+          ...history[history.length - 1].askedQuestionList.filter(
+            (question) => question.id,
+          ),
           newHistory.askingQuestion,
         ]
       }
       newHistory.askingQuestion = {}
       function compareFun(QListA, QListB) {
-        return QListA.id - QListB.id
+        if (QListA.id.indexOf('r') !== -1 && QListB.id.indexOf('r') === -1) {
+          return 1
+        }
+        if (QListB.id.indexOf('r') !== -1 && QListA.id.indexOf('r') === -1) {
+          return -1
+        }
+        return (
+          parseInt(QListA.id.replace('r', '')) -
+          parseInt(QListB.id.replace('r', ''))
+        )
       }
       if (newHistory.remainingQuestionList.length > 0) {
         newHistory.remainingQuestionList.sort(compareFun)
@@ -204,6 +222,10 @@ export const useHistory = () => {
         newHistory.remainingQuestionList.shift()
         newHistory.isAnswered = false
         newHistory.questionNum += 1
+        // 表示が多くなりすぎないように調節
+        if (newHistory.askedQuestionList.length > 10) {
+          newHistory.askedQuestionList.shift()
+        }
         setHistory([...history, newHistory])
         console.log('nextQuestion:')
         console.log(history)
@@ -224,14 +246,13 @@ export const useHistory = () => {
   const reviewQuestion = (index) => {
     let newHistory = history[history.length - 1]
     if (
-      newHistory.askedQuestionList[index + 1] &&
-      newHistory.askedQuestionList[index + 1].id < 1000000
+      newHistory.askedQuestionList[index] &&
+      newHistory.askedQuestionList[index].id.indexOf('r') === -1
     ) {
-      newHistory.askedQuestionList[index + 1].id += 1000000
-      newHistory.remainingQuestionList.push(
-        newHistory.askedQuestionList[index + 1],
-      )
-      newHistory.askedQuestionList.splice(index + 1, 1)
+      newHistory.askedQuestionList[index].id =
+        'r' + newHistory.askedQuestionList[index].id
+      newHistory.remainingQuestionList.push(newHistory.askedQuestionList[index])
+      newHistory.askedQuestionList.splice(index, 1)
 
       setHistory([...history, newHistory])
     }
@@ -239,8 +260,11 @@ export const useHistory = () => {
   }
   const reviewAskingQuestion = (settingDetail) => {
     let newHistory = history[history.length - 1]
-    if (newHistory.askingQuestion && newHistory.askingQuestion.id < 1000000) {
-      newHistory.askingQuestion.id += 1000000
+    if (
+      newHistory.askingQuestion &&
+      newHistory.askingQuestion.id.indexOf('r') === -1
+    ) {
+      newHistory.askingQuestion.id = 'r' + newHistory.askingQuestion.id
       newHistory.isAnswered = false
 
       newHistory.remainingQuestionList.push(newHistory.askingQuestion)
