@@ -41,7 +41,7 @@ import placenta from './img/answer/placenta.png'
 import testis from './img/answer/testis.png'
 import renalTubule from './img/answer/renalTubule.png'
 import pancreasTissue from './img/answer/pancreasTissue.png'
-import graafianFollicle from './img/answer/GraafianFollicle.png'
+import follicle2 from './img/answer/follicle2.png'
 import releasedFollicle from './img/answer/releasedFollicle.png'
 import spinalDisorder from './img/answer/spinalDisorder.png'
 import sensoryDisorder from './img/answer/sensoryDisorder.png'
@@ -874,7 +874,7 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: 'グラーフ卵胞にないもの',
           choices: ['線毛細胞', '卵母細胞', '透明帯', '放線冠'],
-          answerImg: [graafianFollicle],
+          answerImg: [follicle2],
           answer: '',
           commentary: '',
         },
@@ -1595,8 +1595,10 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: '血液尿関門について説明せよ。',
           answerImg: [bloodUrineBarrier],
-          answer: '準備中',
-          commentary: '',
+          answer:
+            '毛細血管内皮、糸球体基底膜、足細胞の足突起の３層のろ過障壁が、毛細血管とボウマン腔を隔てている。水とイオンなど小分子の透過性は極めて高いが、タンパク質など高分子に対する透過性が著しく低い。',
+          commentary:
+            'ろ過障壁：filtration barrier、糸球体基底膜：GBM。毛細血管は有窓性で、隔膜がない。陰性荷電分子を通しにくい性質も持つ。',
         },
       ],
     },
@@ -1677,7 +1679,7 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             'グラーフ卵胞（卵胞膜を含む）を図示して、それぞれを名称とともに説明しなさい。 ',
-          answerImg: [graafianFollicle],
+          answerImg: [follicle2],
           answer:
             '第1分裂を終え、二次卵母細胞となった卵母細胞は上皮細胞との間に透明帯を形成している。その外層は放線上に並んだ顆粒膜細胞の放線冠が覆う。卵胞液によって卵胞腔の片隅に押しやられた卵母細胞を卵丘といい、最外層を内外卵胞膜が包む。排卵直前の卵胞はグラーフ細胞あるいは成熟細胞と呼ばれる。',
           commentary:
@@ -1700,18 +1702,18 @@ export const useQuestionList = () => {
           questionSentence:
             '内分泌腺と外分泌腺の発生の違いを図示して説明しなさい。※（それぞれの構造の違いについても説明すること）',
           // questionSentence: '',
-          answerImg: [],
-          answer: '',
+          answerImg: [pancreasTissue],
+          answer: '準備中',
           commentary: '',
         },
         {
           detailInfo: '再試験大問1(2)',
-          questionImg: [],
+          questionImg: [pancreasTissue],
           questionSentence:
             '内分泌腺と外分泌腺を各々1 つずつ選び、図示して説明しなさい。 ',
           // questionSentence: '',
           answerImg: [],
-          answer: '',
+          answer: '準備中',
           commentary: '',
         },
         // {

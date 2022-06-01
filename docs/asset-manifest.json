@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.39396934.js",
+    "main.js": "/Anywhere-studying02/static/js/main.deb2c762.js",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/BloodAir.png": "/Anywhere-studying02/static/media/BloodAir.42a11021f6f28ba11c69.png",
     "static/media/sinusoid.png": "/Anywhere-studying02/static/media/sinusoid.cad74aeebbe625737c19.png",
@@ -38,7 +38,7 @@
     "static/media/attendance2-1.jpg": "/Anywhere-studying02/static/media/attendance2-1.a3efa170c5a5efacac51.jpg",
     "static/media/cerebellum.png": "/Anywhere-studying02/static/media/cerebellum.3f5203f250181c2a79fe.png",
     "static/media/attendance3-1.jpg": "/Anywhere-studying02/static/media/attendance3-1.9378ac7dd8ec9abdd330.jpg",
-    "static/media/GraafianFollicle.png": "/Anywhere-studying02/static/media/GraafianFollicle.abdee8a54aa2fe83ec72.png",
+    "static/media/follicle2.png": "/Anywhere-studying02/static/media/follicle2.abdee8a54aa2fe83ec72.png",
     "static/media/crossSectionOfCNS.png": "/Anywhere-studying02/static/media/crossSectionOfCNS.fced69a798ae22b9eeb7.png",
     "static/media/centralMotorNeuron.png": "/Anywhere-studying02/static/media/centralMotorNeuron.e546f7ab380c5eae5ccc.png",
     "static/media/CN11.png": "/Anywhere-studying02/static/media/CN11.9a325552fb4c1b7f322c.png",
@@ -52,10 +52,10 @@
     "static/media/220601cerebellum.png": "/Anywhere-studying02/static/media/220601cerebellum.151d17639cc3adaff58d.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.39396934.js.map": "/Anywhere-studying02/static/js/main.39396934.js.map"
+    "main.deb2c762.js.map": "/Anywhere-studying02/static/js/main.deb2c762.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.39396934.js"
+    "static/js/main.deb2c762.js"
   ]
 }
