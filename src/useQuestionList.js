@@ -43,6 +43,12 @@ import renalTubule from './img/answer/renalTubule.png'
 import pancreasTissue from './img/answer/pancreasTissue.png'
 import graafianFollicle from './img/answer/GraafianFollicle.png'
 import releasedFollicle from './img/answer/releasedFollicle.png'
+import spinalDisorder from './img/answer/spinalDisorder.png'
+import sensoryDisorder from './img/answer/sensoryDisorder.png'
+import subduralHematoma from './img/answer/subduralHematoma.png'
+import BrownSequard from './img/answer/Brown-Sequard.png'
+import cerebellum220601 from './img/question/220601cerebellum.png'
+import spinalCord220601 from './img/question/220601spinalCord.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -419,8 +425,19 @@ export const useQuestionList = () => {
           answer: '顔面神経・迷走神経・動眼神経',
           commentary: '',
         },
+        {
+          detailInfo: '6/1',
+          questionImg: [],
+          questionSentence:
+            '78歳の女性。 脳梗塞の診断で集中治療室に入院となった。 開眼しているが質問に対しては、 「私どうしたの? ここはどこ? ごはんの準備をしなくっちゃ」など会 話は成立しない。 「手を握ってください」と言うと右手は握るが左手は握らない。 GCSを使って意識レベルを評価して ください。',
+          answerImg: [],
+          answer: '答え: GCS E4 V4M6 合計14点',
+          commentary:
+            'Glasgow Coma Scaleを用いた実際の意識レベルの評価。VとMは最も良かった項目(best)で判定',
+        },
+
         // {
-        //   detailInfo: '5/30反転',
+        //   detailInfo: '6/1',
         //   questionImg: [],
         //   questionSentence: '',
         //   choices: ['', '', '', ''],
@@ -1887,6 +1904,166 @@ export const useQuestionList = () => {
           answer: '',
           commentary:
             '右動眼神経麻痺によって左右どちらの目に光が入っても（対光反射）、右眼は縮瞳しない。',
+        },
+        {
+          detailInfo: '6/1反転授業1',
+          questionImg: [],
+          questionSentence:
+            '42歳の女性。左片麻痺と意識障害のため救急車で搬入された。本日、朝食を準備中に突然、意識を失い倒れたため夫が救急車を要請した。1年前に高血圧を指摘されたことがあるが特に治療は受けていなかった。意識レベルはJCSII-10。体温36.7℃。心拍数84/分、整。血圧150/88mmHg。呼吸数18/分。SpO2 100％（鼻カニューラ2L/分 酸素投与下）。左片麻痺を認める。血液所見：赤血球418万、Hb 12.8g/dL、Ht 38％、白血球7,200、血小板23万。血液生化学所見：血糖98mg/dL。CRP 0.2mg/dL。心電図に異常を認めない。胸部エックス線写真で異常を認めない。右内頸動脈造影側面像を示す。今後の治療方針として血管内治療の後に開頭手術を行うこととした。行うべき血管内治療はどれか。',
+          answerImg: [nidusAVM],
+          choices: [
+            '流入動脈塞栓術',
+            '血栓溶解療法',
+            '経皮血管形成術',
+            'ステント留置術',
+            '脳動脈瘤塞栓術',
+          ],
+          answer: '',
+          commentary:
+            '患者は脳動静脈奇形AVMで、異常部分に流入する血流を減らす必要があった。',
+        },
+        {
+          detailInfo: '6/1反転授業2',
+          questionImg: [],
+          questionSentence:
+            '症例：78歳男性。主訴：意識障害、ふらつき。既往歴：特記すべきことなし。生活歴：飲酒は日本酒5合/日程度。喫煙は10本/日程度。現病歴：3日前から歩行時にふらつくことに家人が気付いた。昨日から元気がなく、問いかけに対する反応が鈍かった。今朝から流涎や尿失禁を認めたため受診した。現症：身長168cm、体重72.2kg。体温36.1℃。脈拍62/分、整。血圧132/68mmHg。問いかけには返答するが、傾眠傾向あり。口答指示にはゆっくりと反応し、記銘力や見当識の障害、軽度の左片麻痺を認めたが、脳神経、失調、感覚系の詳細な評価は困難だった。項部硬直は明らかでなく、腱反射は正常で病的反射はなし。筋強剛は明らかでなかった。一般内科所見に異常なし。検査所見：血液生化学検査では特記すべき異常なし。血清梅毒反応は陰性で、甲状腺機能も正常。初診時の頭部CT（画像1）を示す。下記のうち、この疾患について正しいのはどれか。1つ選べ。',
+          answerImg: [subduralHematoma],
+          choices: [
+            '治療の基本は穿頭血腫洗浄術である。',
+            '意識障害の改善は期待できない。',
+            '適切に治療すれば、再発はまれである。',
+            '頭部打撲の数日後に発症する例が多い。',
+            '頭蓋骨と硬膜の間に血液が貯留する疾患である。',
+          ],
+          answer: '',
+          commentary:
+            '硬膜下血腫：手術を行えば意識障害の改善が期待できる。硬膜下血腫は再発しやすい。頭部打撲から数週間～数か月後に発症するケースが多い。硬膜とくも膜の間に血液が貯留する疾患である。',
+        },
+        {
+          detailInfo: '6/1反転授業3(1)',
+          questionImg: [],
+          questionSentence: '左中心前回の障害で出る症状は以下のどれか？',
+          answerImg: [],
+          choices: [
+            '右の運動麻痺',
+            '左の運動麻痺',
+            '右の感覚異常',
+            '左の感覚異常',
+            '平衡感覚異常',
+          ],
+          answer: '',
+          commentary: '左中心前回：大脳中心溝の前頭葉側。一次運動野など',
+        },
+        {
+          detailInfo: '6/1反転授業3(2)',
+          questionImg: [cerebellum220601],
+          questionSentence:
+            '右図の部位が障害された時に最も見られる症状はどれか？',
+          answerImg: [cerebellum],
+          choices: ['平衡障害', '失語', '失行', '健忘', '意識障害'],
+          answer: '',
+          commentary:
+            '前庭小脳で平衡・眼球運動の調節が行われる。大脳小脳は一部言語に関係しているが、中心的役割は大脳が果たす。',
+        },
+        {
+          detailInfo: '6/1反転授業3(3)',
+          questionImg: [],
+          questionSentence: '錐体路障害で認められないものは以下のどれか？',
+          answerImg: [attendance4],
+          choices: [
+            '不随意運動',
+            'バビンスキー反射陽性',
+            '腱反射亢進',
+            '筋緊張異常',
+          ],
+          answer: '',
+          commentary:
+            '筋緊張は筋トーヌスとも呼ばれる。筋伸張反射（筋が伸張したときに筋の長さを一定に保とうとして筋が収縮する反射）が関与している。不随意運動はHuntington病など。',
+        },
+        {
+          detailInfo: '6/1反転授業3(4)',
+          questionImg: [],
+          questionSentence:
+            '脳の障害と傷害部位の組み合わせとして不適切なものはどれか？',
+          answerImg: [],
+          choices: [
+            '運動障害ー後頭葉',
+            '視野異常ー後頭葉',
+            '失語ー前頭葉',
+            '感覚異常ー頭頂葉',
+            '平衡異常ー小脳',
+          ],
+          answer: '',
+          commentary: '運動に関わる大脳皮質は前頭葉に存在する。',
+        },
+        {
+          detailInfo: '6/1反転授業4(1)',
+          questionImg: [spinalCord220601],
+          questionSentence:
+            '明るい所では問題ないが、暗くなったり、閉眼したときに急にバランスが取れなくなるのは右のどの部位に障害がある場合か？',
+          answerImg: [],
+          choices: [],
+          answer: '1',
+          commentary: '位置覚が関係している',
+        },
+        {
+          detailInfo: '6/1反転授業4(2)',
+          questionImg: [],
+          questionSentence:
+            '右体幹に全感覚消失している部位があり、左下肢に温痛覚麻痺がある。この患者の障害部位は？',
+          answerImg: [BrownSequard],
+          choices: ['脊髄右側', '脊髄左側', '延髄左外側', '延髄右外側', '視床'],
+          answer: '',
+          commentary:
+            '障害部位の高さでは同側全感覚消失、障害部位より下では反対側に温痛覚障害がみられる',
+        },
+        {
+          detailInfo: '6/1反転授業5(1)',
+          questionImg: [],
+          questionSentence:
+            '41歳女性、両側の頚部、肩、両側上肢に徐々に感覚低下を認めるようになった。検査の結果、上記の部位に温度覚と痛覚の低下があるが、他の種類の感覚は正常であった。運動、筋力の異常、深部反射の異常はない。次のどの構造に障害があると考えるか？',
+          answerImg: [spinalDisorder],
+          choices: [
+            '脊髄中心管周囲',
+            '視床VPL核',
+            '大脳皮質中心後回',
+            '脊髄後索',
+            'どれでもない',
+          ],
+          answer: '',
+          commentary: '両側の温痛覚だけに障害がみられるのが特徴',
+        },
+        {
+          detailInfo: '6/1反転授業5(2)',
+          questionImg: [],
+          questionSentence:
+            '68歳高血圧症の男性、起床時に左半身の感覚が全くないことに気付いた。検査では筋力反射は共に正常で、視野も正常だった。左側の顔面、体幹、上下肢では温度覚、痛覚、及び触覚の消失があり、左前腕と下腿には関節位置覚、振動覚の消失も認めた。この患者では次のどの構造に障害があると考えられるか？',
+          answerImg: [sensoryDisorder],
+          choices: [
+            '視床後腹側核群（VPL、VPM核）',
+            '延髄外側',
+            '橋腹側',
+            '大脳皮質中心前回',
+            '脊髄左半側',
+          ],
+          answer: '',
+          commentary: '顔面と上下肢が同側に出ているので、視床の障害。',
+        },
+        {
+          detailInfo: '6/1反転授業5(3)',
+          questionImg: [],
+          questionSentence:
+            '21歳の兵士が脊柱に銃創を受けて戦地から帰国した。神経学的検査では左下肢の筋力低下があり、同時に右下半身に温度覚、痛覚の低下を認めた。振動覚、位置覚、識別性触覚は左下肢で低下していた。この患者で障害されている部位は？',
+          answerImg: [spinalDisorder],
+          choices: [
+            '脊髄左半側',
+            '脊髄右半側',
+            '脊髄後索',
+            '脊髄中心管周囲',
+            '脊髄後角',
+          ],
+          answer: '',
+          commentary: '',
         },
         // {
         //   detailInfo:'症例1',
