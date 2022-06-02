@@ -435,9 +435,19 @@ export const useQuestionList = () => {
           commentary:
             'Glasgow Coma Scaleを用いた実際の意識レベルの評価。VとMは最も良かった項目(best)で判定',
         },
+        {
+          detailInfo: '6/2',
+          questionImg: [],
+          questionSentence:
+            '血管構造3層構造のうち、筋型動脈と弾性型動脈で最も異なっているのはどの層か？',
+          answerImg: [],
+          answer: '中膜',
+          commentary:
+            'Tunica media。弾性型動脈では弾性繊維Elastic fiberが豊富であるが、筋型動脈では平滑筋細胞で占められている。',
+        },
 
         // {
-        //   detailInfo: '6/1',
+        //   detailInfo: '6/2',
         //   questionImg: [],
         //   questionSentence: '',
         //   choices: ['', '', '', ''],
@@ -1353,7 +1363,7 @@ export const useQuestionList = () => {
             '単層立方上皮である小葉間胆管が通る',
             'アザン染色で青に染まる',
           ],
-          answerImg: [],
+          answerImg: [hepaticLobule],
           answer: '',
           commentary:
             '中心静脈が通るのは肝小葉の中心であり、小葉間組織に通る静脈は小葉間静脈。',
@@ -1383,7 +1393,7 @@ export const useQuestionList = () => {
             '基底膜は卵胞上皮細胞の外側にある',
             '単層の扁平な卵胞上皮細胞に包まれる',
           ],
-          answerImg: [],
+          answerImg: [follicle2],
           answer: '',
           commentary:
             '原始卵胞を取り囲むのは卵胞上皮細胞と基底膜である。卵胞膜が取り囲むようになるのは一次卵胞になってから。',
@@ -1397,9 +1407,8 @@ export const useQuestionList = () => {
             '放出されるのは卵子細胞である',
             '卵胞に含まれるのは全て一次卵母細胞である',
             '放線冠と透明層はくっついている',
-            '',
           ],
-          answerImg: [],
+          answerImg: [follicle2],
           answer: '',
           commentary:
             'グラーフ卵胞から放出されるのは二次卵母細胞で、それが受精して初めて卵子となる(卵子細胞という言葉は厳密にはないようである)。',
@@ -1487,13 +1496,13 @@ export const useQuestionList = () => {
             'グールマーティ細胞は PAS 染色陽性である',
             '傍糸球体細胞は輸入細動脈の平滑筋由来である',
           ],
-          answerImg: [],
+          answerImg: [JGA],
           answer: '',
           commentary: '緻密斑は遠位尿細管の一部の上皮が分化したものである。',
         },
         {
           detailInfo: '(43)',
-          questionImg: [],
+          questionImg: [renalTubule],
           questionSentence: '尿細菅の上皮について誤っているものを選べ。',
           choices: [
             '基底線条は遠位尿細菅で発達している',
