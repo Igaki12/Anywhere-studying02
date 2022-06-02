@@ -445,6 +445,24 @@ export const useQuestionList = () => {
           commentary:
             'Tunica media。弾性型動脈では弾性繊維Elastic fiberが豊富であるが、筋型動脈では平滑筋細胞で占められている。',
         },
+        {
+          detailInfo: '6/2',
+          questionImg: [],
+          questionSentence: '静脈の三層構造で縦走の平滑筋が最もみられる膜は？',
+          answerImg: [],
+          answer: '外膜',
+          commentary:
+            '輪走平滑筋は中膜Tunica mediaにみられる。縦走平滑筋が外膜Tunica externaと一部内膜Tunica internaにみられ、起立時に心臓より下に位置する静脈で特に発達している。',
+        },
+        {
+          detailInfo: '6/2',
+          questionImg: [],
+          questionSentence: '',
+          choices: ['', '', '', ''],
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
 
         // {
         //   detailInfo: '6/2',
