@@ -454,15 +454,15 @@ export const useQuestionList = () => {
           commentary:
             '輪走平滑筋は中膜Tunica mediaにみられる。縦走平滑筋が外膜Tunica externaと一部内膜Tunica internaにみられ、起立時に心臓より下に位置する静脈で特に発達している。',
         },
-        {
-          detailInfo: '6/2',
-          questionImg: [],
-          questionSentence: '',
-          choices: ['', '', '', ''],
-          answerImg: [],
-          answer: '',
-          commentary: '',
-        },
+        // {
+        //   detailInfo: '6/2',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   choices: ['', '', '', ''],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
 
         // {
         //   detailInfo: '6/2',

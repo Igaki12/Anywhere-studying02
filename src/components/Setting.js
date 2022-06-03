@@ -137,7 +137,7 @@ export const Setting = ({
         </ListItem>
         <ListItem transitionDelay="5s" className="Headline1">
           <ListIcon as={CheckCircleIcon} color="green.500" />
-          途中でアプリを消してしまっても、安心して続きから再開できる
+          途中でアプリを消してしまっても、続きから再開できるので安心
         </ListItem>
         <ListItem transitionDelay="6s" className="Headline1">
           <ListIcon as={WarningIcon} color="green.500" />
