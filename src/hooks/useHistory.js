@@ -185,7 +185,8 @@ export const useHistory = () => {
       newHistory.questionNum += 1
       setHistory([...history, newHistory])
     }
-    if (settingDetail.questionOrder === 'ascend') {
+    // if (settingDetail.questionOrder === 'ascend') {
+    else {
       let newHistory = history[history.length - 1]
       if (newHistory.askingQuestion) {
         newHistory.askedQuestionList = [

@@ -8,10 +8,13 @@ import {
   IconButton,
   Flex,
   Spacer,
+  useDisclosure,
+  Collapse,
 } from '@chakra-ui/react'
 import { ArrowDownIcon, RepeatIcon } from '@chakra-ui/icons'
 import { ResultBar } from './ResultBar'
 import '../App.css'
+import { useState } from 'react'
 
 export const QuestionsLog = ({
   questionList,
@@ -24,6 +27,7 @@ export const QuestionsLog = ({
   reviewAskingQuestion,
   saveHistory,
 }) => {
+  const [isOpen, setIsOpen] = useState(true)
   const toast = useToast()
   const toastGoodJob = () => {
     if (history[history.length - 1].remainingQuestionList.length === 0) {
@@ -189,133 +193,153 @@ export const QuestionsLog = ({
         showSettingDetail={showSettingDetail}
       />
       {/* 現在解いている問題askingQuestionはaskedQuestionとは分けて表示している。 */}
+      {/* <Collapse animateOpacity> */}
       {history[history.length - 1].askingQuestion.questionSentence ? (
-        <Box
-          maxW="sm"
-          borderWidth="1px"
-          borderRadius="lg"
-          overflow="hidden"
-          mb={3}
-          mt="3"
-          className="DownSlideIn"
-        >
-          {history[history.length - 1].askingQuestion.questionImg.map(
-            (image, imageNum) => (
-              <Image
-                src={image}
-                alt="写真読み込みエラー"
-                key={imageNum + 'QuestionImage'}
-              />
-            ),
-          )}
-          <Box p="6">
-            <Box display="flex" alignItems="baseline">
-              <Badge borderRadius="full" px="2" colorScheme="teal">
-                {history[history.length - 1].askingQuestion.groupTag}
-              </Badge>
-              <Box
-                color="gray.500"
-                fontWeight="semibold"
-                letterSpacing="wide"
-                fontSize="xs"
-                textTransform="uppercase"
-                ml="2"
-              >
-                {history[history.length - 1].askingQuestion.detailInfo}
+        <>
+          <Box
+            maxW="sm"
+            borderWidth="1px"
+            borderRadius="lg"
+            overflow="hidden"
+            mb={3}
+            mt="3"
+            className="DownSlideIn"
+          >
+            {history[history.length - 1].askingQuestion.questionImg.map(
+              (image, imageNum) => (
+                <Image
+                  src={image}
+                  alt="ERROR:この文章が見えた時は作成者に報告してください"
+                  key={imageNum + 'QuestionImage'}
+                />
+              ),
+            )}
+            <Box p="6">
+              <Box display="flex" alignItems="baseline">
+                <Badge borderRadius="full" px="2" colorScheme="teal">
+                  {history[history.length - 1].askingQuestion.groupTag}
+                </Badge>
+                <Box
+                  color="gray.500"
+                  fontWeight="semibold"
+                  letterSpacing="wide"
+                  fontSize="xs"
+                  textTransform="uppercase"
+                  ml="2"
+                >
+                  {history[history.length - 1].askingQuestion.detailInfo}
+                </Box>
+              </Box>
+
+              <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
+                {history[history.length - 1].askingQuestion.questionSentence}
+                {history[history.length - 1].askingQuestion
+                  .randomizedChoices ? (
+                  history[
+                    history.length - 1
+                  ].askingQuestion.randomizedChoices.map(
+                    (choice, choiceIndex) => (
+                      <Flex ml={4} fontWeight="normal">
+                        <Text>{choiceIndex + 1}.</Text>
+                        <Text pl={2}>{choice}</Text>
+                      </Flex>
+                    ),
+                  )
+                ) : (
+                  <></>
+                )}
               </Box>
             </Box>
-
-            <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
-              {history[history.length - 1].askingQuestion.questionSentence}
-              {history[history.length - 1].askingQuestion.randomizedChoices ? (
-                history[
-                  history.length - 1
-                ].askingQuestion.randomizedChoices.map(
-                  (choice, choiceIndex) => (
-                    <Flex ml={4} fontWeight="normal">
-                      <Text>{choiceIndex + 1}.</Text>
-                      <Text pl={2}>{choice}</Text>
-                    </Flex>
+          </Box>
+          <Collapse in={isOpen} animateOpacity>
+            {history[history.length - 1].isAnswered ? (
+              <Box
+                maxW="sm"
+                borderWidth="1px"
+                borderRadius="lg"
+                overflow="hidden"
+                bg={'red.50'}
+                // className="DownSlideIn"
+              >
+                {history[history.length - 1].askingQuestion.answerImg.map(
+                  (image) => (
+                    <Image src={image} alt="写真読み込みエラー" />
                   ),
-                )
-              ) : (
-                <></>
-              )}
-            </Box>
-          </Box>
-        </Box>
-      ) : (
-        <></>
-      )}
-      {/* 現在解いている問題の解答に関しても分けて表示する。isAnsweredに依る。 */}
-      {history[history.length - 1].isAnswered ? (
-        <Box
-          maxW="sm"
-          borderWidth="1px"
-          borderRadius="lg"
-          overflow="hidden"
-          bg={'red.50'}
-          className="DownSlideIn"
-        >
-          {history[history.length - 1].askingQuestion.answerImg.map((image) => (
-            <Image src={image} alt="写真読み込みエラー" />
-          ))}
+                )}
 
-          <Box p="6" pb={0}>
-            <Box display="flex" alignItems="baseline">
-              <Badge variant="solid" colorScheme="red">
-                解答
-              </Badge>
-              <Box
-                color="red.700"
-                fontWeight="semibold"
-                letterSpacing="wide"
-                fontSize=""
-                textTransform="uppercase"
-                ml="2"
-              >
-                {history[history.length - 1].askingQuestion.answer
-                  ? history[history.length - 1].askingQuestion.answer
-                  : '解答準備中'}
+                <Box p="6" pb={0}>
+                  <Box display="flex" alignItems="baseline">
+                    <Badge variant="solid" colorScheme="red">
+                      解答
+                    </Badge>
+                    <Box
+                      color="red.700"
+                      fontWeight="semibold"
+                      letterSpacing="wide"
+                      fontSize=""
+                      textTransform="uppercase"
+                      ml="2"
+                    >
+                      {history[history.length - 1].askingQuestion.answer
+                        ? history[history.length - 1].askingQuestion.answer
+                        : '解答準備中'}
+                    </Box>
+                  </Box>
+                  <Badge variant="solid" colorScheme="red">
+                    解説
+                  </Badge>
+                  <Box mt="1" as="h4" lineHeight="tight">
+                    {history[history.length - 1].askingQuestion.commentary
+                      ? history[history.length - 1].askingQuestion.commentary
+                      : ''}
+                  </Box>
+                </Box>
+                {history[history.length - 1].askingQuestion.id.indexOf('r') ===
+                -1 ? (
+                  <Flex pr={4} pb={4}>
+                    <Spacer />
+                    <IconButton
+                      colorScheme={'red'}
+                      variant="ghost"
+                      aria-label="review this question"
+                      onClick={() => {
+                        setIsOpen(false)
+                        setTimeout(
+                          () => reviewAskingQuestion(settingDetail),
+                          500,
+                        )
+
+                        toast({
+                          title: 'この質問はもう一度出題されます',
+                          position: 'top',
+                          // description: "We've created your account for you.",
+                          status: 'info',
+                          duration: 9000,
+                          isClosable: true,
+                        })
+                      }}
+                      icon={<RepeatIcon />}
+                    />
+                  </Flex>
+                ) : (
+                  <Flex pr={4} pb="4" pt="40px"></Flex>
+                )}
               </Box>
-            </Box>
-            <Badge variant="solid" colorScheme="red">
-              解説
-            </Badge>
-            <Box mt="1" as="h4" lineHeight="tight">
-              {history[history.length - 1].askingQuestion.commentary
-                ? history[history.length - 1].askingQuestion.commentary
-                : ''}
-            </Box>
-          </Box>
-          {history[history.length - 1].askingQuestion.id.indexOf('r') === -1 ? (
-            <Flex pr={4} pb={4}>
-              <Spacer />
-              <IconButton
-                colorScheme={'red'}
-                variant="ghost"
-                aria-label="review this question"
-                onClick={() => {
-                  reviewAskingQuestion(settingDetail)
-                  toast({
-                    title: 'この質問はもう一度出題されます',
-                    position: 'top',
-                    // description: "We've created your account for you.",
-                    status: 'info',
-                    duration: 9000,
-                    isClosable: true,
-                  })
-                }}
-                icon={<RepeatIcon />}
-              />
-            </Flex>
-          ) : (
-            <Flex pr={4} pb="4" pt="40px"></Flex>
-          )}
-        </Box>
+            ) : (
+              <></>
+            )}
+          </Collapse>
+        </>
       ) : (
         <></>
       )}
+      {/* </Collapse> */}
+      {/* 現在解いている問題の解答に関しても分けて表示する。isAnsweredに依る。 */}
+      {/* {history[history.length - 1].isAnswered ? (
+        
+      ) : (
+        <></>
+      )} */}
 
       {history[history.length - 1].isAnswered &&
       history[history.length - 1].remainingQuestionList.length > 0 ? (
@@ -328,6 +352,7 @@ export const QuestionsLog = ({
           onClick={() => {
             nextQuestion(settingDetail)
             scrollToTheBottom()
+            setIsOpen(false)
           }}
         >
           次の問題へ
@@ -347,9 +372,10 @@ export const QuestionsLog = ({
           variant={'solid'}
           onClick={() => {
             checkAnswer()
-            // scrollToTheBottom()
+            setIsOpen(true)
             toastGoodJob()
             saveHistory(history[history.length - 1])
+            // setTimeout(() => scrollToTheBottom(), 500)
           }}
         >
           解答をみる
