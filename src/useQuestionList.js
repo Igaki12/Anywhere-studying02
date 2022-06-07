@@ -51,6 +51,8 @@ import cerebellum220601 from './img/question/220601cerebellum.png'
 import spinalCord220601 from './img/question/220601spinalCord.png'
 import lymphNode220607 from './img/question/220607lymphNode.png'
 import lymphNode from './img/answer/lymphNode.png'
+import exocrineEndocrine from './img/answer/exocrineEndocrine.png'
+import salivaryGland from './img/answer/salivaryGland.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1787,19 +1789,23 @@ export const useQuestionList = () => {
           questionSentence:
             '内分泌腺と外分泌腺の発生の違いを図示して説明しなさい。※（それぞれの構造の違いについても説明すること）',
           // questionSentence: '',
-          answerImg: [pancreasTissue],
-          answer: '準備中',
-          commentary: '',
+          answerImg: [exocrineEndocrine],
+          answer:
+            '両者上皮細胞が落ち込んで形成されるが、内分泌腺は上皮表面との繋がりを絶つのに対して、外分泌腺は導管を作って上皮表面との繋がりを保つ。',
+          commentary:
+            '外分泌腺（唾液腺など）の分泌は、上皮自由表面へ。内分泌腺（下垂体など）の分泌は、毛細血管へ行われる。',
         },
         {
           detailInfo: '再試験大問1(2)',
-          questionImg: [pancreasTissue],
+          questionImg: [],
           questionSentence:
             '内分泌腺と外分泌腺を各々1 つずつ選び、図示して説明しなさい。 ',
           // questionSentence: '',
-          answerImg: [],
-          answer: '準備中',
-          commentary: '',
+          answerImg: [salivaryGland, adrenalGland],
+          answer:
+            '内分泌腺（副腎）：内部に血管が洞様毛細血管をつくって進入し、ホルモンなどの分泌物質が血中に流れて全身に渡る。導管はもっていない。外分泌腺（唾液腺）：腺房の分泌物質は導管で上皮表面まで運ばれる。唾液腺の場合は扁平な介在部導管と基底線条をもつ線条部導管で構成される。',
+          commentary:
+            '内分泌腺：下垂体・膵臓ランゲルハンス島・甲状腺・性腺など、外分泌腺：皮脂腺・胃腺・膵臓外分泌部など',
         },
         // {
         //   detailInfo:'再試験大問1(1)',

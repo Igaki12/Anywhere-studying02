@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.602d53c9.js",
+    "main.js": "/Anywhere-studying02/static/js/main.75d3432d.js",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/BloodAir.png": "/Anywhere-studying02/static/media/BloodAir.42a11021f6f28ba11c69.png",
     "static/media/sinusoid.png": "/Anywhere-studying02/static/media/sinusoid.cad74aeebbe625737c19.png",
@@ -27,6 +27,7 @@
     "static/media/Brown-Sequard.png": "/Anywhere-studying02/static/media/Brown-Sequard.2dc4dda89fbcb7ac45f5.png",
     "static/media/willis.png": "/Anywhere-studying02/static/media/willis.a089e3258d6b8e64fa74.png",
     "static/media/hepaticLobule.png": "/Anywhere-studying02/static/media/hepaticLobule.99a397e6a60cb3e01e46.png",
+    "static/media/exocrineEndocrine.png": "/Anywhere-studying02/static/media/exocrineEndocrine.8131233b50d34b9fa683.png",
     "static/media/thalamusSyndrome.png": "/Anywhere-studying02/static/media/thalamusSyndrome.f2ee0bb65d2a5b22a2ee.png",
     "static/media/subduralHematoma.png": "/Anywhere-studying02/static/media/subduralHematoma.01a3af6896b4f86797df.png",
     "static/media/attendance4.JPG": "/Anywhere-studying02/static/media/attendance4.7463ce523c9c8ae04a14.JPG",
@@ -49,15 +50,16 @@
     "static/media/mesencephalon.png": "/Anywhere-studying02/static/media/mesencephalon.80070ba286f1367a40b8.png",
     "static/media/sample.png": "/Anywhere-studying02/static/media/sample.a6320935e2373dc71003.png",
     "static/media/bloodUrineBarrier.png": "/Anywhere-studying02/static/media/bloodUrineBarrier.490d202838ef52e06df9.png",
+    "static/media/salivaryGland.png": "/Anywhere-studying02/static/media/salivaryGland.2bb290e2f73ed43fdc71.png",
     "static/media/220601spinalCord.png": "/Anywhere-studying02/static/media/220601spinalCord.688ec6decfa7fa5af27c.png",
     "static/media/capillary.png": "/Anywhere-studying02/static/media/capillary.d5430ad2ed7e4d1e57f9.png",
     "static/media/220601cerebellum.png": "/Anywhere-studying02/static/media/220601cerebellum.151d17639cc3adaff58d.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.602d53c9.js.map": "/Anywhere-studying02/static/js/main.602d53c9.js.map"
+    "main.75d3432d.js.map": "/Anywhere-studying02/static/js/main.75d3432d.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.602d53c9.js"
+    "static/js/main.75d3432d.js"
   ]
 }
