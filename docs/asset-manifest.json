@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.63232ce4.js",
+    "main.js": "/Anywhere-studying02/static/js/main.15998edd.js",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/BloodAir.png": "/Anywhere-studying02/static/media/BloodAir.42a11021f6f28ba11c69.png",
     "static/media/sinusoid.png": "/Anywhere-studying02/static/media/sinusoid.cad74aeebbe625737c19.png",
     "static/media/placenta.png": "/Anywhere-studying02/static/media/placenta.d5ad101c91835ae0fda4.png",
+    "static/media/220607lymphNode.png": "/Anywhere-studying02/static/media/220607lymphNode.70fa2904d32ca20f2b7a.png",
     "static/media/liver.png": "/Anywhere-studying02/static/media/liver.db5c84a18c380ee2f687.png",
     "static/media/marrow.png": "/Anywhere-studying02/static/media/marrow.45fab6b0f528b6add20a.png",
     "static/media/lipidInIntestine.png": "/Anywhere-studying02/static/media/lipidInIntestine.8641da0499fada7482c6.png",
@@ -52,10 +53,10 @@
     "static/media/220601cerebellum.png": "/Anywhere-studying02/static/media/220601cerebellum.151d17639cc3adaff58d.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.63232ce4.js.map": "/Anywhere-studying02/static/js/main.63232ce4.js.map"
+    "main.15998edd.js.map": "/Anywhere-studying02/static/js/main.15998edd.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.63232ce4.js"
+    "static/js/main.15998edd.js"
   ]
 }

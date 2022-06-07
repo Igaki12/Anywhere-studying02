@@ -335,11 +335,6 @@ export const QuestionsLog = ({
       )}
       {/* </Collapse> */}
       {/* 現在解いている問題の解答に関しても分けて表示する。isAnsweredに依る。 */}
-      {/* {history[history.length - 1].isAnswered ? (
-        
-      ) : (
-        <></>
-      )} */}
 
       {history[history.length - 1].isAnswered &&
       history[history.length - 1].remainingQuestionList.length > 0 ? (

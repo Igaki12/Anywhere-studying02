@@ -49,6 +49,7 @@ import subduralHematoma from './img/answer/subduralHematoma.png'
 import BrownSequard from './img/answer/Brown-Sequard.png'
 import cerebellum220601 from './img/question/220601cerebellum.png'
 import spinalCord220601 from './img/question/220601spinalCord.png'
+import lymphNode220607 from './img/question/220607lymphNode.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -454,15 +455,33 @@ export const useQuestionList = () => {
           commentary:
             '輪走平滑筋は中膜Tunica mediaにみられる。縦走平滑筋が外膜Tunica externaと一部内膜Tunica internaにみられ、起立時に心臓より下に位置する静脈で特に発達している。',
         },
-        // {
-        //   detailInfo: '6/2',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   choices: ['', '', '', ''],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '6/7',
+          questionImg: [lymphNode220607],
+          questionSentence: '図（リンパ節傍皮質）の赤矢印が示す細胞の名称は？',
+          // choices: ['', '', '', ''],
+          answerImg: [],
+          answer: 'マクロファージ',
+          commentary: '青矢印は細網細胞、緑矢印はリンパ球',
+        },
+        {
+          detailInfo: '6/7',
+          questionImg: [],
+          questionSentence: '',
+          choices: ['', '', '', ''],
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
+        {
+          detailInfo: '6/7',
+          questionImg: [],
+          questionSentence: '',
+          choices: ['', '', '', ''],
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
 
         // {
         //   detailInfo: '6/2',
