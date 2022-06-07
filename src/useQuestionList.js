@@ -498,7 +498,7 @@ export const useQuestionList = () => {
           answerImg: [spleen],
           answer: '',
           commentary:
-            '中心動脈・筆毛動脈は白脾髄に、莢動脈・脾洞は赤脾髄に存在する。',
+            '中心動脈・筆毛動脈は白脾髄に、莢（さや）動脈・脾洞は赤脾髄に存在する。',
         },
         {
           detailInfo: '6/7',
@@ -513,11 +513,11 @@ export const useQuestionList = () => {
         {
           detailInfo: '6/7',
           questionImg: [],
-          questionSentence: '',
-          choices: ['', '', '', ''],
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          questionSentence: '胃を構成する細胞で、酸を分泌する細胞の名前を答えなさい。',
+          // choices: ['', '', '', ''],
+          answerImg: [gastricGland],
+          answer: '壁細胞',
+          commentary: '壁細胞はミトコンドリアが豊富で、エオジンに強く染まる。',
         },
 
         // {
