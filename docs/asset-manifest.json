@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.14b7a113.js",
+    "main.js": "/Anywhere-studying02/static/js/main.602d53c9.js",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/BloodAir.png": "/Anywhere-studying02/static/media/BloodAir.42a11021f6f28ba11c69.png",
     "static/media/sinusoid.png": "/Anywhere-studying02/static/media/sinusoid.cad74aeebbe625737c19.png",
@@ -16,6 +16,7 @@
     "static/media/releasedFollicle.png": "/Anywhere-studying02/static/media/releasedFollicle.888a698c9d60ed7a31e1.png",
     "static/media/spinalDisorder.png": "/Anywhere-studying02/static/media/spinalDisorder.e7271f8e802115fce047.png",
     "static/media/220528brainStem.png": "/Anywhere-studying02/static/media/220528brainStem.94cc2e9a9c3701f8d906.png",
+    "static/media/lymphNode.png": "/Anywhere-studying02/static/media/lymphNode.997d2920dd8040bbf266.png",
     "static/media/nidusAVM.png": "/Anywhere-studying02/static/media/nidusAVM.6c5e164a48e19d2e71f1.png",
     "static/media/testis.png": "/Anywhere-studying02/static/media/testis.a241d073edd47b0da214.png",
     "static/media/keiroMatome.png": "/Anywhere-studying02/static/media/keiroMatome.9ad96c059817907105c4.png",
@@ -53,10 +54,10 @@
     "static/media/220601cerebellum.png": "/Anywhere-studying02/static/media/220601cerebellum.151d17639cc3adaff58d.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.14b7a113.js.map": "/Anywhere-studying02/static/js/main.14b7a113.js.map"
+    "main.602d53c9.js.map": "/Anywhere-studying02/static/js/main.602d53c9.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.14b7a113.js"
+    "static/js/main.602d53c9.js"
   ]
 }

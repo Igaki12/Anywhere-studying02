@@ -10,6 +10,7 @@ import {
   Spacer,
   useDisclosure,
   Collapse,
+  Tooltip,
 } from '@chakra-ui/react'
 import { ArrowDownIcon, RepeatIcon } from '@chakra-ui/icons'
 import { ResultBar } from './ResultBar'
@@ -160,23 +161,31 @@ export const QuestionsLog = ({
                   {question.id.indexOf('r') === -1 ? (
                     <Flex pr={4} pb={4}>
                       <Spacer />
-                      <IconButton
-                        colorScheme={'red'}
-                        variant="ghost"
-                        aria-label="review this question"
-                        onClick={() => {
-                          reviewQuestion(index)
-                          toast({
-                            title: 'この質問はもう一度出題されます',
-                            position: 'top',
-                            // description: "We've created your account for you.",
-                            status: 'info',
-                            duration: 9000,
-                            isClosable: true,
-                          })
-                        }}
-                        icon={<RepeatIcon />}
-                      />
+                      <Tooltip
+                        hasArrow
+                        label="ボタンを押すと、この質問がもう一度出題し直されます。ランダム出題の場合はランダムに、順番通り出題の場合は順番の最後に回されます。"
+                        bg="gray.300"
+                        color="black"
+                        size={'xs'}
+                      >
+                        <IconButton
+                          colorScheme={'red'}
+                          variant="ghost"
+                          aria-label="review this question"
+                          onClick={() => {
+                            reviewQuestion(index)
+                            toast({
+                              title: 'この質問はもう一度出題されます',
+                              position: 'top',
+                              // description: "We've created your account for you.",
+                              status: 'info',
+                              duration: 9000,
+                              isClosable: true,
+                            })
+                          }}
+                          icon={<RepeatIcon />}
+                        />
+                      </Tooltip>
                     </Flex>
                   ) : (
                     <Flex pr={4} pb="4" pt="40px"></Flex>
@@ -298,28 +307,36 @@ export const QuestionsLog = ({
                 -1 ? (
                   <Flex pr={4} pb={4}>
                     <Spacer />
-                    <IconButton
-                      colorScheme={'red'}
-                      variant="ghost"
-                      aria-label="review this question"
-                      onClick={() => {
-                        setIsOpen(false)
-                        setTimeout(
-                          () => reviewAskingQuestion(settingDetail),
-                          500,
-                        )
+                    <Tooltip
+                      hasArrow
+                      label="ボタンを押すと、この質問がもう一度出題し直されます。ランダム出題の場合はランダムに、順番通り出題の場合は順番の最後に回されます。"
+                      bg="gray.300"
+                      color="black"
+                      size={'xs'}
+                    >
+                      <IconButton
+                        colorScheme={'red'}
+                        variant="ghost"
+                        aria-label="review this question"
+                        onClick={() => {
+                          setIsOpen(false)
+                          setTimeout(
+                            () => reviewAskingQuestion(settingDetail),
+                            500,
+                          )
 
-                        toast({
-                          title: 'この質問はもう一度出題されます',
-                          position: 'top',
-                          // description: "We've created your account for you.",
-                          status: 'info',
-                          duration: 9000,
-                          isClosable: true,
-                        })
-                      }}
-                      icon={<RepeatIcon />}
-                    />
+                          toast({
+                            title: 'この質問はもう一度出題されます',
+                            position: 'top',
+                            // description: "We've created your account for you.",
+                            status: 'info',
+                            duration: 9000,
+                            isClosable: true,
+                          })
+                        }}
+                        icon={<RepeatIcon />}
+                      />
+                    </Tooltip>
                   </Flex>
                 ) : (
                   <Flex pr={4} pb="4" pt="40px"></Flex>

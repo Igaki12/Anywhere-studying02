@@ -7,6 +7,7 @@ import {
   TagLabel,
   TagCloseButton,
   Text,
+  Tooltip,
 } from '@chakra-ui/react'
 import { AddIcon } from '@chakra-ui/icons'
 import { useRef, useState } from 'react'
@@ -94,19 +95,26 @@ export const SearchWord = ({
           onChange={updatePredictionNum}
         />
         {predictionNum > 0 ? (
-          <IconButton
-            ml={2}
-            variant="outline"
-            colorScheme="teal"
-            aria-label="Search database"
-            icon={<AddIcon />}
-            onClick={() => {
-              addWordFilterTag()
-              setPredictionText()
-              checkSelection()
-              saveSetting(settingDetail)
-            }}
-          />
+          <Tooltip
+            hasArrow
+            label="問題文・解答・解説に含まれるようなキーワードを設定すると、絞り込むことができます。例）血管、神経など"
+            bg="gray.300"
+            color="black"
+          >
+            <IconButton
+              ml={2}
+              variant="outline"
+              colorScheme="teal"
+              aria-label="Search database"
+              icon={<AddIcon />}
+              onClick={() => {
+                addWordFilterTag()
+                setPredictionText()
+                checkSelection()
+                saveSetting(settingDetail)
+              }}
+            />
+          </Tooltip>
         ) : (
           <IconButton
             isDisabled
@@ -114,7 +122,17 @@ export const SearchWord = ({
             variant="outline"
             colorScheme="teal"
             aria-label="Search database"
-            icon={<AddIcon />}
+            icon={
+              <Tooltip
+                hasArrow
+                label="問題文・解答・解説に含まれるようなキーワードを設定すると、絞り込むことができます。例）血管、神経など"
+                bg="gray.300"
+                color="black"
+                size={'xs'}
+              >
+                <AddIcon />
+              </Tooltip>
+            }
           />
         )}
       </Flex>

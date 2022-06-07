@@ -50,6 +50,7 @@ import BrownSequard from './img/answer/Brown-Sequard.png'
 import cerebellum220601 from './img/question/220601cerebellum.png'
 import spinalCord220601 from './img/question/220601spinalCord.png'
 import lymphNode220607 from './img/question/220607lymphNode.png'
+import lymphNode from './img/answer/lymphNode.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -470,7 +471,7 @@ export const useQuestionList = () => {
           questionSentence:
             '末梢血中のリンパ球はどの血管から二次リンパ器官に入る？',
           choices: ['post-capillary-venule', 'capillary', 'arteriole', 'vein'],
-          answerImg: [spleen],
+          answerImg: [lymphNode],
           answer: '',
           commentary:
             '毛細血管後細静脈Post capillary venuleはリンパ節の傍皮質にある',
@@ -513,7 +514,8 @@ export const useQuestionList = () => {
         {
           detailInfo: '6/7',
           questionImg: [],
-          questionSentence: '胃を構成する細胞で、酸を分泌する細胞の名前を答えなさい。',
+          questionSentence:
+            '胃を構成する細胞で、酸を分泌する細胞の名前を答えなさい。',
           // choices: ['', '', '', ''],
           answerImg: [gastricGland],
           answer: '壁細胞',
