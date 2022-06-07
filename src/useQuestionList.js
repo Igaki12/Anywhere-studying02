@@ -467,12 +467,49 @@ export const useQuestionList = () => {
         {
           detailInfo: '6/7',
           questionImg: [],
-          questionSentence: '',
-          choices: ['', '', '', ''],
+          questionSentence:
+            '末梢血中のリンパ球はどの血管から二次リンパ器官に入る？',
+          choices: ['post-capillary-venule', 'capillary', 'arteriole', 'vein'],
+          answerImg: [spleen],
+          answer: '',
+          commentary:
+            '毛細血管後細静脈Post capillary venuleはリンパ節の傍皮質にある',
+        },
+        {
+          detailInfo: '6/7',
+          questionImg: [],
+          questionSentence: 'HE染色で車軸状に染まる特徴的な核を持つ細胞は？',
+          choices: ['形質細胞', '内皮細胞', 'T細胞', '細網細胞'],
           answerImg: [],
           answer: '',
-          commentary: '',
+          commentary:
+            '形質細胞はB細胞が抗原提示を受けて分化する。リンパ節の髄質に存在する。',
         },
+        {
+          detailInfo: '6/7',
+          questionImg: [],
+          questionSentence: '脾臓の血管系で正しいのはどれ？',
+          choices: [
+            '脾柱動脈→中心動脈→筆毛動脈→莢動脈→脾洞→脾柱静脈',
+            '脾柱動脈→中心動脈→筆毛動脈→脾洞→莢動脈→脾柱静脈',
+            '脾柱動脈→中心動脈→脾洞→筆毛動脈→莢動脈→脾柱静脈',
+            '脾柱動脈→脾洞→中心動脈→筆毛動脈→莢動脈→脾柱静脈',
+          ],
+          answerImg: [spleen],
+          answer: '',
+          commentary:
+            '中心動脈・筆毛動脈は白脾髄に、莢動脈・脾洞は赤脾髄に存在する。',
+        },
+        {
+          detailInfo: '6/7',
+          questionImg: [],
+          questionSentence: '脾臓の赤脾髄内にあるものを二つ選びなさい。',
+          choices: ['脾索', '脾洞', '中心動脈', '脾小節', '筆毛動脈'],
+          answerImg: [spleen],
+          answer: '脾洞・脾索',
+          commentary: '赤脾髄内には他に莢動脈が含まれる。',
+        },
+
         {
           detailInfo: '6/7',
           questionImg: [],
