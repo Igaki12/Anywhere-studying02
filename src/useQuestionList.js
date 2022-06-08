@@ -528,7 +528,7 @@ export const useQuestionList = () => {
           detailInfo: '6/8(1)',
           questionImg: [],
           questionSentence: '腺の由来は？',
-          answerImg: [],
+          answerImg: [exocrineEndocrine],
           answer: '上皮組織',
           commentary: '',
           choices: [
@@ -547,9 +547,9 @@ export const useQuestionList = () => {
           detailInfo: '6/8(2)',
           questionImg: [],
           questionSentence: '腺構造で、小葉内にあるもの二つ選びなさい。',
-          answerImg: [],
-          answer: '動脈、介在部導管',
-          commentary: '',
+          answerImg: [salivaryGland],
+          answer: '線条部導管、介在部導管',
+          commentary: '小葉内部に存在するのは動脈ではなく毛細血管',
           choices: [
             '小葉間導管',
 
@@ -568,7 +568,7 @@ export const useQuestionList = () => {
           questionSentence: 'エオジンに好染するものを選びなさい。',
           answerImg: [],
           answer: '線条部導管',
-          commentary: '',
+          commentary: '基底線条に豊富なミトコンドリアがエオジンに良く染まる',
           choices: ['粘液細胞', '筋上皮細胞', '介在部導管', '線条部導管'],
         },
         {
@@ -596,9 +596,9 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '胃腺を構成する細胞で間違っているものを選びなさい。',
-          answerImg: [],
+          answerImg: [gastricGland],
           answer: '副細胞=goblet cell',
-          commentary: '',
+          commentary: 'goblet cellは杯細胞。',
           choices: [
             '主細胞=chief cell',
 
@@ -613,9 +613,9 @@ export const useQuestionList = () => {
           detailInfo: '6/8(6)',
           questionImg: [],
           questionSentence: '好酸性の細胞を選びなさい。',
-          answerImg: [],
+          answerImg: [gastricGland],
           answer: 'parietal cell',
-          commentary: '',
+          commentary: '壁細胞はミトコンドリアが豊富で、エオジン好染＝好酸性',
           choices: [
             'chief cell',
 
