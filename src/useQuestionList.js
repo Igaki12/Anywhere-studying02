@@ -1601,7 +1601,7 @@ export const useQuestionList = () => {
           detailInfo: '(6)',
           questionImg: [],
           questionSentence: '脾臓にないもの',
-          choices: ['毛細血管後細静脈', '中心動脈', '鞘動脈', '筆毛動脈'],
+          choices: ['毛細血管後細静脈', '中心動脈', '莢動脈', '筆毛動脈'],
           answerImg: [spleen],
           answer: '',
           commentary: '',
@@ -1663,7 +1663,8 @@ export const useQuestionList = () => {
           choices: ['膵管', '介在部導管', '中心腺房細胞', '線条部導管'],
           answerImg: [pancreasTissue],
           answer: '',
-          commentary: '',
+          commentary:
+            '介在部導管・線条部導管は小葉内の構造であり、膵臓に線条部導管は存在しない。',
         },
         {
           detailInfo: '(13)',
@@ -1681,7 +1682,7 @@ export const useQuestionList = () => {
           choices: ['膵臓', '舌下腺', '顎下腺', '耳下腺'],
           answerImg: [],
           answer: '',
-          commentary: '',
+          commentary: '舌下腺は介在部導管をほぼ持たない',
         },
         {
           detailInfo: '(15)',
@@ -1713,7 +1714,7 @@ export const useQuestionList = () => {
           ],
           answerImg: [],
           answer: '',
-          commentary: '',
+          commentary: 'PAS染色は基底膜やメサンギウム基質の糖タンパクに反応する',
         },
         {
           detailInfo: '(18)',
@@ -1724,7 +1725,6 @@ export const useQuestionList = () => {
             'クッパー細胞',
             'ピット細胞',
             'ランゲルハンス細胞',
-            '',
           ],
           answerImg: [liver],
           answer: '',
@@ -1984,7 +1984,6 @@ export const useQuestionList = () => {
             'ランゲルハンス島',
             'ニッスル小体',
             'ライディッヒ細胞',
-            '',
           ],
           answerImg: [],
           answer: '',
@@ -1999,7 +1998,6 @@ export const useQuestionList = () => {
             'クッパー細胞',
             'ニッスル小体',
             'ライディッヒ細胞',
-            '',
           ],
           answerImg: [],
           answer: '',
@@ -2010,10 +2008,11 @@ export const useQuestionList = () => {
           detailInfo: '(47)',
           questionImg: [],
           questionSentence: '副腎組織でレニンにより制御されるもの',
-          choices: ['皮質球状帯', '皮質束状帯', '皮質網状態', '髄質'],
+          choices: ['皮質球状帯', '皮質束状帯', '皮質網状帯', '髄質'],
           answerImg: [adrenalGland],
           answer: '',
-          commentary: '',
+          commentary:
+            '皮質球状帯→電解質コルチコイド（主としてアルドステロン）、皮質束状帯→糖質コルチコイド（主としてコルチゾール）、皮質網状帯→アンドロゲン、髄質→カテコールアミン（主としてアドレナリン）',
         },
         {
           detailInfo: '(48)',
@@ -2060,7 +2059,7 @@ export const useQuestionList = () => {
           // choices: ['', '', '', '', ''],
           answerImg: [JGA],
           answer:
-            '1遠位尿細管の緻密班細胞・2輸入細動脈の平滑筋細胞・3輸入細動脈の顆粒細胞・4輸出細動脈の平滑筋細胞・5両細動脈と緻密班に挟まれた糸球体外メサンギウム細胞',
+            '1)遠位尿細管の緻密班細胞・2)輸入細動脈の平滑筋細胞・3)輸入細動脈の顆粒細胞・4)輸出細動脈の平滑筋細胞・5)両細動脈と緻密班に挟まれた糸球体外メサンギウム細胞',
           commentary:
             '血管局の近くのいくつかの細胞は、協調して血圧や糸球体ろ過を調節する働きを行うので、まとめて傍糸球体装置と呼ばれる。細胞群は多数のギャップ結合で連結されており、互いに上方を共有する。緻密班からのシグナルは輸入細動脈の平滑筋細胞や顆粒細胞に伝達され、尿細管糸球体フィードバックやレニン分泌を引き起こす。1)遠位尿細管で糸球体血管極に面する部分は細胞が小型で、核が密集して見える緻密班macula densaと呼ばれる。細胞嵌合がなく細胞がほぼ立法形となっていて、遠位尿細管内のClイオン濃度を感知し、ここを通過する濾液の流量を監視している。濾液流量（Clイオン濃度）が増加すると、輸入細動脈の平滑筋が収縮し、糸球体ろ過量が減少する。5)輸入・輸出細動脈、緻密班に囲まれた領域には、細胞成分の豊富な特殊な結合組織が挟まっており、糸球体外メサンギウムExtraglomecular mesangiumと呼ばれる。扁平な細胞で、緻密班の底に対して平行に層をなして集まっている。糸球体の入り口に蓋をしている。3)輸入細動脈の壁は糸球体への入り口近くで平滑筋細胞からレニン分泌細胞の顆粒細胞へと置き換わる。細胞内にレニンを含む顆粒を蓄えており、ゴルジ装置や粗面小胞体が発達している。上皮様細胞や傍糸球体細胞ともよばれる。',
         },

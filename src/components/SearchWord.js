@@ -9,7 +9,7 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react'
-import { AddIcon } from '@chakra-ui/icons'
+import { SearchIcon } from '@chakra-ui/icons'
 import { useRef, useState } from 'react'
 
 export const SearchWord = ({
@@ -106,7 +106,7 @@ export const SearchWord = ({
               variant="outline"
               colorScheme="teal"
               aria-label="Search database"
-              icon={<AddIcon />}
+              icon={<SearchIcon />}
               onClick={() => {
                 addWordFilterTag()
                 setPredictionText()
@@ -130,7 +130,7 @@ export const SearchWord = ({
                 color="black"
                 size={'xs'}
               >
-                <AddIcon />
+                <SearchIcon />
               </Tooltip>
             }
           />
