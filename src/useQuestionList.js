@@ -524,8 +524,113 @@ export const useQuestionList = () => {
           commentary: '壁細胞はミトコンドリアが豊富で、エオジンに強く染まる。',
         },
 
+        {
+          detailInfo: '6/8(1)',
+          questionImg: [],
+          questionSentence: '腺の由来は？',
+          answerImg: [],
+          answer: '上皮組織',
+          commentary: '',
+          choices: [
+            '結合組織',
+
+            '神経組織',
+
+            '上皮組織',
+
+            '筋組織',
+
+            'どれでもない',
+          ],
+        },
+        {
+          detailInfo: '6/8(2)',
+          questionImg: [],
+          questionSentence: '腺構造で、小葉内にあるもの二つ選びなさい。',
+          answerImg: [],
+          answer: '動脈、介在部導管',
+          commentary: '',
+          choices: [
+            '小葉間導管',
+
+            '動脈',
+
+            '介在部導管',
+
+            '小葉間結合組織',
+
+            '線条部導管',
+          ],
+        },
+        {
+          detailInfo: '6/8(3)',
+          questionImg: [],
+          questionSentence: 'エオジンに好染するものを選びなさい。',
+          answerImg: [],
+          answer: '線条部導管',
+          commentary: '',
+          choices: ['粘液細胞', '筋上皮細胞', '介在部導管', '線条部導管'],
+        },
+        {
+          detailInfo: '6/8(4)',
+          questionImg: [],
+          questionSentence:
+            '消化管の基本組織構造（内腔側から）で、正しいものを選びなさい',
+          answerImg: [],
+          answer: '粘膜上皮→粘膜固有層→粘膜筋板→粘膜下組織→輪走筋→縦走筋→漿膜',
+          commentary: '',
+          choices: [
+            '粘膜上皮→粘膜固有層→粘膜筋板→粘膜下組織→輪走筋→縦走筋→漿膜',
+
+            '粘膜上皮→粘膜固有層→粘膜筋板→粘膜下組織→縦走筋→輪走筋→漿膜',
+
+            '粘膜上皮→粘膜固有層→粘膜下組織→粘膜筋板→輪走筋→縦走筋→漿膜',
+
+            '粘膜上皮→粘膜固有層→粘膜筋板→輪走筋→粘膜下組織→縦走筋→漿膜',
+
+            '粘膜上皮→粘膜下組織→粘膜固有層→粘膜筋板→輪走筋→縦走筋→漿膜',
+          ],
+        },
+        {
+          detailInfo: '6/8(5)',
+          questionImg: [],
+          questionSentence:
+            '胃腺を構成する細胞で間違っているものを選びなさい。',
+          answerImg: [],
+          answer: '副細胞=goblet cell',
+          commentary: '',
+          choices: [
+            '主細胞=chief cell',
+
+            '表層上皮細胞=surface mucous cell',
+
+            '副細胞=goblet cell',
+
+            '壁細胞=parietal cell',
+          ],
+        },
+        {
+          detailInfo: '6/8(6)',
+          questionImg: [],
+          questionSentence: '好酸性の細胞を選びなさい。',
+          answerImg: [],
+          answer: 'parietal cell',
+          commentary: '',
+          choices: [
+            'chief cell',
+
+            'surface mucous cell',
+
+            'goblet cell',
+
+            'parietal cell',
+
+            'mucous neck cell',
+          ],
+        },
+
         // {
-        //   detailInfo: '6/2',
+        //   detailInfo: '6/8',
         //   questionImg: [],
         //   questionSentence: '',
         //   choices: ['', '', '', ''],
@@ -1758,9 +1863,8 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             '小腸の吸収上皮細胞の微絨毛とそこから出ている糖鎖が画面中央に映っている。',
-            // ここから要記述
-          commentary:
-            '',
+          // ここから要記述
+          commentary: '',
         },
         {
           detailInfo: '再試験大問1(1)',
