@@ -6,7 +6,7 @@ export const useSetting = () => {
     isSet: false,
     mode: 'training',
     questionOrder: 'ascend',
-    questionRange: ['2015総論', '2017総論'],
+    questionRange: ['2015各論', '2017各論'],
     wordFilter: [],
   })
   const showSettingDetail = () => {
