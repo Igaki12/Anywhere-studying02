@@ -635,7 +635,8 @@ export const useQuestionList = () => {
             '小腸の粘膜上皮を構成する細胞のうち、好酸性であるものを選びなさい。',
           answerImg: [intestine],
           answer: 'Paneth cell',
-          commentary: '',
+          commentary:
+            'パネート細胞Paneth cell、杯細胞Goblet cell、吸収上皮細胞Absorptive epithelial cell。パネート細胞はリソソームが豊富で好酸性。',
           choices: [
             'Goblet cell',
             'Paneth cell ',
