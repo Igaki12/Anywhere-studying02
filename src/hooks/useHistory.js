@@ -52,6 +52,13 @@ export const useHistory = () => {
           savedContentsId
         ].id = savedId.toString()
 
+        if (
+          !questionList[savedGroupId].groupContents[savedContentsId].detailInfo
+        ) {
+          questionList[savedGroupId].groupContents[savedContentsId].detailInfo =
+            '(' + savedContentsId.toString() + ')'
+        }
+
         addingQuestion =
           questionList[savedGroupId].groupContents[savedContentsId]
         addingQuestion.groupTag = questionList[savedGroupId].groupTag
@@ -90,6 +97,9 @@ export const useHistory = () => {
         let newRemainingQuestion = question
         newRemainingQuestion.id = (groupIndex * 1000 + questionIndex).toString()
         newRemainingQuestion.groupTag = group.groupTag
+        if (!newRemainingQuestion.detailInfo) {
+          newRemainingQuestion.detailInfo = '(' + questionIndex.toString() + ')'
+        }
 
         if (newRemainingQuestion.askedQuestionList) {
           if (
