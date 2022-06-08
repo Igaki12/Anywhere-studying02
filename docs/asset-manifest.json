@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.c913eb67.js",
+    "main.js": "/Anywhere-studying02/static/js/main.44a948ef.js",
+    "static/media/anteriorPituitaryH.png": "/Anywhere-studying02/static/media/anteriorPituitaryH.5f100ee81fbd74ed3afa.png",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/BloodAir.png": "/Anywhere-studying02/static/media/BloodAir.42a11021f6f28ba11c69.png",
     "static/media/sinusoid.png": "/Anywhere-studying02/static/media/sinusoid.cad74aeebbe625737c19.png",
@@ -20,6 +21,8 @@
     "static/media/nidusAVM.png": "/Anywhere-studying02/static/media/nidusAVM.6c5e164a48e19d2e71f1.png",
     "static/media/testis.png": "/Anywhere-studying02/static/media/testis.a241d073edd47b0da214.png",
     "static/media/keiroMatome.png": "/Anywhere-studying02/static/media/keiroMatome.9ad96c059817907105c4.png",
+    "static/media/kidneyCorpuscle.png": "/Anywhere-studying02/static/media/kidneyCorpuscle.cd44638a701fbd436038.png",
+    "static/media/microvilli.png": "/Anywhere-studying02/static/media/microvilli.8ae5cdce3cbaa71232ec.png",
     "static/media/gastricGland.png": "/Anywhere-studying02/static/media/gastricGland.e218e6a95623bfeceda9.png",
     "static/media/JGA.png": "/Anywhere-studying02/static/media/JGA.7ad60d39da03537c047c.png",
     "static/media/Millared-Gubler.png": "/Anywhere-studying02/static/media/Millared-Gubler.b6f662880dea8f30b72d.png",
@@ -39,6 +42,7 @@
     "static/media/CN10.png": "/Anywhere-studying02/static/media/CN10.faf47ba23a318a14f05a.png",
     "static/media/pancreasTissue.png": "/Anywhere-studying02/static/media/pancreasTissue.87db658d2b9ae219e1cb.png",
     "static/media/attendance2-1.jpg": "/Anywhere-studying02/static/media/attendance2-1.a3efa170c5a5efacac51.jpg",
+    "static/media/thymus.png": "/Anywhere-studying02/static/media/thymus.042d52cd15ab8cf1fa12.png",
     "static/media/cerebellum.png": "/Anywhere-studying02/static/media/cerebellum.3f5203f250181c2a79fe.png",
     "static/media/attendance3-1.jpg": "/Anywhere-studying02/static/media/attendance3-1.9378ac7dd8ec9abdd330.jpg",
     "static/media/follicle2.png": "/Anywhere-studying02/static/media/follicle2.abdee8a54aa2fe83ec72.png",
@@ -56,10 +60,10 @@
     "static/media/220601cerebellum.png": "/Anywhere-studying02/static/media/220601cerebellum.151d17639cc3adaff58d.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.c913eb67.js.map": "/Anywhere-studying02/static/js/main.c913eb67.js.map"
+    "main.44a948ef.js.map": "/Anywhere-studying02/static/js/main.44a948ef.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.c913eb67.js"
+    "static/js/main.44a948ef.js"
   ]
 }
