@@ -15,7 +15,7 @@ import {
   Text,
   Tag,
 } from '@chakra-ui/react'
-import { ArrowBackIcon, SettingsIcon, ChevronDownIcon } from '@chakra-ui/icons'
+import { SettingsIcon, ChevronDownIcon } from '@chakra-ui/icons'
 export const ControlPanel = ({ showSettingDetail, showHistory }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   let settingDetail = showSettingDetail()
@@ -63,14 +63,14 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
               {settingDetail.questionOrder}
             </Tag>
             <Text>出題範囲:</Text>
-            {settingDetail.questionRange.map((year) => (
-              <Tag colorScheme="teal" m="1">
+            {settingDetail.questionRange.map((year,index) => (
+              <Tag colorScheme="teal" m="1" key={index}>
                 {year}
               </Tag>
             ))}
             <Text>単語絞り込み:</Text>
-            {settingDetail.wordFilter.map((word) => (
-              <Tag colorScheme="teal" m="1">
+            {settingDetail.wordFilter.map((word,index) => (
+              <Tag colorScheme="teal" m="1" key={index}>
                 {word}
               </Tag>
             ))}

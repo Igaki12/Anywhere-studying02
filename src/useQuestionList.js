@@ -700,12 +700,11 @@ export const useQuestionList = () => {
           detailInfo: '6/9(1)',
           questionImg: [],
           questionSentence: '肺外気道の上皮の形態は？',
-          answerImg: [bronchiole],
+          answerImg: [],
           answer: '多列線毛上皮',
           commentary: '',
           choices: [
             '重層扁平上皮',
-
             '単層円柱上皮',
 
             '移行上皮',
@@ -759,7 +758,7 @@ export const useQuestionList = () => {
           questionSentence: 'ボウマン嚢の中に無いのはどれ？',
           answerImg: [JGA],
           answer: '緻密班',
-          commentary: '',
+          commentary: '緻密班：macula densa',
           choices: [
             '有窓性毛細血管',
 
@@ -778,7 +777,7 @@ export const useQuestionList = () => {
           questionSentence: 'PAS染色に陰性なのは？',
           answerImg: [],
           answer: 'たこ足細胞',
-          commentary: '',
+          commentary: 'PAS染色は糖タンパクに反応する',
           choices: [
             '近位尿細管の刷子縁',
 
@@ -2243,7 +2242,7 @@ export const useQuestionList = () => {
           detailInfo: '(3)',
           questionImg: [],
           questionSentence:
-            'Postcapillary venuleについて誤っているものを選べ。',
+            'post-capillary venuleについて誤っているものを選べ。',
           choices: [
             '内弾性板を持つ',
             '毛細血管と繋がる',

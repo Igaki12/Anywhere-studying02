@@ -93,11 +93,11 @@ function App() {
             showSettingDetail={showSettingDetail}
           /> */}
           <QuestionsLog
-            questionList={questionList}
+            // questionList={questionList}
             showHistory={showHistory}
             nextQuestion={nextQuestion}
             checkAnswer={checkAnswer}
-            hideAnswer={hideAnswer}
+            // hideAnswer={hideAnswer}
             showSettingDetail={showSettingDetail}
             reviewQuestion={reviewQuestion}
             reviewAskingQuestion={reviewAskingQuestion}

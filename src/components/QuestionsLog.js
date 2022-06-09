@@ -8,7 +8,7 @@ import {
   IconButton,
   Flex,
   Spacer,
-  useDisclosure,
+  // useDisclosure,
   Collapse,
   Tooltip,
 } from '@chakra-ui/react'
@@ -18,11 +18,11 @@ import '../App.css'
 import { useState } from 'react'
 
 export const QuestionsLog = ({
-  questionList,
+  // questionList,
   showHistory,
   nextQuestion,
   checkAnswer,
-  hideAnswer,
+  // hideAnswer,
   showSettingDetail,
   reviewQuestion,
   reviewAskingQuestion,
@@ -45,11 +45,11 @@ export const QuestionsLog = ({
   let history = showHistory()
   let settingDetail = showSettingDetail()
   console.log(history[history.length - 1].askedQuestionList)
-  const scrollToTheBottom = () => {
-    let element = document.documentElement
-    let bottom = element.scrollHeight - element.clientHeight
-    window.scroll(0, bottom)
-  }
+  // const scrollToTheBottom = () => {
+  //   let element = document.documentElement
+  //   let bottom = element.scrollHeight - element.clientHeight
+  //   window.scroll(0, bottom)
+  // }
   return (
     <>
       <ul>
@@ -110,7 +110,7 @@ export const QuestionsLog = ({
                       {question.randomizedChoices ? (
                         question.randomizedChoices.map(
                           (choice, choiceIndex) => (
-                            <Flex ml={4} fontWeight="normal">
+                            <Flex ml={4} fontWeight="normal" key={choiceIndex}>
                               <Text>{choiceIndex + 1}.</Text>
                               <Text pl={2}>{choice}</Text>
                             </Flex>

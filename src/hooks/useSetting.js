@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 // 途中で設定を変更するときはuseEffectが必要？
 
 export const useSetting = () => {
