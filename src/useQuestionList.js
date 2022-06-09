@@ -736,7 +736,7 @@ export const useQuestionList = () => {
           ],
         },
         {
-          detailInfo: '(3)',
+          detailInfo: '6/9(3)',
           questionImg: [],
           questionSentence:
             'blood air barrierの構成で正しいものを選びなさい。（肺胞腔側から）',
@@ -753,8 +753,73 @@ export const useQuestionList = () => {
             '血管内皮細胞→サーファクタント→肺胞上皮→基底膜',
           ],
         },
+        {
+          detailInfo: '6/9(4)',
+          questionImg: [],
+          questionSentence: 'ボウマン嚢の中に無いのはどれ？',
+          answerImg: [JGA],
+          answer: '緻密班',
+          commentary: '',
+          choices: [
+            '有窓性毛細血管',
+
+            'たこ足細胞',
+
+            '緻密班',
+
+            'メサンギウム細胞',
+
+            '原尿',
+          ],
+        },
+        {
+          detailInfo: '6/9(5)',
+          questionImg: [],
+          questionSentence: 'PAS染色に陰性なのは？',
+          answerImg: [],
+          answer: 'たこ足細胞',
+          commentary: '',
+          choices: [
+            '近位尿細管の刷子縁',
+
+            '血管の基底膜',
+
+            'たこ足細胞',
+
+            'メサンギウム細胞',
+
+            '尿細管の基底膜',
+          ],
+        },
+        {
+          detailInfo: '6/9(6)',
+          questionImg: [],
+          questionSentence: 'ネフロンに含まれないのは？',
+          answerImg: [renalTubule],
+          answer: '輸入細動脈',
+          commentary: '糸球体+ボウマン嚢+尿細管=ネフロン',
+          choices: ['糸球体', '輸入細動脈', 'ボウマン嚢', '尿細管'],
+        },
+        {
+          detailInfo: '6/9(7)',
+          questionImg: [],
+          questionSentence:
+            'ボウマン嚢から出た原尿が通る順番で正しいのはどれ？',
+          answerImg: [renalTubule],
+          answer: '',
+          commentary: '',
+          choices: [
+            '近位曲尿細管→ヘンレループ→遠位曲尿細管→集合細管→集合管',
+
+            '近位曲尿細管→遠位曲尿細管→ヘンレループ→集合細管→集合管',
+
+            '遠位曲尿細管→近位曲尿細管→ヘンレループ→集合細管→集合管',
+
+            '集合細管→近位曲尿細管→ヘンレループ→遠位曲尿細管→集合管',
+          ],
+        },
         // {
-        //   detailInfo: '6/8',
+        //   detailInfo: '6/9',
         //   questionImg: [],
         //   questionSentence: '',
         //   choices: ['', '', '', ''],
