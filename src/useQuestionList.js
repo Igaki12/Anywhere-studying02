@@ -696,7 +696,63 @@ export const useQuestionList = () => {
           commentary: '',
           choices: ['介在部導管', '腺房中心細胞', '腺房細胞', '小葉間結合組織'],
         },
+        {
+          detailInfo: '6/9(1)',
+          questionImg: [],
+          questionSentence: '肺外気道の上皮の形態は？',
+          answerImg: [bronchiole],
+          answer: '多列線毛上皮',
+          commentary: '',
+          choices: [
+            '重層扁平上皮',
 
+            '単層円柱上皮',
+
+            '移行上皮',
+
+            '多列線毛上皮',
+
+            '単層扁平上皮',
+          ],
+        },
+        {
+          detailInfo: '6/9(2)',
+          questionImg: [],
+          questionSentence:
+            'サーファクタントの産生、分泌を行う細胞をふたつ選びなさい。',
+          answerImg: [alveolus],
+          answer: 'クララ細胞、Ⅱ型肺胞上皮細胞',
+          commentary: '',
+          choices: [
+            'クララ細胞',
+
+            'goblet cell',
+
+            'Ⅰ型肺胞上皮細胞',
+
+            '内皮細胞',
+
+            'Ⅱ型肺胞上皮細胞',
+          ],
+        },
+        {
+          detailInfo: '(3)',
+          questionImg: [],
+          questionSentence:
+            'blood air barrierの構成で正しいものを選びなさい。（肺胞腔側から）',
+          answerImg: [BloodAir],
+          answer: 'サーファクタント→肺胞上皮→基底膜→血管内皮細胞',
+          commentary: '',
+          choices: [
+            'サーファクタント→肺胞上皮→基底膜→血管内皮細胞',
+
+            '肺胞上皮→サーファクタント→血管内皮細胞→基底膜',
+
+            '基底膜→血管内皮細胞→サーファクタント→肺胞上皮',
+
+            '血管内皮細胞→サーファクタント→肺胞上皮→基底膜',
+          ],
+        },
         // {
         //   detailInfo: '6/8',
         //   questionImg: [],
