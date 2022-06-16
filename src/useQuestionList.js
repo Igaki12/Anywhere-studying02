@@ -57,12 +57,23 @@ import microvilli from './img/answer/microvilli.png'
 import anteriorPituitaryH from './img/answer/anteriorPituitaryH.png'
 import kidneyCorpuscle from './img/answer/kidneyCorpuscle.png'
 import thymus from './img/answer/thymus.png'
-import adrenalGlandTEM from './img/answer/adrenalGlandTEM.png'
+import adrenalGlandTEM from './img/question/adrenalGlandTEM.png'
 import ECjunction from './img/answer/ECjunction.png'
-import LeydigCellTEM from './img/answer/LeydigCellTEM.png'
-import medullaTEM from './img/answer/medullaTEM.png'
-import pericyteTEM from './img/answer/pericyteTEM.png'
-import placentaTEM from './img/answer/placentaTEM.png'
+import LeydigCellTEM from './img/question/LeydigCellTEM.png'
+import medullaTEM from './img/question/medullaTEM.png'
+import placentaTEM from './img/question/placentaTEM.png'
+import capillaryTEM from './img/question/capillaryTEM.png'
+import capillaryTEM2 from './img/question/capillaryTEM2.png'
+import chiefTEM from './img/question/chiefTEM.png'
+import marrowSEM from './img/question/marrowSEM.png'
+import mucousNeckTEM from './img/question/mucousNeckTEM.png'
+import panethTEM from './img/question/panethTEM.png'
+import parietalTEM from './img/question/parietalTEM.png'
+import pericyteTEM from './img/question/pericyteTEM.png'
+import spleenSEM from './img/question/spleenSEM.png'
+import surfaceMucousTEM from './img/question/surfaceMucousTEM.png'
+import villiSEM from './img/question/villiSEM.png'
+import stomachSEM from './img/question/stomachSEM.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1067,6 +1078,154 @@ export const useQuestionList = () => {
         //   questionImg: [],
         //   questionSentence: '',
         //   choices: ['', '', '', ''],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
+    {
+      groupTag: 'レジュメ電顕像',
+      groupContents: [
+        {
+          detailInfo: '循環器1',
+          questionImg: [capillaryTEM, capillaryTEM2],
+          questionSentence: 'capillaryのTEM写真を説明せよ。',
+          answerImg: [capillary],
+          answer:
+            '基底膜上に内皮細胞が1層のみ覆っている。内皮細胞間はタイト結合により細胞間隙の物質拡散を防止している。',
+          commentary:
+            '毛細血管なので内膜中膜外膜の区別なし。閉鎖帯tight junction。毛細血管を介した物質透過はこの細胞間隙ではなく内皮細胞の飲み込み作用（連続型）・小孔（有窓型Fenestrated）によって行われる。',
+        },
+        {
+          detailInfo: '循環器2',
+          questionImg: [pericyteTEM],
+          questionSentence: 'PericyteのTEM写真を説明せよ。',
+          answerImg: [capillary],
+          answer:
+            '周皮細胞は毛細血管と細静脈の外側から血管を取り巻く。内皮細胞と基底膜を共有する。周皮細胞の収縮による毛細血管の血流調節に関与。',
+          commentary:
+            '毛細血管や細静脈は平滑筋に乏しいため代わりに周皮細胞が血流調節を担う。',
+        },
+        {
+          detailInfo: 'リンパ性器官1',
+          questionImg: [marrowSEM],
+          questionSentence: '骨髄のSEM写真を説明せよ。',
+          answerImg: [marrow],
+          answer:
+            '網状赤血球や白血球は、洞様毛細血管の内皮細胞の孔を通って血管内へ入る。血管有意の骨髄実質には、成熟途上の血液細胞が密に存在する。',
+          commentary:
+            '血液細胞は骨髄の細網細胞で分化し、成熟して遊走性を得た網状赤血球・白血球が洞様毛細血管sinusoidを通過できる。骨髄実質内で識別できる血液細胞のは赤芽球島や巨核球ぐらい',
+        },
+        {
+          detailInfo: 'リンパ性器官2',
+          questionImg: [spleenSEM],
+          questionSentence: '脾臓のSEM写真を説明せよ。',
+          answerImg: [spleen],
+          answer:
+            '円筒状の内皮細胞（脾洞）を通過する赤血球と、通過できず脾索内で捕食される古い赤血球に選別されている。',
+          commentary:
+            '赤脾髄の脾索中のマクロファージが老化赤血球や異常赤血球を貪食する。赤脾髄は開放循環であり、ここを通過する血液は一度血管外へ出る。',
+        },
+        {
+          detailInfo: '消化器1',
+          questionImg: [stomachSEM],
+          questionSentence: '胃表面のSEM写真を説明せよ。',
+          answerImg: [gastricGland],
+          answer:
+            '左)胃表面を上から見た図で、胃小窩から粘膜が噴き出している。右)胃表面を側面から見た図で、胃小窩と胃腺に沿った断面が見えている。',
+          commentary:
+            '粘膜は表面上皮細胞surface mucous cellか副細胞mucous neck cellから分泌されたもの。非常に発達した腺構造が粘膜固有層に林立している。胃小窩の間の空間は粘膜固有層。',
+        },
+        {
+          detailInfo: '消化器2',
+          questionImg: [surfaceMucousTEM],
+          questionSentence: 'Surface mucous cellのTEM写真を説明せよ。',
+          answerImg: [],
+          answer:
+            '塩酸に溶けにくい粘液（ムチンとHCO3-）を分泌。強酸から胃粘膜を守り胃表面の潤滑に関与する。',
+          commentary:
+            '電子密度の高い粘液顆粒を表面に多数保有している。核が基底側に押しやられている。G:Golgi,M:mitochondria,rER:rough-surfaced endoplasmic reticulum',
+        },
+        {
+          detailInfo: '消化器3',
+          questionImg: [mucousNeckTEM],
+          questionSentence: 'Mucous neck cellのTEM写真を説明せよ。',
+          answerImg: [gastricGland],
+          answer:
+            '胃小窩の頚部でムチンなどアルカリ性の粘液を分泌し、胃粘膜を保護する。PAS陽性',
+          commentary:
+            '電子密度の高い粘液顆粒を多数保有し、核が基底側に押しやられている。PAS染色は糖タンパクに反応する。HE染色では紫（塩基性）に染まる。',
+        },
+        {
+          detailInfo: '消化器4',
+          questionImg: [parietalTEM],
+          questionSentence: 'Parietal cellのTEM写真を説明せよ。',
+          answerImg: [gastricGland],
+          answer:
+            '主細胞や副細胞の間に孤立散在する大型の細胞で、核は中央にあり、豊富なミトコンドリア(M)をもつ。核の周りの細胞膜が深く落ち込んでおり、細胞内分泌細管(IC)という。',
+          commentary:
+            '細胞内分泌細管IC:intracellular canaliculiは休止期には退化し細管小胞となる。分泌刺激を受けると再び癒合して細胞膜と繋がる。',
+        },
+        {
+          detailInfo: '消化器5',
+          questionImg: [chiefTEM],
+          questionSentence: 'Chief cellのTEM写真を説明せよ。',
+          answerImg: [gastricGland],
+          answer:
+            '粗面小胞体rERが集積しており、ゴルジ装置Gが発達している(蛋白生産細胞の特徴)。好塩基性を示す。ペプシノーゲンを含む電子密度の低い分泌顆粒が多数見られ、核は基底側に押しやられている。',
+          commentary: 'ペプシノーゲンは胃酸によってペプシンに変化する。',
+        },
+        {
+          detailInfo: '消化器6',
+          questionImg: [villiSEM],
+          questionSentence: 'villiのSEM写真を説明せよ。',
+          answerImg: [intestine],
+          answer:
+            '小腸上皮では粘膜固有層が指状に突出して絨毛を形成し、表面を覆い尽くしている。それぞれの絨毛には中心リンパ管とその外側を網のように覆う毛細血管がみられる。',
+          commentary:
+            '絨毛villiの周辺には陰窩（腸腺：リーベルキューン腺）が黒い影として映っている。',
+        },
+        {
+          detailInfo: '消化器7',
+          questionImg: [imageSample1],
+          questionSentence:
+            'brush borderのTEM写真を説明せよ（過去問出題済み）。',
+          answerImg: [microvilli],
+          answer:
+            '吸収上皮細胞の微絨毛とその表面を覆う厚い糖鎖が写真中央に、吸収上皮細胞の細胞内小器官や上皮細胞間のjunctional complexが左側に見えている。',
+          commentary: '微絨毛の膜で最終的消化吸収が行われる（膜消化）',
+        },
+        {
+          detailInfo: '消化器8',
+          questionImg: [panethTEM],
+          questionSentence: 'Paneth cellのTEM写真を説明せよ。',
+          answerImg: [intestine],
+          answer:
+            '管腔側にデフェンシン分泌顆粒がみられ、核が基底側に押しやられている。',
+          commentary:
+            'パネート細胞は陰窩の底部に固まって存在する。顆粒は好酸性で、デフェンシンdefensinを分泌し感染防御に関与する。',
+        },
+        // {
+        //   detailInfo: '循環器2',
+        //   questionImg: [capillaryTEM],
+        //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '循環器2',
+        //   questionImg: [capillaryTEM],
+        //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '循環器2',
+        //   questionImg: [capillaryTEM],
+        //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
         //   answerImg: [],
         //   answer: '',
         //   commentary: '',

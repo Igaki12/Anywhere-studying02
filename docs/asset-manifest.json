@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.a85caa54.js",
+    "main.js": "/Anywhere-studying02/static/js/main.19f889f1.js",
     "static/media/anteriorPituitaryH.png": "/Anywhere-studying02/static/media/anteriorPituitaryH.5f100ee81fbd74ed3afa.png",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/BloodAir.png": "/Anywhere-studying02/static/media/BloodAir.42a11021f6f28ba11c69.png",
@@ -13,23 +13,33 @@
     "static/media/lipidInIntestine.png": "/Anywhere-studying02/static/media/lipidInIntestine.8641da0499fada7482c6.png",
     "static/media/medullaTEM.png": "/Anywhere-studying02/static/media/medullaTEM.10f0e2bd35df1cbb4800.png",
     "static/media/InkedpyramidalTract_LI.jpg": "/Anywhere-studying02/static/media/InkedpyramidalTract_LI.1e75050e681d438b1f72.jpg",
+    "static/media/stomachSEM.png": "/Anywhere-studying02/static/media/stomachSEM.b10329b8547c11319c32.png",
     "static/media/adrenalGland.png": "/Anywhere-studying02/static/media/adrenalGland.5af8d33980fe1754b7ef.png",
+    "static/media/mucousNeckTEM.png": "/Anywhere-studying02/static/media/mucousNeckTEM.aaa8a7d3becd725d2400.png",
     "static/media/ECjunction.png": "/Anywhere-studying02/static/media/ECjunction.1e7faee964b27389d598.png",
+    "static/media/parietalTEM.png": "/Anywhere-studying02/static/media/parietalTEM.902ace0152dedb3e7a47.png",
+    "static/media/marrowSEM.png": "/Anywhere-studying02/static/media/marrowSEM.60cdc89081299c9d1456.png",
+    "static/media/chiefTEM.png": "/Anywhere-studying02/static/media/chiefTEM.fc0131084842490978f6.png",
+    "static/media/spleenSEM.png": "/Anywhere-studying02/static/media/spleenSEM.f2394ea049cd97a23908.png",
     "static/media/complexParalyzedCN.png": "/Anywhere-studying02/static/media/complexParalyzedCN.b019eb8b172c6f4092fe.png",
     "static/media/releasedFollicle.png": "/Anywhere-studying02/static/media/releasedFollicle.888a698c9d60ed7a31e1.png",
     "static/media/spinalDisorder.png": "/Anywhere-studying02/static/media/spinalDisorder.e7271f8e802115fce047.png",
     "static/media/220528brainStem.png": "/Anywhere-studying02/static/media/220528brainStem.94cc2e9a9c3701f8d906.png",
     "static/media/lymphNode.png": "/Anywhere-studying02/static/media/lymphNode.997d2920dd8040bbf266.png",
+    "static/media/capillaryTEM.png": "/Anywhere-studying02/static/media/capillaryTEM.9eee831410a44a933c2f.png",
     "static/media/nidusAVM.png": "/Anywhere-studying02/static/media/nidusAVM.6c5e164a48e19d2e71f1.png",
     "static/media/testis.png": "/Anywhere-studying02/static/media/testis.a241d073edd47b0da214.png",
     "static/media/keiroMatome.png": "/Anywhere-studying02/static/media/keiroMatome.9ad96c059817907105c4.png",
+    "static/media/panethTEM.png": "/Anywhere-studying02/static/media/panethTEM.5911d4f28bd459e8ebe1.png",
     "static/media/adrenalGlandTEM.png": "/Anywhere-studying02/static/media/adrenalGlandTEM.51516d51d7dbb10a5369.png",
     "static/media/kidneyCorpuscle.png": "/Anywhere-studying02/static/media/kidneyCorpuscle.cd44638a701fbd436038.png",
     "static/media/microvilli.png": "/Anywhere-studying02/static/media/microvilli.8ae5cdce3cbaa71232ec.png",
+    "static/media/villiSEM.png": "/Anywhere-studying02/static/media/villiSEM.e12ab7cbff4824a80f25.png",
     "static/media/gastricGland.png": "/Anywhere-studying02/static/media/gastricGland.e218e6a95623bfeceda9.png",
     "static/media/JGA.png": "/Anywhere-studying02/static/media/JGA.7ad60d39da03537c047c.png",
     "static/media/Millared-Gubler.png": "/Anywhere-studying02/static/media/Millared-Gubler.b6f662880dea8f30b72d.png",
     "static/media/sentuusi.png": "/Anywhere-studying02/static/media/sentuusi.cbf95f0b2b1a3d506f8a.png",
+    "static/media/surfaceMucousTEM.png": "/Anywhere-studying02/static/media/surfaceMucousTEM.0d371236e10b4fcb8e00.png",
     "static/media/pericyteTEM.png": "/Anywhere-studying02/static/media/pericyteTEM.f759e43fb69a262c313b.png",
     "static/media/Brown-Sequard.png": "/Anywhere-studying02/static/media/Brown-Sequard.2dc4dda89fbcb7ac45f5.png",
     "static/media/willis.png": "/Anywhere-studying02/static/media/willis.a089e3258d6b8e64fa74.png",
@@ -42,6 +52,7 @@
     "static/media/renalTubule.png": "/Anywhere-studying02/static/media/renalTubule.70e675907eb4d69eeb97.png",
     "static/media/intestine.png": "/Anywhere-studying02/static/media/intestine.ff5787b36a8c56e72111.png",
     "static/media/alveolus.png": "/Anywhere-studying02/static/media/alveolus.961a24acb1a6e266cf8e.png",
+    "static/media/capillaryTEM2.png": "/Anywhere-studying02/static/media/capillaryTEM2.8cb8145bfc2f97eddad8.png",
     "static/media/sensoryDisorder.png": "/Anywhere-studying02/static/media/sensoryDisorder.cebb2b8ed6d7f3884698.png",
     "static/media/CN10.png": "/Anywhere-studying02/static/media/CN10.faf47ba23a318a14f05a.png",
     "static/media/pancreasTissue.png": "/Anywhere-studying02/static/media/pancreasTissue.87db658d2b9ae219e1cb.png",
@@ -66,10 +77,10 @@
     "static/media/220601cerebellum.png": "/Anywhere-studying02/static/media/220601cerebellum.151d17639cc3adaff58d.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.a85caa54.js.map": "/Anywhere-studying02/static/js/main.a85caa54.js.map"
+    "main.19f889f1.js.map": "/Anywhere-studying02/static/js/main.19f889f1.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.a85caa54.js"
+    "static/js/main.19f889f1.js"
   ]
 }
