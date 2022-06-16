@@ -1020,8 +1020,50 @@ export const useQuestionList = () => {
             '性腺刺激ホルモン＝FSH, LH',
           ],
         },
+        {
+          detailInfo: '6/16感覚器',
+          questionImg: [],
+          questionSentence: 'メラノサイトについて正しいのはどれか',
+          choices: [
+            '有色人種のほうが白色人種より多い',
+            '樹状突起がある',
+            '顆粒層にある',
+            '抗原提示能をもつ',
+            'メラニンを貪食する',
+          ],
+          answerImg: [],
+          answer: '樹状突起がある',
+          commentary:
+            'メラノサイトの数自体は人種間で差がない。顆粒層ではなく基底層にあって、ランゲルハンス細胞のような抗原提示能はもたない。メラニン産生細胞である',
+        },
+        {
+          detailInfo: '6/16感覚器',
+          questionImg: [],
+          questionSentence: 'デスモゾームが発達しているのはどれか',
+          choices: ['角質層', '顆粒層', '有棘層', '透明層', '基底層'],
+          answerImg: [],
+          answer: '有棘層',
+          commentary:
+            '有棘層は基底層と顆粒層の間にあり、デスモゾームで互いがすべて結合しあうケラチノサイトによる数層を指す。',
+        },
+        {
+          detailInfo: '6/16感覚器',
+          questionImg: [],
+          questionSentence: '表皮に含まれない細胞はどれか',
+          choices: [
+            '角質細胞',
+            '有棘細胞',
+            '線維芽細胞',
+            'Merkel細胞',
+            'Langerhans細胞',
+          ],
+          answerImg: [],
+          answer: '線維芽細胞',
+          commentary:
+            '線維芽細胞は真皮でみられる。メルケル細胞は表皮基底層、ランゲルハンス細胞は表皮有棘層など、角質細胞や有棘細胞は表皮を構成する主要組織。',
+        },
         // {
-        //   detailInfo: '6/9',
+        //   detailInfo: '6/16感覚器',
         //   questionImg: [],
         //   questionSentence: '',
         //   choices: ['', '', '', ''],
