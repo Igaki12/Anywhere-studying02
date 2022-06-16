@@ -74,6 +74,12 @@ import spleenSEM from './img/question/spleenSEM.png'
 import surfaceMucousTEM from './img/question/surfaceMucousTEM.png'
 import villiSEM from './img/question/villiSEM.png'
 import stomachSEM from './img/question/stomachSEM.png'
+import peyersPatchSEM from './img/question/peyersPatchSEM.png'
+import MCellSEM from './img/question/MCellSEM.png'
+import tracheaTEM from './img/question/tracheaSEM.png'
+import claraSEMTEM from './img/question/claraSEMTEM.png'
+import alveolarSEM from './img/question/alveolarSEM.png'
+import trachea from './img/answer/trachea.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1085,7 +1091,7 @@ export const useQuestionList = () => {
       ],
     },
     {
-      groupTag: 'レジュメ電顕像',
+      groupTag: 'レジュメ電顕',
       groupContents: [
         {
           detailInfo: '循環器1',
@@ -1113,9 +1119,9 @@ export const useQuestionList = () => {
           questionSentence: '骨髄のSEM写真を説明せよ。',
           answerImg: [marrow],
           answer:
-            '網状赤血球や白血球は、洞様毛細血管の内皮細胞の孔を通って血管内へ入る。血管有意の骨髄実質には、成熟途上の血液細胞が密に存在する。',
+            '網状赤血球や白血球は、洞様毛細血管の内皮細胞の孔を通って血管内へ入る。骨髄実質には、成熟途上の血液細胞が密に存在する。',
           commentary:
-            '血液細胞は骨髄の細網細胞で分化し、成熟して遊走性を得た網状赤血球・白血球が洞様毛細血管sinusoidを通過できる。骨髄実質内で識別できる血液細胞のは赤芽球島や巨核球ぐらい',
+            '血液細胞は骨髄の細網細胞で分化し、成熟して遊走性を得た網状赤血球・白血球が洞様毛細血管sinusoidを通過できる。骨髄実質内で識別できる血液細胞は赤芽球島や巨核球ぐらい',
         },
         {
           detailInfo: 'リンパ性器官2',
@@ -1206,7 +1212,43 @@ export const useQuestionList = () => {
           commentary:
             'パネート細胞は陰窩の底部に固まって存在する。顆粒は好酸性で、デフェンシンdefensinを分泌し感染防御に関与する。',
         },
-        // {
+        {
+          detailInfo: '消化器9',
+          questionImg: [peyersPatchSEM, MCellSEM],
+          questionSentence: 'Peyers patchとM cellのSEM写真を説明せよ。',
+          answerImg: [intestine],
+          answer:
+            'M細胞は腸管免疫の主役であり、その管腔面は微絨毛に乏しく微小ヒダを持っている。',
+          commentary:
+            '微小ヒダmicrofold。M細胞の深層にはリンパ小節があるためパイエル板Peyers patchは膨らんでいる。絨毛や輪状ヒダはこの部分にはない。',
+        },
+        {
+          detailInfo: '呼吸器1',
+          questionImg: [tracheaTEM],
+          questionSentence: '多列線毛上皮のSEM写真を説明せよ。',
+          answerImg: [trachea],
+          answer:
+            '気道上皮は単層で、線毛細胞（細くて丈が高く、核は基底側による）・杯細胞（粘液産生、線毛に乏しい）・刷子細胞（丈が高く未発達の線毛がみられる）・基底細胞（丈が低く映っていない）で構成されている。',
+          commentary:
+            '線毛で粘膜とともに補足された粉塵などを鼻・咽頭側に運んでいる。細胞核の位置も丈の高さもバラバラであるが、上皮細胞はすべて基底膜に接している。',
+        },
+        {
+          detailInfo: '呼吸器2',
+          questionImg: [claraSEMTEM],
+          questionSentence: 'Clara cellのSEM/TEM写真を説明せよ。',
+          answerImg: [bronchiole],
+          answer: '細気管支の単層上皮は線毛細胞とクララ細胞で構成される。クララ細胞は線毛を持たず、丈の高い細胞で、ミトコンドリアや滑面小胞体、分泌顆粒が認められる。サーファクタントの産生を行っている。',
+          commentary: '細気管支では末梢に近づくにつれ単層円柱上皮→単層立方上皮に。気管腺や軟骨はないが、平滑筋SMが弾性繊維とともに管径を維持しており、写真下部にも映っている。',
+        },
+                {
+          detailInfo: '呼吸器3',
+          questionImg: [alveolarSEM],
+          questionSentence: '肺胞上皮のSEM写真を説明せよ。',
+          answerImg: [alveolus],
+          answer: '肺胞表面は扁平でガス交換に関与するⅠ型肺胞上皮細胞と立方形でサーファクタント分泌を行うⅡ型肺胞上皮細胞で覆われ、基底膜の内側には毛細血管やその内皮細胞が映っている。',
+          commentary: '血液-空気関門blood air barrierは肺胞上皮・基底膜・血管内皮を介して行われる。肺胞内にはその他肺胞マクロファージもみられる。',
+        },
+                // {
         //   detailInfo: '循環器2',
         //   questionImg: [capillaryTEM],
         //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
@@ -1214,7 +1256,7 @@ export const useQuestionList = () => {
         //   answer: '',
         //   commentary: '',
         // },
-        // {
+                // {
         //   detailInfo: '循環器2',
         //   questionImg: [capillaryTEM],
         //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
@@ -1222,7 +1264,7 @@ export const useQuestionList = () => {
         //   answer: '',
         //   commentary: '',
         // },
-        // {
+                // {
         //   detailInfo: '循環器2',
         //   questionImg: [capillaryTEM],
         //   questionSentence: '周皮細胞のTEM写真を説明せよ。',

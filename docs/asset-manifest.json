@@ -1,20 +1,23 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.19f889f1.js",
+    "main.js": "/Anywhere-studying02/static/js/main.4f614ac5.js",
     "static/media/anteriorPituitaryH.png": "/Anywhere-studying02/static/media/anteriorPituitaryH.5f100ee81fbd74ed3afa.png",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/BloodAir.png": "/Anywhere-studying02/static/media/BloodAir.42a11021f6f28ba11c69.png",
     "static/media/sinusoid.png": "/Anywhere-studying02/static/media/sinusoid.cad74aeebbe625737c19.png",
     "static/media/placenta.png": "/Anywhere-studying02/static/media/placenta.d5ad101c91835ae0fda4.png",
+    "static/media/tracheaSEM.png": "/Anywhere-studying02/static/media/tracheaSEM.d64acd0847157920468f.png",
     "static/media/220607lymphNode.png": "/Anywhere-studying02/static/media/220607lymphNode.70fa2904d32ca20f2b7a.png",
     "static/media/liver.png": "/Anywhere-studying02/static/media/liver.db5c84a18c380ee2f687.png",
+    "static/media/alveolarSEM.png": "/Anywhere-studying02/static/media/alveolarSEM.ff8474fe7be017bb0cfa.png",
     "static/media/marrow.png": "/Anywhere-studying02/static/media/marrow.45fab6b0f528b6add20a.png",
     "static/media/lipidInIntestine.png": "/Anywhere-studying02/static/media/lipidInIntestine.8641da0499fada7482c6.png",
     "static/media/medullaTEM.png": "/Anywhere-studying02/static/media/medullaTEM.10f0e2bd35df1cbb4800.png",
     "static/media/InkedpyramidalTract_LI.jpg": "/Anywhere-studying02/static/media/InkedpyramidalTract_LI.1e75050e681d438b1f72.jpg",
     "static/media/stomachSEM.png": "/Anywhere-studying02/static/media/stomachSEM.b10329b8547c11319c32.png",
     "static/media/adrenalGland.png": "/Anywhere-studying02/static/media/adrenalGland.5af8d33980fe1754b7ef.png",
+    "static/media/bronchiole.png": "/Anywhere-studying02/static/media/bronchiole.4daf5da8c32bee198fb0.png",
     "static/media/mucousNeckTEM.png": "/Anywhere-studying02/static/media/mucousNeckTEM.aaa8a7d3becd725d2400.png",
     "static/media/ECjunction.png": "/Anywhere-studying02/static/media/ECjunction.1e7faee964b27389d598.png",
     "static/media/parietalTEM.png": "/Anywhere-studying02/static/media/parietalTEM.902ace0152dedb3e7a47.png",
@@ -32,6 +35,7 @@
     "static/media/keiroMatome.png": "/Anywhere-studying02/static/media/keiroMatome.9ad96c059817907105c4.png",
     "static/media/panethTEM.png": "/Anywhere-studying02/static/media/panethTEM.5911d4f28bd459e8ebe1.png",
     "static/media/adrenalGlandTEM.png": "/Anywhere-studying02/static/media/adrenalGlandTEM.51516d51d7dbb10a5369.png",
+    "static/media/claraSEMTEM.png": "/Anywhere-studying02/static/media/claraSEMTEM.9f3766d0bac0e9c62ef7.png",
     "static/media/kidneyCorpuscle.png": "/Anywhere-studying02/static/media/kidneyCorpuscle.cd44638a701fbd436038.png",
     "static/media/microvilli.png": "/Anywhere-studying02/static/media/microvilli.8ae5cdce3cbaa71232ec.png",
     "static/media/villiSEM.png": "/Anywhere-studying02/static/media/villiSEM.e12ab7cbff4824a80f25.png",
@@ -45,6 +49,7 @@
     "static/media/willis.png": "/Anywhere-studying02/static/media/willis.a089e3258d6b8e64fa74.png",
     "static/media/hepaticLobule.png": "/Anywhere-studying02/static/media/hepaticLobule.99a397e6a60cb3e01e46.png",
     "static/media/exocrineEndocrine.png": "/Anywhere-studying02/static/media/exocrineEndocrine.8131233b50d34b9fa683.png",
+    "static/media/trachea.png": "/Anywhere-studying02/static/media/trachea.a2b975b4f24c12f457e1.png",
     "static/media/thalamusSyndrome.png": "/Anywhere-studying02/static/media/thalamusSyndrome.f2ee0bb65d2a5b22a2ee.png",
     "static/media/subduralHematoma.png": "/Anywhere-studying02/static/media/subduralHematoma.01a3af6896b4f86797df.png",
     "static/media/attendance4.JPG": "/Anywhere-studying02/static/media/attendance4.7463ce523c9c8ae04a14.JPG",
@@ -59,15 +64,16 @@
     "static/media/attendance2-1.jpg": "/Anywhere-studying02/static/media/attendance2-1.a3efa170c5a5efacac51.jpg",
     "static/media/thymus.png": "/Anywhere-studying02/static/media/thymus.042d52cd15ab8cf1fa12.png",
     "static/media/LeydigCellTEM.png": "/Anywhere-studying02/static/media/LeydigCellTEM.3b965ac2a3ac7c0e25da.png",
+    "static/media/MCellSEM.png": "/Anywhere-studying02/static/media/MCellSEM.79b53b9b52f5bfd552aa.png",
     "static/media/cerebellum.png": "/Anywhere-studying02/static/media/cerebellum.3f5203f250181c2a79fe.png",
     "static/media/attendance3-1.jpg": "/Anywhere-studying02/static/media/attendance3-1.9378ac7dd8ec9abdd330.jpg",
     "static/media/follicle2.png": "/Anywhere-studying02/static/media/follicle2.abdee8a54aa2fe83ec72.png",
+    "static/media/peyersPatchSEM.png": "/Anywhere-studying02/static/media/peyersPatchSEM.a4c26ddd0461e6de18ce.png",
     "static/media/crossSectionOfCNS.png": "/Anywhere-studying02/static/media/crossSectionOfCNS.fced69a798ae22b9eeb7.png",
     "static/media/placentaTEM.png": "/Anywhere-studying02/static/media/placentaTEM.252a75635569a9b4b653.png",
     "static/media/centralMotorNeuron.png": "/Anywhere-studying02/static/media/centralMotorNeuron.e546f7ab380c5eae5ccc.png",
     "static/media/CN11.png": "/Anywhere-studying02/static/media/CN11.9a325552fb4c1b7f322c.png",
     "static/media/CN12.JPG": "/Anywhere-studying02/static/media/CN12.91a67296ee3e81994842.JPG",
-    "static/media/bronchiole.png": "/Anywhere-studying02/static/media/bronchiole.43fc6ed0fa336544dc5e.png",
     "static/media/mesencephalon.png": "/Anywhere-studying02/static/media/mesencephalon.80070ba286f1367a40b8.png",
     "static/media/sample.png": "/Anywhere-studying02/static/media/sample.a6320935e2373dc71003.png",
     "static/media/bloodUrineBarrier.png": "/Anywhere-studying02/static/media/bloodUrineBarrier.490d202838ef52e06df9.png",
@@ -77,10 +83,10 @@
     "static/media/220601cerebellum.png": "/Anywhere-studying02/static/media/220601cerebellum.151d17639cc3adaff58d.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.19f889f1.js.map": "/Anywhere-studying02/static/js/main.19f889f1.js.map"
+    "main.4f614ac5.js.map": "/Anywhere-studying02/static/js/main.4f614ac5.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.19f889f1.js"
+    "static/js/main.4f614ac5.js"
   ]
 }
