@@ -63,13 +63,13 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
               {settingDetail.questionOrder}
             </Tag>
             <Text>出題範囲:</Text>
-            {settingDetail.questionRange.map((year,index) => (
+            {settingDetail.questionRange.map((year, index) => (
               <Tag colorScheme="teal" m="1" key={index}>
                 {year}
               </Tag>
             ))}
             <Text>単語絞り込み:</Text>
-            {settingDetail.wordFilter.map((word,index) => (
+            {settingDetail.wordFilter.map((word, index) => (
               <Tag colorScheme="teal" m="1" key={index}>
                 {word}
               </Tag>
@@ -94,7 +94,12 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button variant="ghost">設定を変更する</Button>
+            <Button
+              variant="ghost"
+              onClick={() => document.location.reload(true)}
+            >
+              タイトルに戻る
+            </Button>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
