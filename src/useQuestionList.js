@@ -80,6 +80,23 @@ import tracheaTEM from './img/question/tracheaSEM.png'
 import claraSEMTEM from './img/question/claraSEMTEM.png'
 import alveolarSEM from './img/question/alveolarSEM.png'
 import trachea from './img/answer/trachea.png'
+import BTBarrierTEM from './img/question/BTBarrierTEM.png'
+import follicleTEM from './img/question/follicleTEM.png'
+import glomerularCapillaryTEM from './img/question/glomerularCapillaryTEM.png'
+import hypophysisTEM1 from './img/question/hypophysisTEM1.png'
+import hypophysisTEM2 from './img/question/hypophysisTEM2.png'
+import interMediateTubuleTEM from './img/question/InterMediateTubuleTEM.png'
+import mesangialTEM from './img/question/mesangialTEM.png'
+import ovaryTEM from './img/question/ovaryTEM.png'
+import oviductSEM from './img/question/oviductSEM.png'
+import oviductTEM from './img/question/oviductTEM.png'
+import pancreasATEM from './img/question/pancreasATEM.png'
+import pancreasBTEM from './img/question/pancreasBTEM.png'
+import podocyteSEM from './img/question/podocyteSEM.png'
+import proximalTubuleTEM from './img/question/proximalTubuleTEM.png'
+import thyroidSEM from './img/question/thyroidSEM.png'
+import thyroidTEM from './img/question/thyroidTEM.png'
+import anteriorPituitaryE from './img/answer/anteriorPituitaryE.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -1149,7 +1166,7 @@ export const useQuestionList = () => {
           questionSentence: 'Surface mucous cellのTEM写真を説明せよ。',
           answerImg: [],
           answer:
-            '塩酸に溶けにくい粘液（ムチンとHCO3-）を分泌。強酸から胃粘膜を守り胃表面の潤滑に関与する。',
+            '胃腺表面上皮細胞は塩酸に溶けにくい粘液（ムチンとHCO3-）を分泌。強酸から胃粘膜を守り胃表面の潤滑に関与する。',
           commentary:
             '電子密度の高い粘液顆粒を表面に多数保有している。核が基底側に押しやられている。G:Golgi,M:mitochondria,rER:rough-surfaced endoplasmic reticulum',
         },
@@ -1159,7 +1176,7 @@ export const useQuestionList = () => {
           questionSentence: 'Mucous neck cellのTEM写真を説明せよ。',
           answerImg: [gastricGland],
           answer:
-            '胃小窩の頚部でムチンなどアルカリ性の粘液を分泌し、胃粘膜を保護する。PAS陽性',
+            '副細胞は胃小窩の頚部でムチンなどアルカリ性の粘液を分泌し、胃粘膜を保護する。PAS陽性',
           commentary:
             '電子密度の高い粘液顆粒を多数保有し、核が基底側に押しやられている。PAS染色は糖タンパクに反応する。HE染色では紫（塩基性）に染まる。',
         },
@@ -1169,7 +1186,7 @@ export const useQuestionList = () => {
           questionSentence: 'Parietal cellのTEM写真を説明せよ。',
           answerImg: [gastricGland],
           answer:
-            '主細胞や副細胞の間に孤立散在する大型の細胞で、核は中央にあり、豊富なミトコンドリア(M)をもつ。核の周りの細胞膜が深く落ち込んでおり、細胞内分泌細管(IC)という。',
+            '胃腺壁細胞は主細胞や副細胞の間に孤立散在する大型の細胞で、核は中央にあり、豊富なミトコンドリア(M)をもつ。核の周りの細胞膜が深く落ち込んでおり、細胞内分泌細管(IC)という。',
           commentary:
             '細胞内分泌細管IC:intracellular canaliculiは休止期には退化し細管小胞となる。分泌刺激を受けると再び癒合して細胞膜と繋がる。',
         },
@@ -1179,7 +1196,7 @@ export const useQuestionList = () => {
           questionSentence: 'Chief cellのTEM写真を説明せよ。',
           answerImg: [gastricGland],
           answer:
-            '粗面小胞体rERが集積しており、ゴルジ装置Gが発達している(蛋白生産細胞の特徴)。好塩基性を示す。ペプシノーゲンを含む電子密度の低い分泌顆粒が多数見られ、核は基底側に押しやられている。',
+            '胃腺主細胞には粗面小胞体rERが集積しており、ゴルジ装置Gが発達している(蛋白生産細胞の特徴)。好塩基性を示す。ペプシノーゲンを含む電子密度の低い分泌顆粒が多数見られ、核は基底側に押しやられている。',
           commentary: 'ペプシノーゲンは胃酸によってペプシンに変化する。',
         },
         {
@@ -1252,26 +1269,159 @@ export const useQuestionList = () => {
           commentary:
             '血液-空気関門blood air barrierは肺胞上皮・基底膜・血管内皮を介して行われる。肺胞内にはその他肺胞マクロファージもみられる。',
         },
+        {
+          detailInfo: '泌尿器1',
+          questionImg: [glomerularCapillaryTEM],
+          questionSentence: '糸球体毛細血管のTEM写真を説明せよ。',
+          answerImg: [kidneyCorpuscle],
+          answer:
+            '腎臓糸球体の毛細血管は有窓性毛細血管で、その孔は隔膜を持たず、透過性が高い。',
+          commentary:
+            'ほぼ素通しであるが、洞様毛細血管ではない。血液尿関門の実質の関門は基底膜とたこ足細胞',
+        },
+        {
+          detailInfo: '泌尿器2',
+          questionImg: [mesangialTEM],
+          questionSentence: 'メサンギウム細胞のTEM写真を説明せよ。',
+          answerImg: [],
+          answer:
+            'メサンギウム細胞は毛細血管に向かって大きな突起を伸ばし、糸球体基底膜を介さずに接している。メサンギウム基質がメサンギウム細胞の周囲を埋めている。',
+          commentary:
+            'PAS陽性。アクチンフィラメントを主体とする収縮装置が備わっており、メサンギウム細胞の収縮によって糸球体濾過量GFRを調節している。',
+        },
+        {
+          detailInfo: '泌尿器3',
+          questionImg: [podocyteSEM],
+          questionSentence: 'たこ足細胞のSEM写真を説明せよ。',
+          answerImg: [],
+          answer:
+            '足細胞は基底膜の上から血管内皮細胞とメサンギウム細胞を抱きかかえている。ろ過機能のために高度に分化した上皮細胞である。',
+          commentary:
+            '足細胞とボウマン嚢壁側上皮とは折れ返って繋がっている。大小の突起は隣り合う足細胞と噛み合って血管表面の大部分を覆っている。',
+        },
+        {
+          detailInfo: '泌尿器3',
+          questionImg: [proximalTubuleTEM],
+          questionSentence: 'proximal tubuleのTEM写真を説明せよ。',
+          answerImg: [renalTubule],
+          answer:
+            '近位尿細管は基底線条と微絨毛が発達している。基底線条にはミトコンドリアMが豊富で能動輸送を盛んに行っている。',
+          commentary:
+            '単層立方上皮。エオジンに強く染色する。細胞嵌合もみられる。',
+        },
+        {
+          detailInfo: '泌尿器4',
+          questionImg: [interMediateTubuleTEM],
+          questionSentence: '近位尿細管-中間尿細管移行部のTEM写真を説明せよ。',
+          answerImg: [renalTubule],
+          answer:
+            '単層立方上皮の近位尿細管から単層扁平上皮の中間尿細管への移行部。中間尿細管は微絨毛や基底線条を持たない。',
+          commentary: 'DH:descending limb of loop Henle,PT:proximal tubule',
+        },
+        {
+          detailInfo: '生殖器1',
+          questionImg: [BTBarrierTEM],
+          questionSentence: 'Blood-testis barrierのTEM写真を説明せよ。',
+          answerImg: [testis],
+          answer:
+            '中央のセルトリ細胞どおしのtight junctionにより傍腔区画への免疫反応を制限している。',
+          commentary:
+            '写真下が基底膜。中央の細胞が曲精細管基底区画の精祖細胞で、その上が傍腔区画と推測される。セルトリ細胞はインヒビン（FSHを抑制）とエストロゲンを分泌する',
+        },
+        {
+          detailInfo: '生殖器2',
+          questionImg: [follicleTEM],
+          questionSentence: '二次卵母細胞のTEM写真を説明せよ。',
+          answerImg: [follicle2],
+          answer:
+            '第1減数分裂後の二次卵母細胞は一次極体を抱えて排卵を迎える。二次卵母細胞の中には第二減数分裂中期で停止したままの染色体が見える。',
+          commentary:
+            '二次卵母細胞は透明帯・放線冠を伴って卵巣から排出される。',
+        },
+        {
+          detailInfo: '生殖器3',
+          questionImg: [ovaryTEM],
+          questionSentence: '黄体の顆粒層ルテイン細胞のTEM写真を説明せよ。',
+          answerImg: [],
+          answer:
+            '黄体はステロイドホルモンであるプロゲステロンを分泌する。ステロイドホルモン産生細胞は、1)脂肪滴、2)管状クリステ、3)管状滑面小胞体という特徴を持つ。',
+          commentary: '卵胞の顆粒層細胞の排卵後の姿。',
+        },
+
+        {
+          detailInfo: '生殖器4',
+          questionImg: [oviductSEM, oviductTEM],
+          questionSentence: '卵管上皮細胞のSEM/TEM写真を説明せよ。',
+          answerImg: [],
+          answer:
+            '卵管上皮は単層円柱上皮で、丸い核・ゴルジ装置の発達した線毛細胞と、細長い核・粗面小胞体等が発達した分泌細胞で構成される。分泌細胞は線毛に乏しい。',
+          commentary:
+            '分泌細胞Peg Cell,線毛細胞Ciliated Cell,矢印：電子密度の高い分泌物が見える',
+        },
+        {
+          detailInfo: '生殖器5',
+          questionImg: [placentaTEM],
+          questionSentence: 'blood placenta barrierのTEM写真を説明せよ。',
+          answerImg: [placenta],
+          answer:
+            '血液胎盤関門を構成する層は、（母体側血管）→合胞体性栄養膜→細胞性栄養膜（ラングハンス細胞）→基底膜→絨毛疎性結合組織→毛細血管基底膜→毛細血管内皮　の順に通過する。',
+          commentary: '妊娠後期になると栄養膜細胞層や疎性結合組織が薄くなる。',
+        },
+        {
+          detailInfo: '内分泌器官1',
+          questionImg: [hypophysisTEM1, hypophysisTEM2],
+          questionSentence:
+            '脳下垂体前葉のホルモン分泌細胞群（2枚目はGonadotroph)のTEM写真を説明せよ。',
+          answerImg: [anteriorPituitaryE, anteriorPituitaryH],
+          answer:
+            '成長ホルモンGH分泌細胞は小型の細胞で大型で丸い顆粒をもつ。乳腺刺激ホルモンPRL分泌細胞は大型の細胞で歪な大小の顆粒をもつ。副腎髄質刺激ホルモンACTH分泌細胞はHE染色で染まらないような小さな顆粒をもつ。性腺刺激ホルモンLH/FSH分泌細胞は小型の細胞で大きな核を持ち、GH分泌細胞やPRL分泌細胞と比べて小さな分泌顆粒を持つ。',
+          commentary:
+            '（酸好性/エオジン好染）成長ホルモン分泌細胞>乳腺刺激ホルモン分泌細胞>副腎皮質刺激ホルモン>性腺刺激ホルモン分泌細胞>甲状腺刺激ホルモン分泌細胞（塩基好性/ヘマトキシリン好染）',
+        },
+        {
+          detailInfo: '内分泌器官2',
+          questionImg: [thyroidTEM, thyroidSEM],
+          questionSentence: '甲状腺のTEM/SEM写真を説明せよ。',
+          answerImg: [],
+          answer:
+            '甲状腺は内分泌器官であるが、内部にコロイドを蓄えた濾胞が存在し上皮細胞の外側を洞様毛細血管が網状に取り巻いている。カルシトニンを分泌する傍濾胞細胞は内部に電子密度の高い顆粒を持っている。',
+          commentary:
+            '甲状腺上皮細胞は単層上皮で、甲状腺の分泌量によって扁平化したり立方化したりする。',
+        },
+        {
+          detailInfo: '内分泌器官3',
+          questionImg: [adrenalGlandTEM],
+          questionSentence: '副腎皮質束状帯のTEM写真を説明せよ。',
+          answerImg: [adrenalGland],
+          answer:
+            '細胞質に多量の脂肪滴を持ち、ミトコンドリアが小胞体クリステを持つ。滑面小胞体が発達している。',
+          commentary:
+            '束状帯はコルチゾールや弱い男性ホルモン（デヒドロエピアンドロステロン）などのステロイドホルモンを分泌する。',
+        },
+        {
+          detailInfo: '内分泌器官4',
+          questionImg: [medullaTEM],
+          questionSentence: '副腎髄質のTEM写真を説明せよ。',
+          answerImg: [adrenalGland],
+          answer:
+            'アドレナリン分泌細胞とノルアドレナリン分泌細胞は同程度の大きさの分泌顆粒を持つが、NA含有顆粒はA含有顆粒より電子密度が高く、区別することができる。',
+          commentary:
+            '血液上流からの糖質コルチコイドによってNA→アドレナリン合成が誘導される',
+        },
+        {
+          detailInfo: '内分泌器官5',
+          questionImg: [pancreasATEM, pancreasBTEM],
+          questionSentence: 'ランゲルハンス島のTEM写真を説明せよ。',
+          answerImg: [pancreasTissue],
+          answer:
+            '1枚目はグルカゴン合成のA細胞で、限界膜に包まれた高電子密度の顆粒が多数みられる。2枚目はインスリン合成のB細胞で、限界膜に包まれた様々な種類の顆粒がみられる。',
+          commentary:
+            'A細胞はランゲルハンス島周辺部に多く、B細胞はランゲルハンス島中心付近に偏在している。',
+        },
         // {
-        //   detailInfo: '循環器2',
-        //   questionImg: [capillaryTEM],
-        //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '循環器2',
-        //   questionImg: [capillaryTEM],
-        //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '循環器2',
-        //   questionImg: [capillaryTEM],
-        //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
+        //   detailInfo: '内分泌器官',
+        //   questionImg: [TEM],
+        //   questionSentence: 'のTEM写真を説明せよ。',
         //   answerImg: [],
         //   answer: '',
         //   commentary: '',
