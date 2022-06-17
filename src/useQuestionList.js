@@ -1237,18 +1237,22 @@ export const useQuestionList = () => {
           questionImg: [claraSEMTEM],
           questionSentence: 'Clara cellのSEM/TEM写真を説明せよ。',
           answerImg: [bronchiole],
-          answer: '細気管支の単層上皮は線毛細胞とクララ細胞で構成される。クララ細胞は線毛を持たず、丈の高い細胞で、ミトコンドリアや滑面小胞体、分泌顆粒が認められる。サーファクタントの産生を行っている。',
-          commentary: '細気管支では末梢に近づくにつれ単層円柱上皮→単層立方上皮に。気管腺や軟骨はないが、平滑筋SMが弾性繊維とともに管径を維持しており、写真下部にも映っている。',
+          answer:
+            '細気管支の単層上皮は線毛細胞とクララ細胞で構成される。クララ細胞は線毛を持たず、丈の高い細胞で、ミトコンドリアや滑面小胞体、分泌顆粒が認められる。サーファクタントの産生を行っている。',
+          commentary:
+            '細気管支では末梢に近づくにつれ単層円柱上皮→単層立方上皮に。気管腺や軟骨はないが、平滑筋SMが弾性繊維とともに管径を維持しており、写真下部にも映っている。',
         },
-                {
+        {
           detailInfo: '呼吸器3',
           questionImg: [alveolarSEM],
           questionSentence: '肺胞上皮のSEM写真を説明せよ。',
           answerImg: [alveolus],
-          answer: '肺胞表面は扁平でガス交換に関与するⅠ型肺胞上皮細胞と立方形でサーファクタント分泌を行うⅡ型肺胞上皮細胞で覆われ、基底膜の内側には毛細血管やその内皮細胞が映っている。',
-          commentary: '血液-空気関門blood air barrierは肺胞上皮・基底膜・血管内皮を介して行われる。肺胞内にはその他肺胞マクロファージもみられる。',
+          answer:
+            '肺胞表面は扁平でガス交換に関与するⅠ型肺胞上皮細胞と立方形でサーファクタント分泌を行うⅡ型肺胞上皮細胞で覆われ、基底膜の内側には毛細血管やその内皮細胞が映っている。',
+          commentary:
+            '血液-空気関門blood air barrierは肺胞上皮・基底膜・血管内皮を介して行われる。肺胞内にはその他肺胞マクロファージもみられる。',
         },
-                // {
+        // {
         //   detailInfo: '循環器2',
         //   questionImg: [capillaryTEM],
         //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
@@ -1256,7 +1260,7 @@ export const useQuestionList = () => {
         //   answer: '',
         //   commentary: '',
         // },
-                // {
+        // {
         //   detailInfo: '循環器2',
         //   questionImg: [capillaryTEM],
         //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
@@ -1264,7 +1268,7 @@ export const useQuestionList = () => {
         //   answer: '',
         //   commentary: '',
         // },
-                // {
+        // {
         //   detailInfo: '循環器2',
         //   questionImg: [capillaryTEM],
         //   questionSentence: '周皮細胞のTEM写真を説明せよ。',
@@ -2615,8 +2619,9 @@ export const useQuestionList = () => {
             'アクチンフィラメント',
           ],
           answerImg: [],
-          answer: '',
-          commentary: '',
+          answer: '管状クリステ',
+          commentary:
+            'ステロイドホルモン産生細胞の特徴：1)脂肪滴、2)管状クリステを持つミトコンドリア、3)管状滑面小胞体',
         },
         {
           detailInfo: '記述1',
@@ -3755,8 +3760,9 @@ export const useQuestionList = () => {
             '胃腺の壁細胞',
           ],
           answerImg: [medullaTEM],
-          answer: '不明',
-          commentary: '情報求む',
+          answer: 'ノルアドレナリン分泌細胞',
+          commentary:
+            'ノルアドレナリン分泌細胞の顆粒の方がアドレナリン分泌細胞の顆粒より電顕像の色が濃い（→電子密度が高い）',
         },
         // {
         //   detailInfo: '',
