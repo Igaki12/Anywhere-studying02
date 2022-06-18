@@ -1235,7 +1235,7 @@ export const useQuestionList = () => {
           questionSentence: 'Peyers patchとM cellのSEM写真を説明せよ。',
           answerImg: [intestine],
           answer:
-            'M細胞は腸管免疫の主役であり、その管腔面は微絨毛に乏しく微小ヒダを持っている。',
+            'パイエル板の表層をM細胞が構成している。M細胞は腸管免疫の主役であり、その管腔面は微絨毛に乏しく微小ヒダを持っている。',
           commentary:
             '微小ヒダmicrofold。M細胞の深層にはリンパ小節があるためパイエル板Peyers patchは膨らんでいる。絨毛や輪状ヒダはこの部分にはない。',
         },
