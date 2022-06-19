@@ -1156,9 +1156,9 @@ export const useQuestionList = () => {
           questionSentence: '胃表面のSEM写真を説明せよ。',
           answerImg: [gastricGland],
           answer:
-            '左)胃表面を上から見た図で、胃小窩から粘膜が噴き出している。右)胃表面を側面から見た図で、胃小窩と胃腺に沿った断面が見えている。',
+            '左)胃表面を上から見た図で、胃小窩から粘液が噴き出している。右)胃表面を側面から見た図で、胃小窩と胃腺に沿った断面が見えている。',
           commentary:
-            '粘膜は表面上皮細胞surface mucous cellか副細胞mucous neck cellから分泌されたもの。非常に発達した腺構造が粘膜固有層に林立している。胃小窩の間の空間は粘膜固有層。',
+            '粘液は表面上皮細胞surface mucous cellか副細胞mucous neck cellから分泌されたもの。非常に発達した腺構造が粘膜固有層に林立している。胃小窩の間の空間は粘膜固有層。',
         },
         {
           detailInfo: '消化器2',
@@ -3163,7 +3163,7 @@ export const useQuestionList = () => {
         {
           detailInfo: '(30)',
           questionImg: [],
-          questionSentence: '肝臓の小葉間組織について',
+          questionSentence: '肝臓の小葉間組織について、誤っているものを選べ。',
           choices: [
             '中心静脈が通る',
             'グリソン鞘という',
@@ -3173,7 +3173,7 @@ export const useQuestionList = () => {
           answerImg: [hepaticLobule],
           answer: '',
           commentary:
-            '中心静脈が通るのは肝小葉の中心であり、小葉間組織に通る静脈は小葉間静脈。',
+            '中心静脈が通るのは肝小葉の中心であり、小葉間組織に通る静脈は小葉間静脈。小葉間組織はグリソン鞘とよばれ、小葉間胆管がとおり、結合組織はAzan染色で染まる。',
         },
         {
           detailInfo: '(31)',
@@ -4090,8 +4090,8 @@ export const useQuestionList = () => {
             '卵胞上皮細胞',
           ],
           answerImg: [follicle2],
-          answer: '卵胞上皮細胞、一次卵母細胞？',
-          commentary: '機能単位ってなんですか',
+          answer: '卵胞上皮細胞、一次卵母細胞',
+          commentary: '卵胞=卵胞上皮+一次卵母細胞',
         },
         {
           detailInfo: '記述1',
