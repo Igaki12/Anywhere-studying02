@@ -263,7 +263,7 @@ export const Setting = ({
       >
         <Stack
           spacing={[2, 4]}
-          direction={['column', 'row']}
+          direction={['row']}
           bg="blackAlpha.100"
           p={2}
           mb="5"
