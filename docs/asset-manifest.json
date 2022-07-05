@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Anywhere-studying02/static/css/main.2255ca1a.css",
-    "main.js": "/Anywhere-studying02/static/js/main.246f1f9d.js",
+    "main.js": "/Anywhere-studying02/static/js/main.f180dac3.js",
     "static/media/anteriorPituitaryH.png": "/Anywhere-studying02/static/media/anteriorPituitaryH.5f100ee81fbd74ed3afa.png",
     "static/media/spleen.png": "/Anywhere-studying02/static/media/spleen.1d72ad5d06d1de78a895.png",
     "static/media/BloodAir.png": "/Anywhere-studying02/static/media/BloodAir.42a11021f6f28ba11c69.png",
@@ -100,10 +100,10 @@
     "static/media/220601cerebellum.png": "/Anywhere-studying02/static/media/220601cerebellum.151d17639cc3adaff58d.png",
     "index.html": "/Anywhere-studying02/index.html",
     "main.2255ca1a.css.map": "/Anywhere-studying02/static/css/main.2255ca1a.css.map",
-    "main.246f1f9d.js.map": "/Anywhere-studying02/static/js/main.246f1f9d.js.map"
+    "main.f180dac3.js.map": "/Anywhere-studying02/static/js/main.f180dac3.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.246f1f9d.js"
+    "static/js/main.f180dac3.js"
   ]
 }
