@@ -87,8 +87,6 @@ export const Setting = ({
   // ここからCookieを使った設定の引継ぎ
   let savedSettingDetail = showSettingDetail()
   let getCookiesFlag = 0
-  // let isLoaded
-  jsCookie.set('locale', 'ja-JP')
   if (jsCookie.get('questionOrder')) {
     savedSettingDetail.questionOrder = jsCookie.get('questionOrder')
     getCookiesFlag = 1
@@ -102,17 +100,8 @@ export const Setting = ({
     savedSettingDetail.wordFilter = jsCookie.get('wordFilter').split(',')
     getCookiesFlag = 1
   }
-  // if (isLoaded !== true && getCookiesFlag === 1) {
-  //   console.log('savedSettingDetail:' + isLoaded + getCookiesFlag)
-  //   toast({
-  //     title: '前回の設定を引継ぎました',
-  //     position: 'top',
-  //     status: 'info',
-  //     isClosable: true,
-  //   })
-  //   // updateAllSettings(savedSettingDetail)
-  //   isLoaded = true
-  // }
+
+
   const saveSetting = (settingDetail) => {
     jsCookie.set('questionOrder', settingDetail.questionOrder)
     jsCookie.set('questionRange', settingDetail.questionRange)

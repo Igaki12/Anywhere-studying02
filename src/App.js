@@ -35,6 +35,9 @@ function App() {
   } = useHistory()
   const history = showHistory()
   // ここからCookieを利用した設定の引継ぎ
+  // const saveHistory = (latestHistory) => {
+
+  // }
   const saveHistory = (latestHistory) => {
     let savingHistory = latestHistory.questionNum + ','
     latestHistory.remainingQuestionList.forEach((question) => {
@@ -44,7 +47,15 @@ function App() {
     savingHistory = savingHistory.substring(0, savingHistory.length - 1)
     jsCookie.set('history', savingHistory)
     console.log('saveHistory:' + jsCookie.get('history'))
+    let jsonData = {
+      app: 'anywhere-studying02',
+      latestUpdate: new Date().getTime(),
+      status: settingDetail,
+      history: savingHistory,
+    }
+    localStorage.setItem('anywhere-studying02', JSON.stringify(jsonData))
   }
+  console.log(localStorage.getItem('anywhere-studying02'))
   return (
     <>
       <Heading mt={'3'} ml="3" color="teal" mb={0}>
